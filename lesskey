@@ -1,0 +1,144 @@
+#command
+y          back-line
+f          forw-screen
+d          forw-scroll
+u          back-scroll
+b          back-screen
+r          repaint
+g          goto-line
+p          percent
+s          toggle-option o
+h          help
+q          quit
+m          set-mark
+t          next-tag
+
+# was j
+i          forw-line
+# was k
+o          back-line
+
+# was w
+e          back-window
+# was z
+n          forw-window
+
+# was n, N
+w          repeat-search
+W          reverse-search
+
+
+
+H          help
+F          forw-forever
+J          forw-line-force
+K          back-line-force
+Y          back-line-force
+V          version
+R          repaint-flush
+M          set-mark-bottom
+Q          quit
+G          goto-end
+E          examine
+T          prev-tag
+
+
+
+ZZ         quit
+
+
+
+0          digit
+1          digit
+2          digit
+3          digit
+4          digit
+5          digit
+6          digit
+7          digit
+8          digit
+9          digit
+
+
+
+_          display-option
+-          toggle-option
+|          pipe
+v          visual
+!          shell
++          firstcmd
+<          goto-line
+%          percent
+{          forw-bracket {}
+}          back-bracket {}
+(          forw-bracket ()
+)          back-bracket ()
+[          forw-bracket []
+]          back-bracket []
+>          goto-end
+=          status
+/          forw-search
+?          back-search
+&          filter
+'          goto-mark
+
+:f         status
+:e         examine
+:n         next-file
+:p         prev-file
+:x         index-file
+:d         remove-file
+:t         toggle-option t
+:q         quit
+:Q         quit
+
+^E         forw-line
+^N         forw-line
+^Y         back-line
+^K         back-line
+^P         back-line
+^D         forw-scroll
+^U         back-scroll
+^F         forw-screen
+^V         forw-screen
+^R         repaint
+^L         repaint
+^B         back-screen
+^G         status
+
+^X^X       goto-mark
+^X^V       examine
+
+\r         forw-line
+\n         forw-line
+\kd        forw-line
+\40        forw-screen
+\kD        forw-screen
+\ev        back-screen
+\kU        back-screen
+\e\40      forw-screen-force
+\eF        forw-until-hilite
+\eu        undo-hilite
+\eU        clear-search
+\kh        goto-line
+\e<        goto-line
+\e[        left-scroll
+\e]        right-scroll
+\e(        left-scroll
+\e)        right-scroll
+\e{        no-scroll
+\e}        end-scroll
+
+\kl        left-scroll
+\kr        right-scroll
+\e^F       forw-bracket
+\e^B       back-bracket
+\e>        goto-end
+\ke        goto-end
+\eG        goto-end-buffered
+\e/        forw-search *
+\e?        back-search *
+\en        repeat-search-all
+\eN        reverse-search-all
+\em        clear-mark
+
