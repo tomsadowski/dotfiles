@@ -129,10 +129,11 @@ function M.chill.rust(_palette)
         rustFoldBraces = {fg=_palette.MAIN1},
         rustModPath    = {fg=_palette.MAIN1},
 
+        rustLifetime   = {fg=_palette.MAIN2},
+
         rustSelf       = {link='Keyword'},
 
         rustStorage    = {link='StorageClass'},
-      --  ['@lsp.type.enum.rust'] = {fg=_palette.MAIN2},
         ['@lsp.type.method.rust'] = {fg=_palette.MAIN2},
     }
 end
@@ -151,7 +152,7 @@ function M.chill.csharp(_palette)
     return {
         csClassType              = {fg=_palette.MAIN1},
 
-        csGeneric                = {fg=_palette.MAIN1},
+        csGeneric                = {fg=_palette.MAIN2},
         csGenericBraces          = {fg=_palette.MAIN1},
 
         csXmlTag                 = {fg=_palette.ALT2},
@@ -348,13 +349,14 @@ M.mountain = {
     ALT2  = '#af8780', -- pink
 }
 
-M.mipe = {
+M.lemonbars = {
     CANV0 = '#000000', -- brown
     CANV1 = '#00171f', -- blue
     CANV2 = '#10272f', -- light blue
 
     MAIN1 = '#cfc7a0', -- white
-    MAIN2 = '#afa760', -- yellow
+    --MAIN2 = '#afa760', -- yellow
+    MAIN2 = '#979f50', -- bile green
     MAIN3 = '#7f7720', -- poop green
 
     ALT1  = '#7077af', -- purp

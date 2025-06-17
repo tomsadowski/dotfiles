@@ -4,4 +4,4 @@ require("keymap")
 
 require("lsp")
 
-vim.cmd 'colo mipe'
+vim.cmd 'colo lemonbars'
