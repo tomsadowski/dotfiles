@@ -68,3 +68,6 @@ alias cb="cargo build"
 # dotnet
 alias dr="dotnet run"
 alias db="dotnet build"
+
+# signal
+alias signal="signal-desktop --no-sandbox"
