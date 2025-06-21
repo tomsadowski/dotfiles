@@ -4,4 +4,4 @@ require("keymap")
 
 require("lsp")
 
-vim.cmd 'colo lemonbars'
+vim.cmd 'colo mountain'
