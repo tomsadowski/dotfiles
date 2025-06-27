@@ -173,16 +173,12 @@ color.schemes.A.rust = function(palette) return {
     rustFoldBraces = {fg=palette.B1},
     rustModPath    = {fg=palette.B1},
     rustLifetime   = {fg=palette.C2},
-  --  rustEnum       = {fg=palette.C4},
     rustSelf       = {link='Keyword'},
     rustStorage    = {link='StorageClass'},
---    ['@lsp.type.selfKeyword.rust']     = {fg=palette.A4},
- --   ['@lsp.mod.declaration.rust']      = {fg=palette.B1},
---    ['@lsp.type.selfTypeKeyword.rust'] = {fg=palette.B1},
     ['@lsp.type.struct.rust']     = {fg=palette.B2},
---    ['@lsp.type.property.rust']   = {fg=palette.B2},
     ['@lsp.type.parameter.rust']  = {fg=palette.C2},
     ['@lsp.type.method.rust']     = {fg=palette.C3},
+    ['@lsp.type.interface.rust']  = {fg=palette.C3},
     ['@lsp.type.enumMember.rust'] = {fg=palette.C4},
 } end
 color.schemes.A.c = function(palette) return {
