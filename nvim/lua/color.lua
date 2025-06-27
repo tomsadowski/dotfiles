@@ -7,16 +7,18 @@ color.palettes.twofivesix = {
     A1 = '#000000', -- black
     A2 = '#080808', -- grey
     A3 = '#1c1c1c', -- grey
-    A4 = '#5f5f5f', -- grey
+    A4 = '#808080', -- grey
+    A5 = '#5f5f5f', -- grey
 
     B1 = '#d0d0d0', -- white
+
     B2 = '#afaf87', -- yellow
     B3 = '#875f00', -- brown
 
-    C1  = '#008700', -- green
+    C1  = '#87af5f', -- green
     C2  = '#af87af', -- pink
     C3  = '#5fafd7', -- blue
-    C4  = '#5f5faf', -- proopl
+    C4  = '#8787d7', -- purple
 }
 color.palettes.primary = {
     A1 = '#000000', -- black
@@ -87,7 +89,7 @@ color.schemes.A.syntax = function(palette) return {
     Number         = {link='Normal'}, 
     Float          = {link='Normal'}, 
     Constant       = {link='Normal'}, 
-    Comment        = {fg=palette.C1}, 
+    Comment        = {fg=palette.A4}, 
     xmlTag         = {fg=palette.C1},
     xmlAttrib      = {link='Comment'},
     xmlTagName     = {link='Comment'},
@@ -172,14 +174,15 @@ color.schemes.A.rust = function(palette) return {
     rustSigil      = {fg=palette.B1},
     rustFoldBraces = {fg=palette.B1},
     rustModPath    = {fg=palette.B1},
-    rustLifetime   = {fg=palette.C2},
+    rustEnum       = {fg=palette.B1},
+    rustLifetime   = {fg=palette.B1},
     rustSelf       = {link='Keyword'},
     rustStorage    = {link='StorageClass'},
     ['@lsp.type.struct.rust']     = {fg=palette.B2},
-    ['@lsp.type.parameter.rust']  = {fg=palette.C2},
-    ['@lsp.type.function.rust']     = {fg=palette.C3},
-    ['@lsp.type.interface.rust']  = {fg=palette.C3},
-    ['@lsp.type.enumMember.rust'] = {fg=palette.C4},
+    ['@lsp.type.variable.rust']   = {fg=palette.C1},
+    ['@lsp.type.enumMember.rust'] = {fg=palette.C2},
+    ['@lsp.type.parameter.rust']  = {fg=palette.C3},
+    ['@lsp.type.interface.rust']  = {fg=palette.C4},
 } end
 color.schemes.A.c = function(palette) return {
     cType         = {link='Type'},
