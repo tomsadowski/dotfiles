@@ -3,6 +3,21 @@ local color = {
     palettes = {},
     schemes  = {A = {}},
 }
+color.palettes.twofivesix = {
+    A1 = '#000000', -- black
+    A2 = '#080808', -- grey
+    A3 = '#1c1c1c', -- grey
+    A4 = '#585858', -- grey
+
+    B1 = '#c6c6c6', -- white
+    B2 = '#afaf5f', -- yellow
+    B3 = '#5f5f00', -- brown
+
+    C1  = '#87af87', -- green
+    C2  = '#af5f5f', -- red
+    C3  = '#87afd7', -- blue
+    C4  = '#875f87', -- proopl
+}
 color.palettes.primary = {
     A1 = '#000000', -- black
     A2 = '#070707', -- grey
