@@ -7,16 +7,16 @@ color.palettes.twofivesix = {
     A1 = '#000000', -- black
     A2 = '#080808', -- grey
     A3 = '#1c1c1c', -- grey
-    A4 = '#585858', -- grey
+    A4 = '#5f5f5f', -- grey
 
-    B1 = '#c6c6c6', -- white
-    B2 = '#afaf5f', -- yellow
-    B3 = '#5f5f00', -- brown
+    B1 = '#d0d0d0', -- white
+    B2 = '#afaf87', -- yellow
+    B3 = '#875f00', -- brown
 
-    C1  = '#87af87', -- green
-    C2  = '#af5f5f', -- red
-    C3  = '#87afd7', -- blue
-    C4  = '#875f87', -- proopl
+    C1  = '#008700', -- green
+    C2  = '#af87af', -- pink
+    C3  = '#5fafd7', -- blue
+    C4  = '#5f5faf', -- proopl
 }
 color.palettes.primary = {
     A1 = '#000000', -- black
@@ -177,7 +177,7 @@ color.schemes.A.rust = function(palette) return {
     rustStorage    = {link='StorageClass'},
     ['@lsp.type.struct.rust']     = {fg=palette.B2},
     ['@lsp.type.parameter.rust']  = {fg=palette.C2},
-    ['@lsp.type.method.rust']     = {fg=palette.C3},
+    ['@lsp.type.function.rust']     = {fg=palette.C3},
     ['@lsp.type.interface.rust']  = {fg=palette.C3},
     ['@lsp.type.enumMember.rust'] = {fg=palette.C4},
 } end
