@@ -3,10 +3,26 @@ local color = {
     palettes = {},
     schemes  = {A = {}},
 }
-color.palettes.mountain = {
+color.palettes.primary = {
+    A1 = '#000000', -- black
+    A2 = '#070707', -- grey
+    A3 = '#171717', -- grey
+    A4 = '#575757', -- grey
+
+    B1 = '#bfbfbf', -- white
+    B2 = '#afaf50', -- yeller
+    B3 = '#6f6f10', -- brown
+
+    C1  = '#80a080', -- green
+    C2  = '#a77777', -- red
+    C3  = '#70a0a0', -- blue
+    C4  = '#907090', -- proopl
+}
+color.palettes.ocean = {
     A1 = '#000000', -- brown
     A2 = '#00171f', -- blue
     A3 = '#10272f', -- light blue
+    A4 = '#676a6f', -- greyyy
 
     B1 = '#cfc7a0', -- white
     B2 = '#979f50', -- light green
@@ -14,18 +30,37 @@ color.palettes.mountain = {
 
     C1  = '#7077af', -- purp
     C2  = '#af7770', -- salmon
+    C3  = '#af7770', -- salmon
+}
+color.palettes.mountain = {
+    A1 = '#000000', -- brown
+    A2 = '#070a0f', -- yule
+    A3 = '#171a1f', -- light blue
+    A4 = '#575f5f', -- greyyy
+
+    B1 = '#bfb790', -- white
+    B2 = '#afa750', -- yeller
+    B3 = '#6f6710', -- dark green
+
+    C1  = '#80a020', -- green
+    C2  = '#af7770', -- salmon
+    C3  = '#70a0a0', -- blue
+    C4  = '#70779f', -- proopl
 }
 color.palettes.fountain = {
     A1 = '#000000', -- black
     A2 = '#101012', -- grey
     A3 = '#2e2e2e', -- grey
+    A4 = '#575a5f', -- greyyy
 
     B1 = '#d9d0c0', -- white
     B2 = '#b8a884', -- light brown
     B3 = '#887744', -- brown
 
     C1  = '#80a020', -- green
-    C2  = '#70a0a0', -- blue
+    C2  = '#af7770', -- salmon
+    C3  = '#70a0a0', -- blue
+    C4  = '#80879f', -- proopl
 }
 color.schemes.A.syntax = function(palette) return {
     Normal         = {fg=palette.B1, bg=palette.A2}, 
@@ -43,9 +78,9 @@ color.schemes.A.syntax = function(palette) return {
     xmlTagName     = {link='Comment'},
     xmlEqual       = {link='Comment'},
     xmlString      = {link='Comment'},
-    String         = {fg=palette.C2}, 
-    Character      = {fg=palette.C2}, 
-    Special        = {fg=palette.C2},
+    String         = {fg=palette.A4}, 
+    Character      = {link='String'}, 
+    Special        = {link='String'},
     SpecialChar    = {link='Special'}, 
     SpecialComment = {link='Special'}, 
     Debug          = {link='Special'}, 
@@ -119,14 +154,21 @@ color.schemes.A.syntax = function(palette) return {
     ['@variable.parameter.builtin'] = {link='@parameter'}, 
 } end
 color.schemes.A.rust = function(palette) return {
-    rustEnum       = {fg=palette.B1},
     rustSigil      = {fg=palette.B1},
     rustFoldBraces = {fg=palette.B1},
     rustModPath    = {fg=palette.B1},
-    rustLifetime   = {fg=palette.B2},
+    rustLifetime   = {fg=palette.C2},
+  --  rustEnum       = {fg=palette.C4},
     rustSelf       = {link='Keyword'},
     rustStorage    = {link='StorageClass'},
-    ['@lsp.type.method.rust'] = {fg=palette.B2},
+--    ['@lsp.type.selfKeyword.rust']     = {fg=palette.A4},
+ --   ['@lsp.mod.declaration.rust']      = {fg=palette.B1},
+--    ['@lsp.type.selfTypeKeyword.rust'] = {fg=palette.B1},
+    ['@lsp.type.struct.rust']     = {fg=palette.B2},
+--    ['@lsp.type.property.rust']   = {fg=palette.B2},
+    ['@lsp.type.parameter.rust']  = {fg=palette.C2},
+    ['@lsp.type.method.rust']     = {fg=palette.C3},
+    ['@lsp.type.enumMember.rust'] = {fg=palette.C4},
 } end
 color.schemes.A.c = function(palette) return {
     cType         = {link='Type'},

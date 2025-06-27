@@ -11,7 +11,7 @@ vim.o.laststatus = 1
 vim.o.foldmethod = 'syntax'
 
 -- a reasonable default that was hard to find
---vim.cmd('set foldlevelstart=99') 
+vim.cmd('set foldlevelstart=99') 
 
 -- needed to paste text from clipboard
 vim.cmd('set mouse=')  

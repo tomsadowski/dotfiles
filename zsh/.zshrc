@@ -38,8 +38,8 @@ export LESSKEYIN=$XDG_CONFIG_HOME/lesskey
 
 # qmk
 export QMK_HOME=$HOME/qmk_firmware
-alias qfl="qmk flash -bl uf2-split-left"
-alias qfr="qmk flash -bl uf2-split-right"
+alias eee="qmk flash -bl uf2-split-left"
+alias iii="qmk flash -bl uf2-split-right"
 
 # ls
 alias l="ls -lAtr" 
