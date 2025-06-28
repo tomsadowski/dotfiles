@@ -94,18 +94,19 @@ color.schemes.A.syntax = function(palette) return {
     ['@variable.parameter.builtin'] = {link='@parameter'}, 
 } end
 color.schemes.A.rust = function(palette) return {
-    rustSigil      = {fg=palette.B1},
-    rustFoldBraces = {fg=palette.B1},
-    rustModPath    = {fg=palette.B1},
+    rustSigil       = {fg=palette.B1},
+    rustFoldBraces  = {fg=palette.B1},
+    rustModPath     = {fg=palette.B1},
     --rustEnum       = {fg=palette.B1},
-    rustLifetime   = {fg=palette.B1},
-    rustSelf       = {link='Keyword'},
-    rustStorage    = {link='StorageClass'},
+    rustLifetime    = {fg=palette.B1},
+    rustSelf        = {link='Keyword'},
+    rustStorage     = {link='StorageClass'},
     ['@lsp.type.struct.rust']     = {fg=palette.B1},
     ['@lsp.type.variable.rust']   = {fg=palette.C4},
     ['@lsp.type.enumMember.rust'] = {fg=palette.C2},
     ['@lsp.type.enum.rust']       = {fg=palette.C2},
     ['@lsp.type.parameter.rust']  = {fg=palette.C3},
+    rustDeriveTrait = {fg=palette.C1},
     ['@lsp.type.interface.rust']  = {fg=palette.C1},
 } end
 color.schemes.A.c = function(palette) return {
