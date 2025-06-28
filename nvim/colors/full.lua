@@ -5,17 +5,18 @@
 require("color").schemes.A.apply(
     {
         A1 = '#000000', -- black
+
         A2 = '#000810', -- blue
-        A3 = '#1c2c30', -- blue
-        A4 = '#4c5c64', -- blue
+        A3 = '#102430', -- blue
+        A4 = '#707068', -- brown
 
-        B1 = '#acaca8', -- white
-        B2 = '#908c58', -- gold
-        B3 = '#645c3c', -- brown
+        B1 = '#a4a4a0', -- white
+        B2 = '#3c5c6c', -- blue
+        B3 = '#6c5c30', -- brown
 
-        C1 = '#7070ac', -- purple
-        C2 = '#8cac50', -- green
-        C3 = '#ac8098', -- pink
-        C4 = '#6098ac', -- blue
+        C1 = '#706cac', -- purple
+        C4 = '#7c9c38', -- chartreuse
+        C2 = '#ac747c', -- pink
+        C3 = '#5c9cac', -- cyan
     }
 )
