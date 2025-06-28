@@ -4,4 +4,4 @@ require("keymap")
 
 require("lsp")
 
-vim.cmd 'colo full'
+vim.cmd 'colo ocean'

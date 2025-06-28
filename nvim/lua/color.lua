@@ -33,6 +33,21 @@ color.palettes.twofivesix = {
     C2  = '#af87af', -- pink
     C4  = '#8787d7', -- purple
 }
+color.palettes.ocean = {
+    A1 = '#000000', -- black
+    A2 = '#001018', -- blue
+    A3 = '#203838', -- blue
+    A4 = '#586060', -- blue
+
+    B1 = '#b0b0a8', -- white
+    B2 = '#a8a880', -- gold
+    B3 = '#584808', -- brown
+
+    C1  = '#88a048', -- green
+    C2  = '#b07090', -- pink
+    C3  = '#70a0b0', -- blue
+    C4  = '#6060b0', -- purple
+}
 color.palettes.full = {
     A1 = '#000000', -- black
     A2 = '#070a0f', -- blue
