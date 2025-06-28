@@ -10,12 +10,12 @@ require("color").schemes.A.apply(
         A4 = '#4c5c64', -- blue
 
         B1 = '#acaca8', -- white
-        B2 = '#a09c68', -- gold
+        B2 = '#908c58', -- gold
         B3 = '#645c3c', -- brown
 
-        C2 = '#8cac50', -- green
-        C4 = '#6098ac', -- blue
         C1 = '#7070ac', -- purple
+        C2 = '#8cac50', -- green
         C3 = '#ac8098', -- pink
+        C4 = '#6098ac', -- blue
     }
 )

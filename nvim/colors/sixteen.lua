@@ -10,9 +10,9 @@ require("color").schemes.A.apply(
         B2 = '#ffff00', -- yellow
         B3 = '#808000', -- brown
 
-        C1  = '#00ff00', -- green
-        C2  = '#ff00ff', -- purple
-        C3  = '#00ffff', -- blue
-        C4  = '#ff0000', -- red
+        C1  = '#ff00ff', -- purple
+        C2  = '#00ff00', -- green
+        C3  = '#ff0000', -- red
+        C4  = '#00ffff', -- blue
     }
 )

@@ -20,7 +20,7 @@ color.schemes.A.syntax = function(palette) return {
     xmlString      = {link='Comment'},
     String         = {fg=palette.A4}, 
     Character      = {link='String'}, 
-    Special        = {link='String'},
+    Special        = {fg=palette.B2},
     SpecialChar    = {link='Special'}, 
     SpecialComment = {link='Special'}, 
     Debug          = {link='Special'}, 
