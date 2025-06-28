@@ -1,7 +1,5 @@
 require("options")
-
 require("keymap")
-
 require("lsp")
 
-vim.cmd 'colo ocean'
+vim.cmd 'colo full'

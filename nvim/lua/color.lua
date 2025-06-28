@@ -1,67 +1,6 @@
 local color = {
     util     = {},
-    palettes = {},
     schemes  = {A = {}},
-}
-color.palettes.sixteen = {
-    A1 = '#000000', -- black
-    A2 = '#000000', -- grey
-    A3 = '#808080', -- grey
-    A4 = '#c0c0c0', -- grey
-
-    B1 = '#ffffff', -- white
-    B2 = '#ffff00', -- yellow
-    B3 = '#808000', -- brown
-
-    C1  = '#00ff00', -- green
-    C2  = '#ff00ff', -- purple
-    C3  = '#00ffff', -- blue
-    C4  = '#ff0000', -- red
-}
-color.palettes.twofivesix = {
-    A1 = '#000000', -- black
-    A2 = '#080808', -- grey
-    A3 = '#1c1c1c', -- grey
-    A4 = '#808080', -- grey
-
-    B1 = '#d0d0d0', -- white
-    B2 = '#afaf87', -- yellow
-    B3 = '#875f00', -- brown
-
-    C1  = '#87af5f', -- green
-    C3  = '#5fafd7', -- blue
-    C2  = '#af87af', -- pink
-    C4  = '#8787d7', -- purple
-}
-color.palettes.ocean = {
-    A1 = '#000000', -- black
-    A2 = '#001018', -- blue
-    A3 = '#203838', -- blue
-    A4 = '#586060', -- blue
-
-    B1 = '#b0b0a8', -- white
-    B2 = '#a8a880', -- gold
-    B3 = '#584808', -- brown
-
-    C1  = '#88a048', -- green
-    C2  = '#b07090', -- pink
-    C3  = '#70a0b0', -- blue
-    C4  = '#6060b0', -- purple
-}
-color.palettes.full = {
-    A1 = '#000000', -- black
-    A2 = '#070a0f', -- blue
-    A3 = '#171a1f', -- blue
-    A4 = '#575f5f', -- blue
-
-    B1 = '#c0c0b8', -- white
-    B2 = '#a09878', -- gold
-    B3 = '#685840', -- brown
-
-    C1  = '#88a048', -- green
-    C2  = '#b080a0', -- pink
-    C3  = '#70a0b0', -- blue
-    C4  = '#8080c8', -- purple
 }
 color.schemes.A.syntax = function(palette) return {
     Normal         = {fg=palette.B1, bg=palette.A2}, 
