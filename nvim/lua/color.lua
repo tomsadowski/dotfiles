@@ -3,22 +3,50 @@ local color = {
     palettes = {},
     schemes  = {A = {}},
 }
+color.palettes.sixteen = {
+    A1 = '#000000', -- black
+    A2 = '#000000', -- grey
+    A3 = '#808080', -- grey
+    A4 = '#c0c0c0', -- grey
+
+    B1 = '#ffffff', -- white
+    B2 = '#ffff00', -- yellow
+    B3 = '#808000', -- brown
+
+    C1  = '#00ff00', -- green
+    C2  = '#ff00ff', -- purple
+    C3  = '#00ffff', -- blue
+    C4  = '#ff0000', -- red
+}
 color.palettes.twofivesix = {
     A1 = '#000000', -- black
     A2 = '#080808', -- grey
     A3 = '#1c1c1c', -- grey
     A4 = '#808080', -- grey
-    A5 = '#5f5f5f', -- grey
 
     B1 = '#d0d0d0', -- white
-
     B2 = '#afaf87', -- yellow
     B3 = '#875f00', -- brown
 
     C1  = '#87af5f', -- green
-    C2  = '#af87af', -- pink
     C3  = '#5fafd7', -- blue
+    C2  = '#af87af', -- pink
     C4  = '#8787d7', -- purple
+}
+color.palettes.mountain = {
+    A1 = '#000000', -- black
+    A2 = '#070a0f', -- blue
+    A3 = '#171a1f', -- blue
+    A4 = '#575f5f', -- blue
+
+    B1 = '#c0c0b8', -- white
+    B2 = '#a09878', -- gold
+    B3 = '#685840', -- brown
+
+    C1  = '#88a048', -- green
+    C3  = '#70a0b0', -- blue
+    C2  = '#b080a0', -- pink
+    C4  = '#8080c8', -- purple
 }
 color.palettes.primary = {
     A1 = '#000000', -- black
@@ -48,21 +76,6 @@ color.palettes.ocean = {
     C1  = '#7077af', -- purp
     C2  = '#af7770', -- salmon
     C3  = '#af7770', -- salmon
-}
-color.palettes.mountain = {
-    A1 = '#000000', -- brown
-    A2 = '#070a0f', -- yule
-    A3 = '#171a1f', -- light blue
-    A4 = '#575f5f', -- greyyy
-
-    B1 = '#bfb790', -- white
-    B2 = '#afa750', -- yeller
-    B3 = '#6f6710', -- dark green
-
-    C1  = '#80a020', -- green
-    C2  = '#af7770', -- salmon
-    C3  = '#70a0a0', -- blue
-    C4  = '#70779f', -- proopl
 }
 color.palettes.fountain = {
     A1 = '#000000', -- black
@@ -208,18 +221,18 @@ color.schemes.A.ui = function(palette) return {
     LineNr               = {fg=palette.A3}, 
     LineNrAbove          = {link='LineNr'}, 
     LineNrBelow          = {link='LineNr'}, 
-    Cursor               = {fg=BG, bg=FG}, 
+    Cursor               = {fg=palette.B1, bg=palette.A1}, 
     CursorLine           = {underline=true}, 
     CursorLineNr         = {bold=true}, 
     CursorLineSign       = {link='SignColumn'}, 
     CursorLineFold       = {link='FoldColumn'}, 
     CursorIM             = {link='Cursor'}, 
-    lCursor              = {fg='bg', bg='fg'}, 
-    TermCursor           = {reverse=true}, 
+    lCursor              = {link='Cursor'}, 
+    TermCursor           = {link='Cursor'}, 
     Visual               = {bg=palette.A3}, 
     VisualNOS            = {link='Visual'}, 
-    Search               = {fg=palette.B1, bg=palette.A1},
-    CurSearch            = {fg=palette.A2, bg=palette.B1}, 
+    Search               = {fg=palette.B1, bg=palette.A3},
+    CurSearch            = {link='Search'}, 
     IncSearch            = {link='CurSearch'}, 
     Substitute           = {link='Search'}, 
     StatusLine           = {link='Normal'},
@@ -235,7 +248,7 @@ color.schemes.A.ui = function(palette) return {
     TabLineFill          = {link='TabLine'}, 
     TabLineSel           = {bold=true}, 
     CursorColumn         = {bg=palette.A2}, 
-    ColorColumn          = {bg=palette.A3, reverse=true}, 
+    ColorColumn          = {bg=palette.A3}, 
     SignColumn           = {fg=palette.A3}, 
     FoldColumn           = {link='SignColumn'}, 
     WinSeparator         = {link='Normal'}, 
