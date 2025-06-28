@@ -4,4 +4,4 @@ require("keymap")
 
 require("lsp")
 
-vim.cmd 'colo twofivesix'
+vim.cmd 'colo full'

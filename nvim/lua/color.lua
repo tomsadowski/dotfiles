@@ -33,7 +33,7 @@ color.palettes.twofivesix = {
     C2  = '#af87af', -- pink
     C4  = '#8787d7', -- purple
 }
-color.palettes.mountain = {
+color.palettes.full = {
     A1 = '#000000', -- black
     A2 = '#070a0f', -- blue
     A3 = '#171a1f', -- blue
@@ -44,53 +44,9 @@ color.palettes.mountain = {
     B3 = '#685840', -- brown
 
     C1  = '#88a048', -- green
-    C3  = '#70a0b0', -- blue
     C2  = '#b080a0', -- pink
+    C3  = '#70a0b0', -- blue
     C4  = '#8080c8', -- purple
-}
-color.palettes.primary = {
-    A1 = '#000000', -- black
-    A2 = '#070707', -- grey
-    A3 = '#171717', -- grey
-    A4 = '#575757', -- grey
-
-    B1 = '#bfbfbf', -- white
-    B2 = '#afaf50', -- yeller
-    B3 = '#6f6f10', -- brown
-
-    C1  = '#80a080', -- green
-    C2  = '#a77777', -- red
-    C3  = '#70a0a0', -- blue
-    C4  = '#907090', -- proopl
-}
-color.palettes.ocean = {
-    A1 = '#000000', -- brown
-    A2 = '#00171f', -- blue
-    A3 = '#10272f', -- light blue
-    A4 = '#676a6f', -- greyyy
-
-    B1 = '#cfc7a0', -- white
-    B2 = '#979f50', -- light green
-    B3 = '#7f7720', -- dark green
-
-    C1  = '#7077af', -- purp
-    C2  = '#af7770', -- salmon
-    C3  = '#af7770', -- salmon
-}
-color.palettes.fountain = {
-    A1 = '#000000', -- black
-    A2 = '#101012', -- grey
-    A3 = '#2e2e2e', -- grey
-    A4 = '#575a5f', -- greyyy
-
-    B1 = '#d9d0c0', -- white
-    B2 = '#b8a884', -- light brown
-    B3 = '#887744', -- brown
-
-    C1  = '#80a020', -- green
-    C2  = '#af7770', -- salmon
-    C3  = '#70a0a0', -- blue
-    C4  = '#80879f', -- proopl
 }
 color.schemes.A.syntax = function(palette) return {
     Normal         = {fg=palette.B1, bg=palette.A2}, 
