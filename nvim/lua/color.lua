@@ -30,7 +30,7 @@ color.schemes.A.syntax = function(palette) return {
     Define         = {link='Special'}, 
     Macro          = {link='Special'}, 
     PreCondit      = {link='Special'}, 
-    Keyword        = {fg=palette.B3, bold=true}, 
+    Keyword        = {fg=palette.B3}, 
     Conditional    = {link='Keyword'}, 
     Statement      = {link='Keyword'}, 
     Repeat         = {link='Keyword'}, 
