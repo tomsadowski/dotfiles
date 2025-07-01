@@ -13,4 +13,5 @@ local p1 = {
     C3 = '#808080', -- grey
     C4 = '#ffff00', -- yellow
 }
+
 require("color").schemes.A.apply(p1)
