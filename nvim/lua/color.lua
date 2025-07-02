@@ -18,7 +18,7 @@ color.schemes.A.syntax = function(palette) return {
     xmlTagName     = {link='Comment'},
     xmlEqual       = {link='Comment'},
     xmlString      = {link='Comment'},
-    String         = {fg=palette.B2}, 
+    String         = {fg=palette.B5}, 
     Character      = {link='String'}, 
     Special        = {fg=palette.B2},
     SpecialChar    = {link='Special'}, 
