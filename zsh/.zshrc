@@ -41,6 +41,8 @@ export QMK_HOME=$HOME/qmk_firmware
 alias eee="qmk flash -bl uf2-split-left"
 alias iii="qmk flash -bl uf2-split-right"
 
+alias sigdesk="signal-desktop --no-sandbox"
+
 # ls
 alias l="ls -lAtr" 
 alias ll="ls -l" 
