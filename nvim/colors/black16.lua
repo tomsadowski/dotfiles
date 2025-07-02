@@ -8,6 +8,7 @@ local p1 = {
     B1 = '#ffffff', -- white
     B2 = '#00ff00', -- lime
     B3 = '#808080', -- grey
+    B4 = '#ffff00', -- yellow
     C1 = '#00ff00', -- lime
     C2 = '#ff00ff', -- fuschia
     C3 = '#808080', -- grey

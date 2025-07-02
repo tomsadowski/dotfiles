@@ -102,6 +102,7 @@ color.schemes.A.rust = function(palette) return {
     rustStorage     = {link='StorageClass'},
     rustDeriveTrait = {fg=palette.C1},
     ['@lsp.type.struct.rust']     = {fg=palette.B1},
+    ['@lsp.type.const.rust']     = {fg=palette.B4},
     ['@lsp.type.selfTypeKeyword.rust']     = {link='Keyword'},
     ['@lsp.type.variable.rust']   = {fg=palette.C4},
     ['@lsp.type.enumMember.rust'] = {fg=palette.C2},
