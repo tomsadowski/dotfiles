@@ -9,8 +9,8 @@ local p1 = {
     B2 = '#44aadd', -- mild cyan
     B3 = '#6084a8', -- grey
 
-    B5 = '#a077ac', -- muted pink
-    B4 = '#cc77cc', -- pink
+    B5 = '#aa77aa', -- muted pink
+    B4 = '#aa77aa', -- muted pink
     C2 = '#ccbb60', -- fire
 
     C1 = '#9988dd', -- purple
