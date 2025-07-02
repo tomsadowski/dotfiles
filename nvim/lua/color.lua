@@ -12,7 +12,7 @@ color.schemes.A.syntax = function(palette) return {
     Number         = {link='Normal'}, 
     Float          = {link='Normal'}, 
     Constant       = {link='Normal'}, 
-    Comment        = {fg=palette.C3}, 
+    Comment        = {fg=palette.B6}, 
     xmlTag         = {fg=palette.C1},
     xmlAttrib      = {link='Comment'},
     xmlTagName     = {link='Comment'},
