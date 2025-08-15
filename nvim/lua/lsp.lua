@@ -1,10 +1,15 @@
 
 -- LSP
 -- * executables for Language Servers must be on $PATH
+-- * vim.lsp.get_clients()[1].server_capabilities
+
 vim.api.nvim_create_autocmd(
     {'BufEnter', 'BufWinEnter'}, 
     {
-        pattern = {'*.c', '*.C', '*.h', '*.H', '*.cpp', '*.CPP'},
+        pattern = {
+            '*.c', '*.C', '*.h', '*.H', 
+            '*.cpp', '*.CPP', '*.hpp', '*.HPP'
+        },
         callback = function(args) 
             vim.lsp.start({
                     name = 'clang-lsp',
@@ -18,8 +23,6 @@ vim.api.nvim_create_autocmd(
         end
     }
 )
-
--- vim.lsp.get_clients()[1].server_capabilities
 vim.api.nvim_create_autocmd(
     'FileType', 
     {
@@ -31,6 +34,23 @@ vim.api.nvim_create_autocmd(
                     root_dir = vim.fs.root(
                         args.buf, 
                         {'Cargo.toml'}
+                    )
+                }
+            )
+        end
+    }
+)
+vim.api.nvim_create_autocmd(
+    {'BufEnter', 'BufWinEnter'}, 
+    {
+        pattern  = '*.cs',
+        callback = function(args) 
+            vim.lsp.start({
+                    name = 'csharp-lsp',
+                    cmd = {'csharp-ls'},
+                    root_dir = vim.fs.root(
+                        args.buf, 
+                        {'.git'}
                     )
                 }
             )

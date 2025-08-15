@@ -1,27 +1,77 @@
--- black16
-
-local p1 = {
-    A1 = '#000000', -- black
-    A2 = '#000000', -- black
-
-    B1 = '#ffffff', -- white
-
-    C3 = '#808080', -- grey
-    A3 = '#808080', -- grey
-    B3 = '#808080', -- grey
-
-    A4 = '#ff00ff', -- fuschia
-    C1 = '#ff00ff', -- fuschia
-
-    B2 = '#00ffff', -- cyan
-    C4 = '#00ffff', -- cyan
-
-    B6 = '#00ff00', -- green
-    
-    B5 = '#ff0000', -- red
-    B4 = '#ff0000', -- red
-
-    C2 = '#ffff00', -- yellow
-}
-
-require("color").schemes.A.apply(p1)
+require("color").apply({
+    BLACK = {
+        '#000000',
+        '#000000',
+        '#808080',
+    },
+    DARK_GREY = {
+        '#808080',
+        '#808080',
+        '#808080',
+    },
+    GREY = {
+        '#c0c0c0',
+        '#c0c0c0',
+        '#c0c0c0',
+    },
+    WHITE = {
+        '#ffffff',
+        '#ffffff',
+        '#ffffff',
+    },
+    DARK_RED = {
+        '#800000',
+        '#800000',
+        '#800000',
+    }, 
+    RED = {
+        '#ff0000',
+        '#ff0000',
+        '#ff0000',
+    },
+    BROWN = {
+        '#808000',
+        '#808000',
+        '#808000',
+    }, 
+    YELLOW = {
+        '#ffff00',
+        '#ffff00',
+        '#ffff00',
+    },
+    DARK_GREEN = {
+        "#008000",
+        "#008000",
+        "#008000",
+    },
+    GREEN = {
+        '#00ff00',
+        '#00ff00',
+        '#00ff00',
+    },
+    DARK_CYAN = {
+        '#008080',
+        '#008080',
+        '#008080',
+    }, 
+    CYAN = {
+        '#00ffff',
+        '#00ffff',
+        '#00ffff',
+    },
+    DARK_BLUE = {
+        '#000080',
+        '#000080',
+        '#000080',
+    }, 
+    BLUE = {
+        '#000080',
+        '#000080',
+        '#000080',
+    }, 
+    MAGENTA = {
+        '#ff00ff',
+        '#ff00ff',
+        '#ff00ff',
+    },
+})

@@ -1,297 +1,614 @@
-local color = {
-    util     = {},
-    schemes  = {A = {}},
-}
-color.schemes.A.syntax = function(palette) return {
-    Normal         = {fg=palette.B1, bg=palette.A2}, 
-    Ignore         = {link='Normal'}, 
-    Function       = {link='Normal'}, 
-    Identifier     = {link='Normal'}, 
-    Delimiter      = {link='Normal'}, 
-    Operator       = {link='Normal'}, 
-    Number         = {link='Normal'}, 
-    Float          = {link='Normal'}, 
-    Constant       = {link='Normal'}, 
-    Comment        = {fg=palette.B6}, 
-    xmlTag         = {fg=palette.C1},
-    xmlAttrib      = {link='Comment'},
-    xmlTagName     = {link='Comment'},
-    xmlEqual       = {link='Comment'},
-    xmlString      = {link='Comment'},
-    String         = {fg=palette.B5}, 
-    Character      = {link='String'}, 
-    Special        = {fg=palette.B2},
-    SpecialChar    = {link='Special'}, 
-    SpecialComment = {link='Special'}, 
-    Debug          = {link='Special'}, 
-    Tag            = {link='Special'}, 
-    PreProc        = {link='Special'},
-    Include        = {link='Special'}, 
-    Define         = {link='Special'}, 
-    Macro          = {link='Special'}, 
-    PreCondit      = {link='Special'}, 
-    Keyword        = {fg=palette.B3}, 
-    Conditional    = {link='Keyword'}, 
-    Statement      = {link='Keyword'}, 
-    Repeat         = {link='Keyword'}, 
-    Exception      = {link='Keyword'}, 
-    Structure      = {link='Keyword'}, 
-    Boolean        = {link='Keyword'}, 
-    StorageClass   = {link='Keyword'}, 
-    Label          = {fg=palette.B3},
-    Type           = {fg=palette.B3}, 
-    Typedef        = {link='Type'}, 
-    Error          = {fg=palette.B1, bg=palette.A3}, 
-    Todo           = {fg=palette.B1}, 
-    ['@diff.plus']            = {link='Added'}, 
-    ['@diff.minus']           = {link='Removed'}, 
-    ['@diff.delta']           = {link='Changed'}, 
-    ['@module']               = {fg=palette.B2}, 
-    ['@module.builtin']       = {link='Special'}, 
-    ['@keyword']              = {link='Keyword'}, 
-    ['@label']                = {link='Label'}, 
-    ['@type']                 = {link='Type'}, 
-    ['@type.builtin']         = {link='@type'}, 
-    ['@boolean']              = {link='Boolean'}, 
-    ['@number']               = {link='Number'}, 
-    ['@number.float']         = {link='Float'}, 
-    ['@constant']             = {link='Constant'}, 
-    ['@constant.builtin']     = {link='@constant'}, 
-    ['@string']               = {link='String'}, 
-    ['@string.regexp']        = {link='@string'}, 
-    ['@string.escape']        = {link='@string'}, 
-    ['@string.special']       = {link='@string'}, 
-    ['@string.special.url']   = {link='@string'}, 
-    ['@character']            = {link='Character'}, 
-    ['@character.special']    = {link='Character'}, 
-    ['@function']             = {link='Function'}, 
-    ['@function.method']      = {link='@function'}, 
-    ['@function.builtin']     = {link='@function'}, 
-    ['@markup']               = {fg=palette.C1}, 
-    ['@markup.link']          = {link='@markup'}, 
-    ['@markup.strong']        = {link='@markup'}, 
-    ['@markup.italic']        = {link='@markup'}, 
-    ['@markup.heading']       = {link='@markup'}, 
-    ['@markup.underline']     = {link='@markup'}, 
-    ['@markup.strikethrough'] = {link='@markup'}, 
-    ['@punctuation']          = {link='Delimiter'},
-    ['@punctuation.special']  = {link='@punctuation'}, 
-    ['@operator']             = {link='Operator'}, 
-    ['@property']             = {link='Identifier'}, 
-    ['@constructor']          = {link='Normal'}, 
-    ['@comment']              = {link='Comment'}, 
-    ['@comment.warning']      = {link='@comment'}, 
-    ['@comment.error']        = {link='@comment'}, 
-    ['@comment.note']         = {link='@comment'}, 
-    ['@comment.todo']         = {link='@comment'}, 
-    ['@tag']                  = {link='Tag'}, 
-    ['@tag.builtin']          = {link='Tag'}, 
-    ['@attribute']            = {link='PreProc'}, 
-    ['@attribute.builtin']    = {link='@attribute'}, 
-    ['@variable']             = {link='Normal'}, 
-    ['@variable.builtin']     = {link='@variable'}, 
-    ['@variable.parameter']   = {link='@variable'}, 
-    ['@variable.parameter.builtin'] = {link='@parameter'}, 
-} end
-color.schemes.A.rust = function(palette) return {
-    rustSigil       = {fg=palette.B1},
-    rustFoldBraces  = {fg=palette.B1},
-    rustModPath     = {fg=palette.B1},
-    rustLifetime    = {fg=palette.B1},
-    rustSelf        = {link='Keyword'},
-    rustStorage     = {link='StorageClass'},
-    rustDeriveTrait = {fg=palette.C1},
-    ['@lsp.type.struct.rust']     = {fg=palette.B1},
-    ['@lsp.type.const.rust']     = {fg=palette.B4},
-    ['@lsp.type.selfTypeKeyword.rust']     = {link='Keyword'},
-    ['@lsp.type.variable.rust']   = {fg=palette.C4},
-    ['@lsp.type.enumMember.rust'] = {fg=palette.C2},
-    ['@lsp.type.enum.rust']       = {fg=palette.C2},
-    ['@lsp.type.parameter.rust']  = {fg=palette.A4},
-    ['@lsp.type.builtinType.rust']  = {link='Keyword'},
-    ['@lsp.type.interface.rust']  = {fg=palette.C1},
-} end
-color.schemes.A.c = function(palette) return {
+local M = {}
+
+M.BLACK = 0
+M.DARK_BLUE = 1
+M.DARK_GREEN = 2
+M.DARK_CYAN = 3 
+M.DARK_RED = 4
+M.DARK_MAGENTA = 5
+M.BROWN = 6
+M.GREY = 7 
+M.DARK_GREY = 8
+M.BLUE = 9
+M.GREEN = 10
+M.CYAN = 11
+M.RED = 12
+M.MAGENTA = 13
+M.YELLOW = 14
+M.WHITE = 15
+
+M.scheme = function(p) return {
+    Normal = {
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+        ctermbg = M.BLACK,
+        bg      = p.BLACK[1],
+    }, 
+    Number = {
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+    }, 
+    Float = {
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+    }, 
+    Ignore = {
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+    }, 
+    Function = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[1],
+    }, 
+    Statement = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Delimiter = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Operator = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Conditional = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Repeat = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Exception = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Boolean = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Type = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Label = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    },
+    Structure = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    StorageClass = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Typedef = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Keyword = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    String = {
+        ctermfg = M.RED,
+        fg      = p.RED[1],
+    }, 
+    Character = {
+        ctermfg = M.RED,
+        fg      = p.RED[1],
+    }, 
+    Constant = {
+        ctermfg = M.RED,
+        fg      = p.RED[1],
+    }, 
+    Error = {
+        ctermfg = M.RED, 
+        fg      = p.RED[1], 
+        ctermbg = M.GREY,
+        bg      = p.GREY[3],
+    }, 
+    Special = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    },
+    PreProc = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    },
+    Include = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Define = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Macro = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Debug = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    SpecialChar = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    SpecialComment = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Tag = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    },
+    Comment = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    }, 
+    xmlTagName = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    },
+    xmlEqual = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    },
+    xmlString = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    },
+    Todo = {
+        bold    = true,
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    }, 
+    Identifier = {
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[1],
+    }, 
+    PreCondit = {
+        ctermfg = M.MAGENTA,
+        fg      = p.MAGENTA[1],
+    }, 
+    xmlAttrib = {
+        ctermfg = M.MAGENTA,
+        fg      = p.MAGENTA[1],
+    },
+
+    -- UI
+    Title = {
+        bold    = true,
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+    }, 
+    Cursor = {
+        ctermfg = M.WHITE,
+        fg      = p.WHITE[1], 
+        ctermbg = M.BLACK,
+        bg      = p.BLACK[2],
+    }, 
+    Search = {
+        ctermfg = M.WHITE,
+        fg      = p.WHITE[1], 
+        ctermbg = M.GREY,
+        bg      = p.GREY[3],
+    },
+    DiffAdd = {
+        ctermbg = M.WHITE, 
+        fg      = p.WHITE[1], 
+        ctermbg = M.GREY, 
+        bg      = p.GREY[3],
+    }, 
+    DiffChange = {
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+        ctermbg = M.GREY, 
+        bg      = p.GREY[3],
+    }, 
+    DiffText = {
+        ctermfg = M.WHITE, 
+        fg      = p.WHITE[1], 
+        ctermbg = M.GREY, 
+        bg      = p.GREY[3],
+    }, 
+    LineNr = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    Visual = {
+        ctermbg = M.DARK_GREY,
+        bg      = p.DARK_GREY[1],
+    }, 
+    StatusLineNC = {
+        bold      = true, 
+        underline = true,
+        ctermfg   = M.GREY, 
+        fg        = p.GREY[3], 
+        ctermbg   = M.BLACK, 
+        bg        = p.BLACK[2], 
+    }, 
+    ColorColumn = {
+        ctermbg = M.GREY, 
+        bg      = p.GREY[3],
+    }, 
+    SignColumn = {
+        ctermfg = M.GREY, 
+        fg      = p.GREY[3],
+    }, 
+    WinBar = {
+        bold    = true,
+        ctermfg = M.GREY, 
+        fg      = p.GREY[3], 
+        ctermbg = M.CYAN, 
+        bg      = p.CYAN[2], 
+    }, 
+    WinBarNC = {
+        bold    = true,
+        ctermfg = M.GREY, 
+        fg      = p.GREY[3], 
+        ctermbg = M.CYAN, 
+        bg      = p.CYAN[2], 
+    }, 
+    Added = {
+        ctermfg = M.GREY, 
+        fg      = p.GREY[3],
+    }, 
+    Changed = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Directory = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    Conceal = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    FloatShadow = {
+        blend   = 80,
+        ctermbg = M.GREY,
+        bg      = p.GREY[3], 
+    }, 
+    FloatShadowThrough = {
+        blend   = 100,
+        ctermbg = M.GREY,
+        bg      = p.GREY[3], 
+    }, 
+    ModeMsg = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    MatchParen = {
+        bold      = true, 
+        underline = true,
+        ctermbg   = M.GREY,
+        bg        = p.GREY[3], 
+    }, 
+    MoreMsg = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    PmenuThumb = {
+        ctermbg = M.GREY,
+        bg      = p.GREY[3],
+    }, 
+    Question = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    QuickFixLine = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    RedrawDebugClear = {
+        ctermbg = M.GREY,
+        bg      = p.GREY[3],
+    }, 
+    RedrawDebugComposed = {
+        ctermbg = M.GREY,
+        bg      = p.GREY[3],
+    }, 
+    RedrawDebugRecompose = {
+        ctermbg = M.GREY,
+        bg      = p.GREY[3],
+    }, 
+    SpecialKey = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    NonText = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    DiagnosticInfo = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    DiagnosticHint = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    DiagnosticOk = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[3],
+    }, 
+    CursorColumn = {
+        ctermbg = M.BLACK, 
+        bg      = p.BLACK[2],
+    }, 
+    NormalFloat = {
+        ctermbg = M.BLACK,
+        bg      = p.BLACK[2],
+    },
+    MsgSeparator = {
+        ctermfg = M.BLACK, 
+        fg      = p.BLACK[2], 
+        ctermbg = M.WHITE, 
+        bg      = p.WHITE[1],
+    }, 
+    Pmenu = {
+        reverse = true,
+        ctermbg = M.BLACK, 
+        bg      = p.BLACK[2], 
+    }, 
+    Folded = {
+        ctermfg = M.CYAN, 
+        fg      = p.CYAN[2], 
+        ctermbg = M.BLACK,
+        bg      = p.BLACK[2],
+    }, 
+    Removed = {
+        ctermfg = M.MAGENTA, 
+        fg      = p.MAGENTA[2],
+    }, 
+    WarningMsg = {
+        ctermfg = M.MAGENTA, 
+        fg      = p.MAGENTA[2],
+    }, 
+    DiagnosticError = {
+        ctermfg = M.MAGENTA, 
+        fg      = p.MAGENTA[2],
+    }, 
+    DiagnosticWarn = {
+        ctermfg = M.MAGENTA, 
+        fg      = p.MAGENTA[2],
+    }, 
+    DiffDelete = {
+        bold    = true,
+        ctermfg = M.MAGENTA, 
+        fg      = p.MAGENTA[2], 
+    }, 
+    ErrorMsg = {
+        ctermfg = M.MAGENTA,
+        fg      = p.MAGENTA[2],
+    }, 
+
+    SpellLocal = {
+        undercurl = true,
+    }, 
+    SpellRare = {
+        undercurl = true,
+    }, 
+    DiagnosticUnderlineInfo = {
+        underline = true,
+    }, 
+    DiagnosticUnderlineOk = {
+        underline = true,
+    }, 
+    DiagnosticUnderlineHint = {
+        underline = true,
+    }, 
+    SpellBad = {
+        undercurl = true,
+    }, 
+    SpellCap = {
+        undercurl = true,
+    }, 
+    DiagnosticDeprecated = {
+        strikethrough = true,
+    }, 
+    DiagnosticUnderlineError = {
+        underline = true,
+    }, 
+    DiagnosticUnderlineWarn = {
+        underline = true,
+    }, 
+    PmenuSel = {
+        reverse   = true, 
+        underline = true, 
+        blend     = 0,
+    }, 
+    RedrawDebugNormal = {
+        reverse = true,
+    }, 
+    Underlined = {
+        underline = true,
+    }, 
+    CursorLine = {
+        underline = true,
+    }, 
+    CursorLineNr = {
+        bold = true,
+    }, 
+    TabLineSel = {
+        bold = true,
+    }, 
+
+    -- syntax
+    ['@module']                     = {link='Normal'}, 
+    ['@constructor']                = {link='Normal'}, 
+    ['@variable']                   = {link='Normal'}, 
+    ['@variable.builtin']           = {link='Normal'}, 
+    ['@variable.parameter']         = {link='Normal'}, 
+    ['@variable.parameter.builtin'] = {link='Normal'}, 
+    ['@markup']                     = {link='Macro'}, 
+    ['@markup.link']                = {link='Macro'}, 
+    ['@markup.strong']              = {link='Macro'}, 
+    ['@markup.italic']              = {link='Macro'}, 
+    ['@markup.heading']             = {link='Macro'}, 
+    ['@markup.underline']           = {link='Macro'}, 
+    ['@markup.strikethrough']       = {link='Macro'}, 
+    ['@type']                       = {link='Type'}, 
+    ['@type.builtin']               = {link='Type'}, 
+    ['@constant']                   = {link='Constant'}, 
+    ['@constant.builtin']           = {link='Constant'}, 
+    ['@string']                     = {link='String'}, 
+    ['@string.regexp']              = {link='String'}, 
+    ['@string.escape']              = {link='String'}, 
+    ['@string.special']             = {link='String'}, 
+    ['@string.special.url']         = {link='String'}, 
+    ['@character']                  = {link='Character'}, 
+    ['@character.special']          = {link='Character'}, 
+    ['@function']                   = {link='Function'}, 
+    ['@function.method']            = {link='Function'}, 
+    ['@function.builtin']           = {link='Function'}, 
+    ['@punctuation']                = {link='Delimiter'},
+    ['@punctuation.special']        = {link='Delimiter'}, 
+    ['@comment']                    = {link='Comment'}, 
+    ['@comment.warning']            = {link='Comment'}, 
+    ['@comment.error']              = {link='Comment'}, 
+    ['@comment.note']               = {link='Comment'}, 
+    ['@comment.todo']               = {link='Comment'}, 
+    ['@tag']                        = {link='Tag'}, 
+    ['@tag.builtin']                = {link='Tag'}, 
+    ['@attribute']                  = {link='PreProc'}, 
+    ['@attribute.builtin']          = {link='PreProc'}, 
+    ['@module.builtin']             = {link='Special'}, 
+    ['@keyword']                    = {link='Keyword'}, 
+    ['@label']                      = {link='Label'}, 
+    ['@boolean']                    = {link='Boolean'}, 
+    ['@number']                     = {link='Number'}, 
+    ['@number.float']               = {link='Float'}, 
+    ['@property']                   = {link='Identifier'}, 
+    ['@operator']                   = {link='Operator'}, 
+    ['@diff.plus']                  = {link='Added'}, 
+    ['@diff.minus']                 = {link='Removed'}, 
+    ['@diff.delta']                 = {link='Changed'}, 
+    -- clang
     cType         = {link='Type'},
     cTypeDef      = {link='Type'},
     cFormat       = {link='Special'},
     cStorageClass = {link='StorageClass'},
-} end
-color.schemes.A.csharp = function(palette) return {
-    csClassType              = {fg=palette.B1},
-    csGeneric                = {fg=palette.B2},
-    csGenericBraces          = {fg=palette.B1},
-    csXmlTag                 = {fg=palette.C2},
-    csSpecialChar            = {fg=palette.C1},
-    csInterpolation          = {link='Special'},
-    csInterpolationDelimiter = {fg=palette.C1},
-    csType                   = {link='Type'},
-    csModifier               = {link='Keyword'},
-    csAccessModifier         = {link='Keyword'},
-    csClass                  = {link='Keyword'},
-    csStorage                = {link='StorageClass'},
-} end
-color.schemes.A.ui = function(palette) return {
-    LineNr               = {fg=palette.A3}, 
-    LineNrAbove          = {link='LineNr'}, 
-    LineNrBelow          = {link='LineNr'}, 
-    Cursor               = {fg=palette.B1, bg=palette.A1}, 
-    CursorLine           = {underline=true}, 
-    CursorLineNr         = {bold=true}, 
-    CursorLineSign       = {link='SignColumn'}, 
-    CursorLineFold       = {link='FoldColumn'}, 
-    CursorIM             = {link='Cursor'}, 
-    lCursor              = {link='Cursor'}, 
-    TermCursor           = {link='Cursor'}, 
-    Visual               = {bg=palette.A3}, 
-    VisualNOS            = {link='Visual'}, 
-    Search               = {fg=palette.B1, bg=palette.A3},
-    CurSearch            = {link='Search'}, 
-    IncSearch            = {link='CurSearch'}, 
-    Substitute           = {link='Search'}, 
-    StatusLine           = {link='Normal'},
-    StatusLineTerm       = {link='StatusLine'}, 
-    StatusLineNC         = {
-        fg=palette.B3, 
-        bg=palette.A2, 
-        bold=true, 
-        underline=true
-    }, 
-    StatusLineTermNC     = {link='StatusLineNC'}, 
-    TabLine              = {link='StatusLineNC'}, 
-    TabLineFill          = {link='TabLine'}, 
-    TabLineSel           = {bold=true}, 
-    CursorColumn         = {bg=palette.A2}, 
-    ColorColumn          = {bg=palette.A3}, 
-    SignColumn           = {fg=palette.A3}, 
-    FoldColumn           = {link='SignColumn'}, 
-    WinSeparator         = {link='Normal'}, 
-    VertSplit            = {link='WinSeparator'}, 
-    WinBar               = {
-        fg=palette.B3, 
-        bg=palette.B2, 
-        bold=true
-    }, 
-    WinBarNC             = {
-        fg=palette.B3, 
-        bg=palette.B2, 
-        bold=true
-    }, 
-    Added                = {fg=palette.B3}, 
-    DiffAdd              = {fg=palette.B1, bg=palette.A3}, 
-    Changed              = {fg=palette.B3}, 
-    DiffChange           = {fg=palette.B1, bg=palette.A3}, 
-    DiffDelete           = {fg=palette.C1, bold=true}, 
-    DiffText             = {fg=palette.B1, bg=palette.A3}, 
-    Directory            = {fg=palette.B3}, 
-    Conceal              = {fg=palette.A3}, 
-    ErrorMsg             = {fg=palette.C1}, 
-    FloatShadow          = {bg=palette.A3, blend=80}, 
-    FloatShadowThrough   = {bg=palette.A3, blend=100}, 
-    Folded               = {fg=palette.B2, bg=palette.A1}, 
-    MatchParen           = {
-        bg=palette.A3, 
-        bold=true, 
-        underline=true
-    }, 
-    ModeMsg              = {fg=palette.B3}, 
-    MoreMsg              = {fg=palette.B3}, 
-    PmenuThumb           = {bg=palette.A3}, 
-    Question             = {fg=palette.B3}, 
-    QuickFixLine         = {fg=palette.B3}, 
-    RedrawDebugClear     = {bg=palette.A3}, 
-    RedrawDebugComposed  = {bg=palette.A3}, 
-    RedrawDebugRecompose = {bg=palette.A3}, 
-    Removed              = {fg=palette.C1}, 
-    SpecialKey           = {fg=palette.A3}, 
-    SpellBad             = {sp=palette.C1, undercurl=true}, 
-    SpellCap             = {sp=palette.C1, undercurl=true}, 
-    SpellLocal           = {sp=palette.B3, undercurl=true}, 
-    SpellRare            = {sp=palette.B3, undercurl=true}, 
-    WarningMsg           = {fg=palette.C1}, 
-    RedrawDebugNormal    = {reverse=true}, 
-    Underlined           = {underline=true}, 
-    NonText              = {fg=palette.A3}, 
-    EndOfBuffer          = {link='NonText'}, 
-    Whitespace           = {link='NonText'}, 
-    LspInlayHint         = {link='NonText'}, 
-    LspCodeLens          = {link='NonText'}, 
-    SnippetTabstop       = {link='Visual'}, 
-    LspReferenceText     = {link='Visual'}, 
-    LspReferenceRead     = {link='LspReferenceText'}, 
-    LspReferenceWrite    = {link='LspReferenceText'}, 
+    -- rust
+    rustSigil                          = {link='Normal'},
+    rustFoldBraces                     = {link='Normal'},
+    rustModPath                        = {link='Normal'},
+    rustLifetime                       = {link='Normal'},
+    ['@lsp.type.struct.rust']          = {link='Normal'},
+    ['@lsp.type.enumMember.rust']      = {link='Special'},
+    ['@lsp.type.enum.rust']            = {link='Special'},
+    rustSelf                           = {link='Keyword'},
+    ['@lsp.type.builtinType.rust']     = {link='Keyword'},
+    ['@lsp.type.selfTypeKeyword.rust'] = {link='Keyword'},
+    rustDeriveTrait                    = {link='PreCondit'},
+    ['@lsp.type.parameter.rust']       = {link='PreCondit'},
+    ['@lsp.type.interface.rust']       = {link='PreCondit'},
+    rustStorage                        = {link='StorageClass'},
+    ['@lsp.type.const.rust']           = {link='Constant'},
+    ['@lsp.type.variable.rust']        = {link='Identifier'},
+    -- csharp
+    csClassType                         = {link='Normal'},
+    csGenericBraces                     = {link='Normal'},
+    csXmlTag                            = {link='Special'},
+    ['@lsp.type.enumMember.cs']         = {link='Special'},
+    ['@lsp.type.enum.cs']               = {link='Special'},
+    csModifier                          = {link='Keyword'},
+    csAccessModifier                    = {link='Keyword'},
+    csClass                             = {link='Keyword'},
+    csNull                              = {link='Keyword'},
+    ['@lsp.typemod.class.static.cs']    = {link='Keyword'},
+    ['@lsp.type.keyword.cs']            = {link='Keyword'},
+    ['@lsp.type.builtinType.cs']        = {link='Keyword'},
+    ['@lsp.type.interface.cs']          = {link='Keyword'},
+    csSpecialChar                       = {link='PreCondit'},
+    csInterpolationDelimiter            = {link='PreCondit'},
+    ['@lsp.type.parameter.cs']          = {link='PreCondit'},
+    csType                              = {link='Type'},
+    csStorage                           = {link='StorageClass'},
+    ['@lsp.typemod.property.static.cs'] = {link='String'},
+    ['@lsp.type.method.cs']             = {link='Function'},
+    ['@lsp.type.variable.cs']           = {link='Identifier'},
+    ['@lsp.type.const.cs']              = {link='Constant'},
+
+    -- UI
+    WinSeparator                = {link='Normal'}, 
+    StatusLine                  = {link='Normal'},
+    LineNrAbove                 = {link='LineNr'}, 
+    LineNrBelow                 = {link='LineNr'}, 
+    CursorLineSign              = {link='SignColumn'}, 
+    CursorLineFold              = {link='FoldColumn'}, 
+    CursorIM                    = {link='Cursor'}, 
+    lCursor                     = {link='Cursor'}, 
+    TermCursor                  = {link='Cursor'}, 
+    CurSearch                   = {link='Search'}, 
+    Substitute                  = {link='Search'}, 
+    IncSearch                   = {link='CurSearch'}, 
+    StatusLineTerm              = {link='StatusLine'}, 
+    StatusLineTermNC            = {link='StatusLineNC'}, 
+    TabLine                     = {link='StatusLineNC'}, 
+    TabLineFill                 = {link='TabLine'}, 
+    FoldColumn                  = {link='SignColumn'}, 
+    VertSplit                   = {link='WinSeparator'}, 
+    EndOfBuffer                 = {link='NonText'}, 
+    Whitespace                  = {link='NonText'}, 
+    LspInlayHint                = {link='NonText'}, 
+    LspCodeLens                 = {link='NonText'}, 
+    VisualNOS                   = {link='Visual'}, 
+    SnippetTabstop              = {link='Visual'}, 
+    LspReferenceText            = {link='Visual'}, 
     LspSignatureActiveParameter = {link='Visual'}, 
-    LspCodeLensSeparator = {link='LspCodeLens'}, 
-    NormalFloat   = {bg=palette.A1},
-    FloatBorder   = {link='NormalFloat'}, 
-    Title         = {fg=palette.B1, bold=true}, 
-    FloatTitle    = {link='Title'}, 
-    FloatFooter   = {link='FloatTitle'}, 
-    MsgSeparator  = {fg=palette.A2, bg=palette.B1}, 
-    MsgArea       = {link='NONE'}, 
-    NormalNC      = {link='NONE'}, 
-    TermCursorNC  = {link='NONE'}, 
-    Pmenu         = {
-        bg=palette.A2, 
-        reverse=true
-    }, 
-    PmenuKind     = {link='Pmenu'}, 
-    PmenuExtra    = {link='Pmenu'}, 
-    PmenuMatch    = {link='Pmenu'}, 
-    PmenuSbar     = {link='Pmenu'}, 
-    PmenuSel      = {
-        reverse=true, 
-        underline=true, 
-        blend=0
-    }, 
-    PmenuExtraSel = {link='PmenuSel'}, 
-    PmenuKindSel  = {link='PmenuSel'}, 
-    PmenuMatchSel = {link='PmenuSel'}, 
-    WildMenu      = {link='PmenuSel'}, 
-    DiagnosticDeprecated       = {sp=palette.C1, strikethrough=true}, 
-    DiagnosticUnderlineError   = {sp=palette.C1, underline=true}, 
-    DiagnosticUnderlineWarn    = {sp=palette.C1, underline=true}, 
-    DiagnosticUnderlineInfo    = {sp=palette.B3, underline=true}, 
-    DiagnosticUnderlineOk      = {sp=palette.B3, underline=true}, 
-    DiagnosticUnderlineHint    = {sp=palette.B3, underline=true}, 
-    DiagnosticUnnecessary      = {link='Comment'}, 
-    DiagnosticError            = {fg=palette.C1}, 
-    DiagnosticFloatingError    = {link='DiagnosticError'}, 
-    DiagnosticVirtualTextError = {link='DiagnosticError'}, 
-    DiagnosticSignError        = {link='DiagnosticError'}, 
-    DiagnosticWarn             = {fg=palette.C1}, 
-    DiagnosticFloatingWarn     = {link='DiagnosticWarn'}, 
-    DiagnosticVirtualTextWarn  = {link='DiagnosticWarn'}, 
-    DiagnosticSignWarn         = {link='DiagnosticWarn'}, 
-    DiagnosticInfo             = {fg=palette.B3}, 
-    DiagnosticFloatingInfo     = {link='DiagnosticInfo'}, 
-    DiagnosticVirtualTextInfo  = {link='DiagnosticInfo'}, 
-    DiagnosticSignInfo         = {link='DiagnosticInfo'}, 
-    DiagnosticHint             = {fg=palette.B3}, 
-    DiagnosticFloatingHint     = {link='DiagnosticHint'}, 
-    DiagnosticVirtualTextHint  = {link='DiagnosticHint'}, 
-    DiagnosticSignHint         = {link='DiagnosticHint'}, 
-    DiagnosticOk               = {fg=palette.B3}, 
-    DiagnosticFloatingOk       = {link='DiagnosticOk'}, 
-    DiagnosticVirtualTextOk    = {link='DiagnosticOk'}, 
-    DiagnosticSignOk           = {link='DiagnosticOk'}, 
+    LspReferenceRead            = {link='LspReferenceText'}, 
+    LspReferenceWrite           = {link='LspReferenceText'}, 
+    LspCodeLensSeparator        = {link='LspCodeLens'}, 
+    FloatBorder                 = {link='NormalFloat'}, 
+    FloatTitle                  = {link='Title'}, 
+    FloatFooter                 = {link='FloatTitle'}, 
+    MsgArea                     = {link='NONE'}, 
+    NormalNC                    = {link='NONE'}, 
+    TermCursorNC                = {link='NONE'}, 
+    PmenuKind                   = {link='Pmenu'}, 
+    PmenuExtra                  = {link='Pmenu'}, 
+    PmenuMatch                  = {link='Pmenu'}, 
+    PmenuSbar                   = {link='Pmenu'}, 
+    PmenuExtraSel               = {link='PmenuSel'}, 
+    PmenuKindSel                = {link='PmenuSel'}, 
+    PmenuMatchSel               = {link='PmenuSel'}, 
+    WildMenu                    = {link='PmenuSel'}, 
+    DiagnosticUnnecessary       = {link='Comment'}, 
+    DiagnosticFloatingError     = {link='DiagnosticError'}, 
+    DiagnosticVirtualTextError  = {link='DiagnosticError'}, 
+    DiagnosticSignError         = {link='DiagnosticError'}, 
+    DiagnosticFloatingWarn      = {link='DiagnosticWarn'}, 
+    DiagnosticVirtualTextWarn   = {link='DiagnosticWarn'}, 
+    DiagnosticSignWarn          = {link='DiagnosticWarn'}, 
+    DiagnosticFloatingInfo      = {link='DiagnosticInfo'}, 
+    DiagnosticVirtualTextInfo   = {link='DiagnosticInfo'}, 
+    DiagnosticSignInfo          = {link='DiagnosticInfo'}, 
+    DiagnosticFloatingHint      = {link='DiagnosticHint'}, 
+    DiagnosticVirtualTextHint   = {link='DiagnosticHint'}, 
+    DiagnosticSignHint          = {link='DiagnosticHint'}, 
+    DiagnosticFloatingOk        = {link='DiagnosticOk'}, 
+    DiagnosticVirtualTextOk     = {link='DiagnosticOk'}, 
+    DiagnosticSignOk            = {link='DiagnosticOk'}, 
 } end
-color.schemes.A.apply = function(palette)
-    color.util.hide_semantic_highlights()
-    color.util.apply(color.schemes.A.syntax(palette))
-    color.util.apply(color.schemes.A.rust(palette))
-    color.util.apply(color.schemes.A.c(palette))
-    color.util.apply(color.schemes.A.csharp(palette))
-    color.util.apply(color.schemes.A.ui(palette))
-end
-color.util.apply = function(scheme) 
-    for k, v in pairs(scheme) do
+
+M.apply = function(p)
+    -- clear lsp highlights
+    for _, group in ipairs(
+        vim.fn.getcompletion("@lsp", "highlight")
+    ) do
+      vim.api.nvim_set_hl(0, group, {})
+    end
+    -- apply p
+    for k, v in pairs(M.scheme(p)) do
         vim.api.nvim_set_hl(0, k, v)
     end
 end
-color.util.hide_semantic_highlights = function()
-    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-      vim.api.nvim_set_hl(0, group, {})
-    end
-end
-return color
+
+return M

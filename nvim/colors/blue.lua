@@ -1,27 +1,77 @@
--- blue
-
-local p1 = {
-    A1 = '#000000', -- black
-    A2 = '#000408', -- black
-
-    B1 = '#c0eeff', -- white
-
-    A3 = '#6084a8', -- grey
-    B3 = '#6084a8', -- grey
-    C3 = '#6084a8', -- grey
-
-    C1 = '#9988dd', -- purple
-    A4 = '#9988dd', -- purple
-
-    B2 = '#44aadd', -- mild cyan
-    C4 = '#44aadd', -- mild cyan
-
-    B6 = '#66aa88', -- green
-
-    B5 = '#aa77aa', -- muted pink
-    B4 = '#aa77aa', -- muted pink
-
-    C2 = '#ccbb60', -- fire
-}
-
-require("color").schemes.A.apply(p1)
+require("color").apply({
+    BLACK = {
+        '#000408', 
+        '#000000', 
+        '#202c38', 
+    },
+    DARK_GREY = {
+        '#808080',
+        '#808080',
+        '#808080',
+    },
+    GREY = {
+        '#6084a8', 
+        '#6084a8', 
+        '#6084a8', 
+    },
+    WHITE = {
+        '#a0ccdd',
+        '#a0ccdd',
+        '#a0ccdd',
+    },
+    DARK_RED = {
+        '#800000',
+        '#800000',
+        '#800000',
+    }, 
+    RED = {
+        '#aa77aa',
+        '#aa77aa',
+        '#aa77aa',
+    },
+    BROWN = {
+        '#808000', 
+        '#808000', 
+        '#808000', 
+    },
+    YELLOW = {
+        '#ccbb60',
+        '#ccbb60',
+        '#ccbb60',
+    },
+    DARK_GREEN = {
+        "#008000", 
+        "#008000", 
+        "#008000", 
+    },
+    GREEN = {
+        '#66aa88',
+        '#66aa88',
+        '#66aa88',
+    },
+    DARK_CYAN = {
+        '#008080',
+        '#008080',
+        '#008080',
+    }, 
+    CYAN = {
+        '#44aadd',
+        '#44aadd',
+        '#44aadd',
+    },
+    DARK_BLUE = {
+        '#000080', 
+        '#000080', 
+        '#000080', 
+    },
+    BLUE = {
+        '#000080', 
+        '#000080', 
+        '#000080', 
+    },
+    MAGENTA = {
+        '#9988dd', 
+        '#9988dd',
+        '#9988dd',
+    },
+})
