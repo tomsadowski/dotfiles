@@ -1,7 +1,6 @@
-
 -- LSP
 -- * executables for Language Servers must be on $PATH
--- * vim.lsp.get_clients()[1].server_capabilities
+-- * :lua =vim.lsp.get_clients()[1].server_capabilities
 
 vim.api.nvim_create_autocmd(
     {'BufEnter', 'BufWinEnter'}, 
@@ -57,3 +56,9 @@ vim.api.nvim_create_autocmd(
         end
     }
 )
+vim.diagnostic.config({
+    underline = true,
+--    float = true,
+    virtual_text = true,
+    update_in_insert = false,
+})

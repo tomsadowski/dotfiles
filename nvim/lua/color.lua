@@ -193,8 +193,8 @@ M.scheme = function(p) return {
         bg      = p.BLACK[2],
     }, 
     Search = {
-        ctermfg = M.WHITE,
-        fg      = p.WHITE[1], 
+        ctermfg = M.BLACK,
+        fg      = p.BLACK[1], 
         ctermbg = M.GREY,
         bg      = p.GREY[3],
     },
@@ -221,6 +221,8 @@ M.scheme = function(p) return {
         fg      = p.DARK_GREY[1],
     }, 
     Visual = {
+        ctermfg = M.BLACK, 
+        fg      = p.BLACK[1], 
         ctermbg = M.DARK_GREY,
         bg      = p.DARK_GREY[1],
     }, 
