@@ -37,12 +37,16 @@ M.scheme = function(p) return {
         fg      = p.WHITE[1], 
     }, 
     Function = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[1],
+        ctermfg = M.MAGENTA,
+        fg      = p.MAGENTA[1],
     }, 
     Statement = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        ctermfg = M.MAGENTA,
+        fg      = p.MAGENTA[2],
+    }, 
+    PreCondit = {
+        ctermfg = M.MAGENTA,
+        fg      = p.MAGENTA[3],
     }, 
     Delimiter = {
         ctermfg = M.GREY,
@@ -81,8 +85,8 @@ M.scheme = function(p) return {
         fg      = p.GREY[3],
     }, 
     StorageClass = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[3],
     }, 
     Typedef = {
         ctermfg = M.GREY,
@@ -90,19 +94,19 @@ M.scheme = function(p) return {
     }, 
     Keyword = {
         ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[1],
+        fg      = p.DARK_GREY[3],
     }, 
     String = {
-        ctermfg = M.RED,
-        fg      = p.RED[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     Character = {
-        ctermfg = M.RED,
-        fg      = p.RED[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     Constant = {
-        ctermfg = M.RED,
-        fg      = p.RED[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[1],
     }, 
     Error = {
         ctermfg = M.RED, 
@@ -111,52 +115,52 @@ M.scheme = function(p) return {
         bg      = p.GREY[3],
     }, 
     Special = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.RED,
+        fg      = p.RED[3],
     },
     PreProc = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     },
     Include = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     Define = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     Macro = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     Debug = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     SpecialChar = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.CYAN,
+        fg      = p.CYAN[3],
     }, 
     SpecialComment = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[3],
     }, 
     Tag = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[3],
     },
     Comment = {
         ctermfg = M.GREEN,
-        fg      = p.GREEN[1],
+        fg      = p.GREEN[3],
     }, 
     xmlTagName = {
         ctermfg = M.GREEN,
-        fg      = p.GREEN[1],
+        fg      = p.GREEN[3],
     },
     xmlEqual = {
-        ctermfg = M.GREEN,
-        fg      = p.GREEN[1],
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
     },
     xmlString = {
         ctermfg = M.GREEN,
@@ -168,12 +172,8 @@ M.scheme = function(p) return {
         fg      = p.GREEN[1],
     }, 
     Identifier = {
-        ctermfg = M.CYAN,
-        fg      = p.CYAN[1],
-    }, 
-    PreCondit = {
-        ctermfg = M.MAGENTA,
-        fg      = p.MAGENTA[1],
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
     }, 
     xmlAttrib = {
         ctermfg = M.MAGENTA,
@@ -193,10 +193,11 @@ M.scheme = function(p) return {
         bg      = p.BLACK[2],
     }, 
     Search = {
+				bold    = true,
         ctermfg = M.BLACK,
         fg      = p.BLACK[1], 
-        ctermbg = M.GREY,
-        bg      = p.GREY[3],
+        ctermbg = M.DARK_GREY,
+        bg      = p.DARK_GREY[2],
     },
     DiffAdd = {
         ctermbg = M.WHITE, 
@@ -221,8 +222,8 @@ M.scheme = function(p) return {
         fg      = p.DARK_GREY[1],
     }, 
     Visual = {
-        ctermfg = M.BLACK, 
-        fg      = p.BLACK[1], 
+      --  ctermfg = M.BLACK, 
+       -- fg      = p.BLACK[1], 
         ctermbg = M.DARK_GREY,
         bg      = p.DARK_GREY[1],
     }, 
@@ -390,7 +391,6 @@ M.scheme = function(p) return {
         ctermfg = M.MAGENTA,
         fg      = p.MAGENTA[2],
     }, 
-
     SpellLocal = {
         undercurl = true,
     }, 
@@ -508,12 +508,14 @@ M.scheme = function(p) return {
     rustSelf                           = {link='Keyword'},
     ['@lsp.type.builtinType.rust']     = {link='Keyword'},
     ['@lsp.type.selfTypeKeyword.rust'] = {link='Keyword'},
-    rustDeriveTrait                    = {link='PreCondit'},
-    ['@lsp.type.parameter.rust']       = {link='PreCondit'},
-    ['@lsp.type.interface.rust']       = {link='PreCondit'},
+    rustDeriveTrait                    = {link='Function'},
+    ['@lsp.type.interface.rust']       = {link='Function'},
+    ['@lsp.type.parameter.rust']       = {link='Statement'},
+    ['@lsp.typemod.parameter.mutable.rust'] = {link='PreCondit'},
     rustStorage                        = {link='StorageClass'},
     ['@lsp.type.const.rust']           = {link='Constant'},
-    ['@lsp.type.variable.rust']        = {link='Identifier'},
+    ['@lsp.type.variable.rust']        = {link='Constant'},
+    ['@lsp.typemod.variable.mutable.rust'] = {link='Identifier'},
     -- csharp
     csClassType                         = {link='Normal'},
     csGenericBraces                     = {link='Normal'},
