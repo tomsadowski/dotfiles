@@ -6,20 +6,25 @@ map({"n", "v"}, "H", "O")
 map({"n", "v"}, "t", "i")
 map({"n", "v"}, "T", "I")
 -- movement
-map({"n", "v"}, "W", "N")              -- previous occurence of search
-map({"n", "v"}, "w", "n")              -- next occurence of search
-map({"n", "v"}, "e", "b")              -- word left
-map({"n", "v"}, "n", "w")              -- word right
-map({"n", "v"}, "i", "jzz")            -- cursor down
-map({"n", "v"}, "o", "kzz")            -- cursor up
-map({"n", "v"}, "<S-e>", "zh")         -- scroll screen left
-map({"n", "v"}, "<S-n>", "zl")         -- scroll screen right
-map({"n", "v"}, "<C-o>", "<C-y>")      -- scroll screen up
-map({"n", "v"}, "<C-i>", "<C-e>")      -- scroll screen down
-map({"n", "v"}, "<Left>", "h")         -- move cursor to start of last word
-map({"n", "v"}, "<Right>", "l")        -- move cursor to start of next word
-map({"n", "v"}, "<Down>", "j")         -- scroll screen and cursor down
-map({"n", "v"}, "<Up>", "k")           -- scroll screen and cursor up
+map({"n", "v"}, "W", "N")           -- previous occurence of search
+map({"n", "v"}, "w", "n")           -- next occurence of search
+
+map({"n", "v"}, "e", "h")           -- word left
+map({"n", "v"}, "n", "l")           -- word right
+map({"n", "v"}, "i", "j")           -- cursor down
+map({"n", "v"}, "o", "k")           -- cursor up
+map({"n", "v"}, "<Left>", "h")         
+map({"n", "v"}, "<Right>", "l")       
+map({"n", "v"}, "<Down>", "j")     
+map({"n", "v"}, "<Up>", "k")       
+map({"n", "v"}, "<C-e>", "zh")      -- screen left
+map({"n", "v"}, "<C-n>", "zl")      -- screen right
+map({"n", "v"}, "I", "<C-y>")       -- screen down
+map({"n", "v"}, "O", "<C-e>")       -- screen up
+map({"n", "v"}, "<S-e>", "b")         -- word left
+map({"n", "v"}, "<S-n>", "w")         -- word right
+map({"n", "v"}, "<C-o>", "kzz")      -- scroll screen and cursor up
+map({"n", "v"}, "<C-i>", "jzz")      -- scroll screen and cursor down
 map({"n"}, "<PageDown>", "10jzz")      -- scroll screen and cursor down 10x
 map({"n"}, "<PageUp>", "10kzz")        -- scroll screen and cursor up 10x
 map({"n"}, "<S-Left>", "<cmd>bp<CR>")  -- previous buffer
