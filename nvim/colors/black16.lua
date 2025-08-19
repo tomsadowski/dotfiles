@@ -1,5 +1,5 @@
 -- black16
-require("color").apply({
+require("color.black_scheme").apply({
     BLACK = {
         '#000000',
         '#000000',
@@ -30,7 +30,7 @@ require("color").apply({
         '#ff0000',
         '#ff0000',
     },
-    BROWN = {
+    DARK_YELLOW = {
         '#808000',
         '#808000',
         '#808000',
@@ -66,10 +66,15 @@ require("color").apply({
         '#000080',
     }, 
     BLUE = {
-        '#000080',
-        '#000080',
-        '#000080',
+        '#0000ff',
+        '#0000ff',
+        '#0000ff',
     }, 
+    DARK_MAGENTA = {
+        '#800080', 
+        '#800080',
+        '#800080',
+    },
     MAGENTA = {
         '#ff00ff',
         '#ff00ff',
