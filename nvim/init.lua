@@ -2,4 +2,4 @@ require("options")
 require("keymap")
 require("lsp")
 
-vim.cmd 'colo black'
+vim.cmd 'colo blue16'

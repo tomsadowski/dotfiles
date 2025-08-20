@@ -13,7 +13,7 @@ M.BLUE = 9
 M.GREEN = 10
 M.CYAN = 11
 M.RED = 12
-M.MAGENTA = 13
+M.MAGENTA = 11
 M.YELLOW = 14
 M.WHITE = 15
 
@@ -23,6 +23,66 @@ M.scheme = function(p) return {
         fg      = p.WHITE[1], 
         ctermbg = M.BLACK,
         bg      = p.BLACK[1],
+    }, 
+    Function = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    String = {
+        ctermfg = M.DARK_GREEN,
+        fg      = p.DARK_GREEN[1],
+    }, 
+    Character = {
+        ctermfg = M.DARK_GREEN,
+        fg      = p.DARK_GREEN[1],
+    }, 
+    Constant = {
+        ctermfg = M.DARK_CYAN,
+        fg      = p.DARK_CYAN[1],
+    }, 
+    Statement = {
+        ctermfg = M.DARK_MAGENTA,
+        fg      = p.DARK_MAGENTA[1],
+    }, 
+    Special = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    },
+    PreProc = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    },
+    Include = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Define = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Macro = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    Debug = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    SpecialChar = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    }, 
+    SpecialComment = {
+        ctermfg = M.DARK_YELLOW,
+        fg      = p.DARK_YELLOW[1],
+    }, 
+    Tag = {
+        ctermfg = M.RED,
+        fg      = p.RED[1],
+    },
+    Comment = {
+        ctermfg = M.DARK_YELLOW,
+        fg      = p.DARK_YELLOW[1],
     }, 
     Number = {
         ctermfg = M.WHITE, 
@@ -36,135 +96,25 @@ M.scheme = function(p) return {
         ctermfg = M.WHITE, 
         fg      = p.WHITE[1], 
     }, 
-    Function = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[1],
-    }, 
-    String = {
-        ctermfg = M.DARK_GREEN,
-        fg      = p.DARK_GREEN[3],
-    }, 
-    Character = {
-        ctermfg = M.DARK_GREEN,
-        fg      = p.DARK_GREEN[3],
-    }, 
-    Constant = {
-        ctermfg = M.DARK_CYAN,
-        fg      = p.DARK_CYAN[1],
-    }, 
-    Statement = {
-        ctermfg = M.DARK_MAGENTA,
-        fg      = p.DARK_MAGENTA[1],
-    }, 
     PreCondit = {
         ctermfg = M.MAGENTA,
-        fg      = p.MAGENTA[3],
+        fg      = p.MAGENTA[1],
     }, 
     Delimiter = {
         ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[3],
+        fg      = p.DARK_GREY[1],
     }, 
     Operator = {
         ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[3],
+        fg      = p.DARK_GREY[1],
     }, 
     Conditional = {
         ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[3],
-    }, 
-    Repeat = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
-    }, 
-    Exception = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
-    }, 
-    Boolean = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[3],
-    }, 
-    Type = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.DARK_GREY[1],
     }, 
     Label = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
-    },
-    Structure = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
-    }, 
-    StorageClass = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[3],
-    }, 
-    Typedef = {
-        ctermfg = M.GREY,
-        fg      = p.GREY[3],
-    }, 
-    Keyword = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[3],
-    }, 
-    Error = {
-        ctermfg = M.RED, 
-        fg      = p.RED[1], 
-        ctermbg = M.GREY,
-        bg      = p.GREY[3],
-    }, 
-    Special = {
-        ctermfg = M.GREEN,
-        fg      = p.GREEN[3],
-    },
-    PreProc = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[3],
-    },
-    Include = {
-        ctermfg = M.DARK_RED,
-        fg      = p.DARK_RED[3],
-    }, 
-    Define = {
-        ctermfg = M.CYAN,
-        fg      = p.CYAN[3],
-    }, 
-    Macro = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[3],
-    }, 
-    Debug = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[3],
-    }, 
-    SpecialChar = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[3],
-    }, 
-    SpecialComment = {
-        ctermfg = M.DARK_YELLOW,
-        fg      = p.DARK_YELLOW[3],
-    }, 
-    Tag = {
-        ctermfg = M.RED,
-        fg      = p.RED[3],
-    },
-    Comment = {
-        ctermfg = M.DARK_YELLOW,
-        fg      = p.DARK_YELLOW[3],
-    }, 
-    xmlTagName = {
-        ctermfg = M.GREEN,
-        fg      = p.GREEN[3],
-    },
-    xmlEqual = {
-        ctermfg = M.YELLOW,
-        fg      = p.YELLOW[1],
-    },
-    xmlString = {
-        ctermfg = M.GREEN,
-        fg      = p.GREEN[1],
+        fg      = p.GREY[1],
     },
     Todo = {
         bold    = true,
@@ -175,6 +125,56 @@ M.scheme = function(p) return {
         ctermfg = M.CYAN,
         fg      = p.CYAN[1],
     }, 
+    Structure = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[1],
+    }, 
+    StorageClass = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    Typedef = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[1],
+    }, 
+    Keyword = {
+        ctermfg = M.BLUE,
+        fg      = p.BLUE[1],
+    }, 
+    Repeat = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[1],
+    }, 
+    Exception = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[1],
+    }, 
+    Boolean = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    Type = {
+        ctermfg = M.GREY,
+        fg      = p.GREY[1],
+    }, 
+    Error = {
+        ctermfg = M.RED, 
+        fg      = p.RED[1], 
+        ctermbg = M.GREY,
+        bg      = p.GREY[1],
+    }, 
+    xmlTagName = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    },
+    xmlEqual = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    },
+    xmlString = {
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+    },
     xmlAttrib = {
         ctermfg = M.MAGENTA,
         fg      = p.MAGENTA[1],
@@ -203,23 +203,23 @@ M.scheme = function(p) return {
         ctermbg = M.WHITE, 
         fg      = p.WHITE[1], 
         ctermbg = M.GREY, 
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     DiffChange = {
         ctermfg = M.WHITE, 
         fg      = p.WHITE[1], 
         ctermbg = M.GREY, 
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     DiffText = {
         ctermfg = M.WHITE, 
         fg      = p.WHITE[1], 
         ctermbg = M.GREY, 
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     LineNr = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[1],
+        ctermfg = M.DARK_BLUE,
+        fg      = p.DARK_BLUE[2],
     }, 
     Visual = {
       --  ctermfg = M.BLACK, 
@@ -231,115 +231,115 @@ M.scheme = function(p) return {
         bold      = true, 
         underline = true,
         ctermfg   = M.GREY, 
-        fg        = p.GREY[3], 
+        fg        = p.GREY[1], 
         ctermbg   = M.BLACK, 
         bg        = p.BLACK[2], 
     }, 
     ColorColumn = {
         ctermbg = M.GREY, 
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     SignColumn = {
         ctermfg = M.GREY, 
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     WinBar = {
         bold    = true,
         ctermfg = M.GREY, 
-        fg      = p.GREY[3], 
+        fg      = p.GREY[1], 
         ctermbg = M.CYAN, 
         bg      = p.CYAN[2], 
     }, 
     WinBarNC = {
         bold    = true,
         ctermfg = M.GREY, 
-        fg      = p.GREY[3], 
+        fg      = p.GREY[1], 
         ctermbg = M.CYAN, 
         bg      = p.CYAN[2], 
     }, 
     Added = {
         ctermfg = M.GREY, 
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     Changed = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     Directory = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     Conceal = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     FloatShadow = {
         blend   = 80,
         ctermbg = M.GREY,
-        bg      = p.GREY[3], 
+        bg      = p.GREY[1], 
     }, 
     FloatShadowThrough = {
         blend   = 100,
         ctermbg = M.GREY,
-        bg      = p.GREY[3], 
+        bg      = p.GREY[1], 
     }, 
     ModeMsg = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     MatchParen = {
         bold      = true, 
         underline = true,
         ctermbg   = M.GREY,
-        bg        = p.GREY[3], 
+        bg        = p.GREY[1], 
     }, 
     MoreMsg = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     PmenuThumb = {
         ctermbg = M.GREY,
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     Question = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     QuickFixLine = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     RedrawDebugClear = {
         ctermbg = M.GREY,
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     RedrawDebugComposed = {
         ctermbg = M.GREY,
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     RedrawDebugRecompose = {
         ctermbg = M.GREY,
-        bg      = p.GREY[3],
+        bg      = p.GREY[1],
     }, 
     SpecialKey = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     NonText = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     DiagnosticInfo = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     DiagnosticHint = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     DiagnosticOk = {
         ctermfg = M.GREY,
-        fg      = p.GREY[3],
+        fg      = p.GREY[1],
     }, 
     CursorColumn = {
         ctermbg = M.BLACK, 
@@ -510,9 +510,9 @@ M.scheme = function(p) return {
     ['@lsp.type.selfTypeKeyword.rust'] = {link='Keyword'},
     ['@lsp.typemod.selfKeyword.mutable.rust'] = {link='PreCondit'},
     ['@lsp.type.builtinType.rust']     = {link='Keyword'},
-    rustDeriveTrait                    = {link='Include'},
-    ['@lsp.type.interface.rust']       = {link='Tag'},
-    ['@lsp.typemod.interface.library.rust'] = {link='Include'},
+    rustDeriveTrait                    = {link='Function'},
+    ['@lsp.type.interface.rust']       = {link='Function'},
+    ['@lsp.typemod.interface.library.rust'] = {link='Function'},
     ['@lsp.type.parameter.rust']       = {link='Statement'},
     ['@lsp.typemod.parameter.mutable.rust'] = {link='PreCondit'},
     rustStorage                        = {link='StorageClass'},

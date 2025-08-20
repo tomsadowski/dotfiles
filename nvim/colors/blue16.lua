@@ -1,5 +1,5 @@
--- black16
-require("color.black_scheme").apply({
+-- black
+require("color.b_scheme").apply({
     BLACK = {
         '#000000',
         '#000000',
