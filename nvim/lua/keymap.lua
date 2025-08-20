@@ -71,9 +71,9 @@ local lsp_attach = function(args)
     end
 end
 
-vim.api.nvim_create_autocmd(
-    'LspAttach', 
-    {
-        callback = lsp_attach
-    }
-)
+--vim.api.nvim_create_autocmd(
+--		'LspAttach', 
+--		{
+--				callback = lsp_attach
+--		}
+--)

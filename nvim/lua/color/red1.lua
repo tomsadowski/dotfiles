@@ -1,17 +1,17 @@
 local M = {}
 
 M.BLACK = 0
-M.DARK_BLUE = 1
+M.DARK_RED = 1
 M.DARK_GREEN = 2
-M.DARK_CYAN = 3 
+M.DARK_YELLOW = 3 
 M.DARK_RED = 4
 M.DARK_MAGENTA = 5
 M.DARK_YELLOW = 6
 M.GREY = 7 
 M.DARK_GREY = 8
-M.BLUE = 9
+M.RED = 9
 M.GREEN = 10
-M.CYAN = 11
+M.YELLOW = 11
 M.RED = 12
 M.MAGENTA = 11
 M.YELLOW = 14
@@ -29,25 +29,25 @@ M.scheme = function(p) return {
         fg      = p.DARK_GREY[1],
     }, 
     String = {
-        ctermfg = M.DARK_GREEN,
-        fg      = p.DARK_GREEN[1],
+        ctermfg = M.DARK_YELLOW,
+        fg      = p.DARK_YELLOW[1],
     }, 
     Character = {
+        ctermfg = M.DARK_YELLOW,
+        fg      = p.DARK_YELLOW[1],
+    }, 
+    Special = {
+        ctermfg = M.YELLOW,
+        fg      = p.YELLOW[1],
+    },
+    Constant = {
         ctermfg = M.DARK_GREEN,
         fg      = p.DARK_GREEN[1],
-    }, 
-    Constant = {
-        ctermfg = M.DARK_CYAN,
-        fg      = p.DARK_CYAN[1],
     }, 
     Statement = {
         ctermfg = M.DARK_MAGENTA,
         fg      = p.DARK_MAGENTA[1],
     }, 
-    Special = {
-        ctermfg = M.GREEN,
-        fg      = p.GREEN[1],
-    },
     PreProc = {
         ctermfg = M.YELLOW,
         fg      = p.YELLOW[1],
@@ -100,18 +100,6 @@ M.scheme = function(p) return {
         ctermfg = M.MAGENTA,
         fg      = p.MAGENTA[1],
     }, 
-    Delimiter = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[1],
-    }, 
-    Operator = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[1],
-    }, 
-    Conditional = {
-        ctermfg = M.BLUE,
-        fg      = p.BLUE[1],
-    }, 
     Label = {
         ctermfg = M.GREY,
         fg      = p.GREY[1],
@@ -122,24 +110,38 @@ M.scheme = function(p) return {
         fg      = p.GREEN[1],
     }, 
     Identifier = {
-        ctermfg = M.CYAN,
-        fg      = p.CYAN[1],
+        ctermfg = M.GREEN,
+        fg      = p.GREEN[1],
+--        ctermfg = M.YELLOW,
+--        fg      = p.YELLOW[1],
     }, 
     Structure = {
         ctermfg = M.GREY,
         fg      = p.GREY[1],
     }, 
-    StorageClass = {
-        ctermfg = M.BLUE,
-        fg      = p.BLUE[1],
-    }, 
     Typedef = {
         ctermfg = M.GREY,
         fg      = p.GREY[1],
     }, 
+    StorageClass = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    Delimiter = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    Operator = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
+    Conditional = {
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
+    }, 
     Keyword = {
-        ctermfg = M.BLUE,
-        fg      = p.BLUE[1],
+        ctermfg = M.DARK_GREY,
+        fg      = p.DARK_GREY[1],
     }, 
     Repeat = {
         ctermfg = M.GREY,
@@ -187,17 +189,17 @@ M.scheme = function(p) return {
         fg      = p.WHITE[1], 
     }, 
     Cursor = {
-        ctermfg = M.WHITE,
-        fg      = p.WHITE[1], 
-        ctermbg = M.BLACK,
-        bg      = p.BLACK[2],
+        ctermfg = M.DARK_RED,
+        fg      = p.DARK_RED[1], 
+        ctermbg = M.DARK_RED,
+        bg      = p.DARK_RED[1],
     }, 
     Search = {
 				bold    = true,
 --        ctermfg = M.BLACK,
  --       fg      = p.BLACK[1], 
-        ctermbg = M.BLUE,
-        bg      = p.BLUE[2],
+        ctermbg = M.RED,
+        bg      = p.RED[2],
     },
     DiffAdd = {
         ctermbg = M.WHITE, 
@@ -218,14 +220,14 @@ M.scheme = function(p) return {
         bg      = p.GREY[1],
     }, 
     LineNr = {
-        ctermfg = M.DARK_BLUE,
-        fg      = p.DARK_BLUE[2],
+        ctermfg = M.DARK_RED,
+        fg      = p.DARK_RED[1],
     }, 
     Visual = {
       --  ctermfg = M.BLACK, 
        -- fg      = p.BLACK[1], 
-        ctermbg = M.DARK_BLUE,
-        bg      = p.DARK_BLUE[1],
+        ctermbg = M.DARK_RED,
+        bg      = p.DARK_RED[1],
     }, 
     StatusLineNC = {
         bold      = true, 
@@ -247,15 +249,15 @@ M.scheme = function(p) return {
         bold    = true,
         ctermfg = M.GREY, 
         fg      = p.GREY[1], 
-        ctermbg = M.CYAN, 
-        bg      = p.CYAN[2], 
+        ctermbg = M.YELLOW, 
+        bg      = p.YELLOW[2], 
     }, 
     WinBarNC = {
         bold    = true,
         ctermfg = M.GREY, 
         fg      = p.GREY[1], 
-        ctermbg = M.CYAN, 
-        bg      = p.CYAN[2], 
+        ctermbg = M.YELLOW, 
+        bg      = p.YELLOW[2], 
     }, 
     Added = {
         ctermfg = M.GREY, 
@@ -361,8 +363,8 @@ M.scheme = function(p) return {
         bg      = p.BLACK[2], 
     }, 
     Folded = {
-        ctermfg = M.CYAN, 
-        fg      = p.CYAN[2], 
+        ctermfg = M.YELLOW, 
+        fg      = p.YELLOW[2], 
         ctermbg = M.BLACK,
         bg      = p.BLACK[2],
     }, 
@@ -436,6 +438,8 @@ M.scheme = function(p) return {
         underline = true,
     }, 
     CursorLineNr = {
+				ctermfg = M.RED,
+				fg = p.RED[1],
         bold = true,
     }, 
     TabLineSel = {
@@ -532,15 +536,15 @@ M.scheme = function(p) return {
     ['@lsp.typemod.class.static.cs']    = {link='Keyword'},
     ['@lsp.type.keyword.cs']            = {link='Keyword'},
     ['@lsp.type.builtinType.cs']        = {link='Keyword'},
-    ['@lsp.type.interface.cs']          = {link='Keyword'},
+    ['@lsp.type.interface.cs']          = {link='Function'},
     csSpecialChar                       = {link='PreCondit'},
     csInterpolationDelimiter            = {link='PreCondit'},
     ['@lsp.type.parameter.cs']          = {link='PreCondit'},
     csType                              = {link='Type'},
     csStorage                           = {link='StorageClass'},
-    ['@lsp.typemod.property.static.cs'] = {link='String'},
     ['@lsp.type.method.cs']             = {link='Function'},
     ['@lsp.type.variable.cs']           = {link='Identifier'},
+    ['@lsp.typemod.property.static.cs'] = {link='Constant'},
     ['@lsp.type.const.cs']              = {link='Constant'},
 
     -- UI
