@@ -109,8 +109,8 @@ M.scheme = function(p) return {
         fg      = p.DARK_GREY[1],
     }, 
     Conditional = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[1],
+        ctermfg = M.BLUE,
+        fg      = p.BLUE[1],
     }, 
     Label = {
         ctermfg = M.GREY,
@@ -130,8 +130,8 @@ M.scheme = function(p) return {
         fg      = p.GREY[1],
     }, 
     StorageClass = {
-        ctermfg = M.DARK_GREY,
-        fg      = p.DARK_GREY[1],
+        ctermfg = M.BLUE,
+        fg      = p.BLUE[1],
     }, 
     Typedef = {
         ctermfg = M.GREY,
