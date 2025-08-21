@@ -7,10 +7,26 @@ require("color.util").apply({
         ctermbg = p.BLACK[1],
         bg      = p.BLACK[2],
     }, 
-    Function = {
-        ctermfg = p.DARK_GREY[1],
-        fg      = p.DARK_GREY[2],
+    Number = {
+        ctermfg = p.WHITE[1], 
+        fg      = p.WHITE[2], 
     }, 
+    Float = {
+        ctermfg = p.WHITE[1], 
+        fg      = p.WHITE[2], 
+    }, 
+
+		-- variables
+    Identifier = {
+        ctermfg = p.GREEN[1],
+        fg      = p.GREEN[2],
+    }, 
+    Constant = {
+        ctermfg = p.DARK_GREEN[1],
+        fg      = p.DARK_GREEN[2],
+    }, 
+
+		-- string
     String = {
         ctermfg = p.DARK_GREEN[1],
         fg      = p.DARK_GREEN[2],
@@ -19,18 +35,26 @@ require("color.util").apply({
         ctermfg = p.DARK_GREEN[1],
         fg      = p.DARK_GREEN[2],
     }, 
+    SpecialChar = {
+        ctermfg = p.CYAN[1],
+        fg      = p.CYAN[2],
+    }, 
     Special = {
         ctermfg = p.CYAN[1],
         fg      = p.CYAN[2],
     },
-    Constant = {
-        ctermfg = p.DARK_GREEN[1],
-        fg      = p.DARK_GREEN[2],
+
+		-- params
+    PreCondit = {
+        ctermfg = p.MAGENTA[1],
+        fg      = p.MAGENTA[2],
     }, 
     Statement = {
         ctermfg = p.DARK_MAGENTA[1],
         fg      = p.DARK_MAGENTA[2],
     }, 
+
+		-- preproc
     PreProc = {
         ctermfg = p.DARK_MAGENTA[1],
         fg      = p.DARK_MAGENTA[2],
@@ -50,11 +74,9 @@ require("color.util").apply({
     Debug = {
         ctermfg = p.DARK_MAGENTA[1],
         fg      = p.DARK_MAGENTA[2],
-    }, 
-    SpecialChar = {
-        ctermfg = p.CYAN[1],
-        fg      = p.CYAN[2],
-    }, 
+    },
+
+		-- comment
     Comment = {
         ctermfg = p.DARK_CYAN[1],
         fg      = p.DARK_CYAN[2],
@@ -63,48 +85,40 @@ require("color.util").apply({
         ctermfg = p.DARK_CYAN[1],
         fg      = p.DARK_CYAN[2],
     }, 
+
+		-- enum
     Tag = {
-        ctermfg = p.RED[1],
-        fg      = p.RED[2],
+        ctermfg = p.CYAN[1],
+        fg      = p.CYAN[2],
     },
-    Number = {
-        ctermfg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
-    }, 
-    Float = {
-        ctermfg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
-    }, 
-    Ignore = {
-        ctermfg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
-    }, 
-    PreCondit = {
-        ctermfg = p.MAGENTA[1],
-        fg      = p.MAGENTA[2],
-    }, 
     Label = {
         ctermfg = p.GREY[1],
         fg      = p.GREY[2],
     },
-    Todo = {
-        bold    = true,
-        ctermfg = p.GREEN[1],
-        fg      = p.GREEN[2],
-    }, 
-    Identifier = {
-        ctermfg = p.GREEN[1],
-        fg      = p.GREEN[2],
---        ctermfg = p.CYAN[1],
---        fg      = p.CYAN[2],
-    }, 
     Structure = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    Type = {
         ctermfg = p.GREY[1],
         fg      = p.GREY[2],
     }, 
     Typedef = {
         ctermfg = p.GREY[1],
         fg      = p.GREY[2],
+    }, 
+    Directory = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+
+    Function = {
+        ctermfg = p.DARK_GREY[1],
+        fg      = p.DARK_GREY[2],
+    }, 
+    Keyword = {
+        ctermfg = p.DARK_GREY[1],
+        fg      = p.DARK_GREY[2],
     }, 
     StorageClass = {
         ctermfg = p.DARK_GREY[1],
@@ -122,54 +136,48 @@ require("color.util").apply({
         ctermfg = p.DARK_GREY[1],
         fg      = p.DARK_GREY[2],
     }, 
-    Keyword = {
+    Repeat = {
         ctermfg = p.DARK_GREY[1],
         fg      = p.DARK_GREY[2],
     }, 
-    Repeat = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
     Exception = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
+        ctermfg = p.DARK_GREY[1],
+        fg      = p.DARK_GREY[2],
     }, 
     Boolean = {
         ctermfg = p.DARK_GREY[1],
         fg      = p.DARK_GREY[2],
     }, 
-    Type = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
+
     Error = {
         ctermfg = p.RED[1], 
         fg      = p.RED[2], 
-        ctermbg = p.GREY[1],
-        bg      = p.GREY[2],
+        ctermbg = p.BLACK[1],
+        bg      = p.BLACK[2],
     }, 
-    xmlTagName = {
+    Ignore = {
+        ctermfg = p.BLUE[1], 
+        fg      = p.BLUE[2], 
+    }, 
+    Todo = {
+        bold    = true,
         ctermfg = p.GREEN[1],
         fg      = p.GREEN[2],
-    },
-    xmlEqual = {
-        ctermfg = p.YELLOW[1],
-        fg      = p.YELLOW[2],
-    },
-    xmlString = {
-        ctermfg = p.GREEN[1],
-        fg      = p.GREEN[2],
-    },
-    xmlAttrib = {
-        ctermfg = p.MAGENTA[1],
-        fg      = p.MAGENTA[2],
-    },
+    }, 
 
     -- UI
-    Title = {
-        bold    = true,
-        ctermfg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
+    LineNr = {
+   --   ctermfg = p.DARK_BLUE[1],
+   --   fg      = p.DARK_BLUE[2],
+        ctermfg = p.DARK_GREY[1],
+        fg      = p.DARK_GREY[2],
+    }, 
+    CursorLineNr = {
+	--		ctermfg = p.BLUE[1],
+	--		fg      = p.BLUE[2],
+	  		ctermfg = p.GREY[1],
+	  		fg      = p.GREY[2],
+        bold = true,
     }, 
     Cursor = {
         ctermfg = p.DARK_BLUE[1],
@@ -177,41 +185,48 @@ require("color.util").apply({
         ctermbg = p.DARK_BLUE[1],
         bg      = p.DARK_BLUE[2],
     }, 
-    Search = {
-				bold    = true,
---        ctermfg = p.BLACK[1],
- --       fg      = p.BLACK[2], 
-        ctermbg = p.BLUE[1],
-        bg      = p.BLUE[2],
-    },
-    DiffAdd = {
-        ctermbg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
-        ctermbg = p.GREY[1], 
-        bg      = p.GREY[2],
+    CursorLine = {
+        underline = true,
     }, 
-    DiffChange = {
-        ctermfg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
-        ctermbg = p.GREY[1], 
-        bg      = p.GREY[2],
+    CursorColumn = {
+        ctermbg = p.BLACK[1], 
+        bg      = p.BLACK[2],
     }, 
-    DiffText = {
-        ctermfg = p.WHITE[1], 
-        fg      = p.WHITE[2], 
-        ctermbg = p.GREY[1], 
-        bg      = p.GREY[2],
-    }, 
-    LineNr = {
-        ctermfg = p.DARK_BLUE[1],
-        fg      = p.DARK_BLUE[2],
-    }, 
+
     Visual = {
-      --  ctermfg = p.BLACK[1], 
-       -- fg      = p.BLACK[2], 
         ctermbg = p.DARK_BLUE[1],
         bg      = p.DARK_BLUE[2],
     }, 
+    Search = {
+				bold    = true,
+        ctermbg = p.DARK_BLUE[1],
+        bg      = p.DARK_BLUE[2],
+    },
+    MatchParen = {
+        bold      = true, 
+        ctermbg = p.DARK_BLUE[1],
+        bg      = p.DARK_BLUE[2], 
+    }, 
+    Folded = {
+        ctermfg = p.CYAN[1], 
+        fg      = p.CYAN[2], 
+        ctermbg = p.BLACK[1],
+        bg      = p.BLACK[2],
+    }, 
+
+    Title = {
+        bold    = true,
+        ctermfg = p.WHITE[1], 
+        fg      = p.WHITE[2], 
+    }, 
+
+    QuickFixLine = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    TabLineSel = {
+        bold = true,
+    },
     StatusLineNC = {
         bold      = true, 
         underline = true,
@@ -228,6 +243,7 @@ require("color.util").apply({
         ctermfg = p.GREY[1], 
         fg      = p.GREY[2],
     }, 
+
     WinBar = {
         bold    = true,
         ctermfg = p.GREY[1], 
@@ -242,22 +258,11 @@ require("color.util").apply({
         ctermbg = p.CYAN[1], 
         bg      = p.CYAN[2], 
     }, 
-    Added = {
-        ctermfg = p.GREY[1], 
-        fg      = p.GREY[2],
-    }, 
-    Changed = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
-    Directory = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
-    Conceal = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
+
+    NormalFloat = {
+        ctermbg = p.BLACK[1],
+        bg      = p.BLACK[2],
+    },
     FloatShadow = {
         blend   = 80,
         ctermbg = p.GREY[1],
@@ -268,52 +273,22 @@ require("color.util").apply({
         ctermbg = p.GREY[1],
         bg      = p.GREY[2], 
     }, 
-    ModeMsg = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
+
+    Pmenu = {
+        reverse = true,
+        ctermbg = p.BLACK[1], 
+        bg      = p.BLACK[2], 
     }, 
-    MatchParen = {
-        bold      = true, 
-        underline = true,
-        ctermbg   = p.GREY[1],
-        bg        = p.GREY[2], 
-    }, 
-    MoreMsg = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
+    PmenuSel = {
+        reverse   = true, 
+        underline = true, 
+        blend     = 0,
     }, 
     PmenuThumb = {
         ctermbg = p.GREY[1],
         bg      = p.GREY[2],
     }, 
-    Question = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
-    QuickFixLine = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
-    RedrawDebugClear = {
-        ctermbg = p.GREY[1],
-        bg      = p.GREY[2],
-    }, 
-    RedrawDebugComposed = {
-        ctermbg = p.GREY[1],
-        bg      = p.GREY[2],
-    }, 
-    RedrawDebugRecompose = {
-        ctermbg = p.GREY[1],
-        bg      = p.GREY[2],
-    }, 
-    SpecialKey = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
-    NonText = {
-        ctermfg = p.GREY[1],
-        fg      = p.GREY[2],
-    }, 
+
     DiagnosticInfo = {
         ctermfg = p.GREY[1],
         fg      = p.GREY[2],
@@ -326,61 +301,22 @@ require("color.util").apply({
         ctermfg = p.GREY[1],
         fg      = p.GREY[2],
     }, 
-    CursorColumn = {
-        ctermbg = p.BLACK[1], 
-        bg      = p.BLACK[2],
-    }, 
-    NormalFloat = {
-        ctermbg = p.BLACK[1],
-        bg      = p.BLACK[2],
-    },
-    MsgSeparator = {
-        ctermfg = p.BLACK[1], 
-        fg      = p.BLACK[2], 
-        ctermbg = p.WHITE[1], 
-        bg      = p.WHITE[2],
-    }, 
-    Pmenu = {
-        reverse = true,
-        ctermbg = p.BLACK[1], 
-        bg      = p.BLACK[2], 
-    }, 
-    Folded = {
-        ctermfg = p.CYAN[1], 
-        fg      = p.CYAN[2], 
-        ctermbg = p.BLACK[1],
-        bg      = p.BLACK[2],
-    }, 
-    Removed = {
-        ctermfg = p.MAGENTA[1], 
-        fg      = p.MAGENTA[2],
-    }, 
-    WarningMsg = {
-        ctermfg = p.MAGENTA[1], 
-        fg      = p.MAGENTA[2],
+    DiagnosticDeprecated = {
+        strikethrough = true,
     }, 
     DiagnosticError = {
-        ctermfg = p.MAGENTA[1], 
-        fg      = p.MAGENTA[2],
+        ctermfg = p.DARK_RED[1], 
+        fg      = p.DARK_RED[2],
     }, 
     DiagnosticWarn = {
-        ctermfg = p.MAGENTA[1], 
-        fg      = p.MAGENTA[2],
+        ctermfg = p.DARK_YELLOW[1], 
+        fg      = p.DARK_YELLOW[2],
     }, 
-    DiffDelete = {
-        bold    = true,
-        ctermfg = p.MAGENTA[1], 
-        fg      = p.MAGENTA[2], 
+    DiagnosticUnderlineError = {
+        underline = true,
     }, 
-    ErrorMsg = {
-        ctermfg = p.MAGENTA[1],
-        fg      = p.MAGENTA[2],
-    }, 
-    SpellLocal = {
-        undercurl = true,
-    }, 
-    SpellRare = {
-        undercurl = true,
+    DiagnosticUnderlineWarn = {
+        underline = true,
     }, 
     DiagnosticUnderlineInfo = {
         underline = true,
@@ -391,42 +327,114 @@ require("color.util").apply({
     DiagnosticUnderlineHint = {
         underline = true,
     }, 
+
+    DiffText = {
+        ctermfg = p.WHITE[1], 
+        fg      = p.WHITE[2], 
+        ctermbg = p.GREY[1], 
+        bg      = p.GREY[2],
+    }, 
+    DiffAdd = {
+        ctermbg = p.WHITE[1], 
+        fg      = p.WHITE[2], 
+        ctermbg = p.GREY[1], 
+        bg      = p.GREY[2],
+    }, 
+    DiffChange = {
+        ctermfg = p.WHITE[1], 
+        fg      = p.WHITE[2], 
+        ctermbg = p.GREY[1], 
+        bg      = p.GREY[2],
+    }, 
+    DiffDelete = {
+        bold    = true,
+        ctermfg = p.MAGENTA[1], 
+        fg      = p.MAGENTA[2], 
+    }, 
+
+    Added = {
+        ctermfg = p.GREY[1], 
+        fg      = p.GREY[2],
+    }, 
+    Changed = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    Removed = {
+        ctermfg = p.MAGENTA[1], 
+        fg      = p.MAGENTA[2],
+    }, 
+
+    ModeMsg = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    MoreMsg = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    WarningMsg = {
+        ctermfg = p.MAGENTA[1], 
+        fg      = p.MAGENTA[2],
+    }, 
+    ErrorMsg = {
+        ctermfg = p.RED[1],
+        fg      = p.RED[2],
+    }, 
+    MsgSeparator = {
+        ctermfg = p.BLACK[1], 
+        fg      = p.BLACK[2], 
+        ctermbg = p.WHITE[1], 
+        bg      = p.WHITE[2],
+    }, 
+    SpecialKey = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+
+    Question = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    NonText = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    Conceal = {
+        ctermfg = p.GREY[1],
+        fg      = p.GREY[2],
+    }, 
+    Underlined = {
+        underline = true,
+    }, 
+
+    SpellLocal = {
+        undercurl = true,
+    }, 
+    SpellRare = {
+        undercurl = true,
+    }, 
     SpellBad = {
         undercurl = true,
     }, 
     SpellCap = {
         undercurl = true,
     }, 
-    DiagnosticDeprecated = {
-        strikethrough = true,
+
+    RedrawDebugClear = {
+        ctermbg = p.GREY[1],
+        bg      = p.GREY[2],
     }, 
-    DiagnosticUnderlineError = {
-        underline = true,
+    RedrawDebugComposed = {
+        ctermbg = p.GREY[1],
+        bg      = p.GREY[2],
     }, 
-    DiagnosticUnderlineWarn = {
-        underline = true,
-    }, 
-    PmenuSel = {
-        reverse   = true, 
-        underline = true, 
-        blend     = 0,
+    RedrawDebugRecompose = {
+        ctermbg = p.GREY[1],
+        bg      = p.GREY[2],
     }, 
     RedrawDebugNormal = {
         reverse = true,
     }, 
-    Underlined = {
-        underline = true,
-    }, 
-    CursorLine = {
-        underline = true,
-    }, 
-    CursorLineNr = {
-				ctermfg = p.BLUE[1],
-				fg      = p.BLUE[2],
-        bold = true,
-    }, 
-    TabLineSel = {
-        bold = true,
-    },
 })
 

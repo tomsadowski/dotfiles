@@ -39,23 +39,23 @@ vim.api.nvim_create_autocmd(
         end
     }
 )
-vim.api.nvim_create_autocmd(
-    {'BufEnter', 'BufWinEnter'}, 
-    {
-        pattern  = '*.cs',
-        callback = function(args) 
-            vim.lsp.start({
-                    name = 'csharp-lsp',
-                    cmd = {'csharp-ls'},
-                    root_dir = vim.fs.root(
-                        args.buf, 
-                        {'.git'}
-                    )
-                }
-            )
-        end
-    }
-)
+--vim.api.nvim_create_autocmd(
+--		{'BufEnter', 'BufWinEnter'}, 
+--		{
+--				pattern  = '*.cs',
+--				callback = function(args) 
+--						vim.lsp.start({
+--										name = 'csharp-lsp',
+--										cmd = {'csharp-ls'},
+--										root_dir = vim.fs.root(
+--												args.buf, 
+--												{'.git'}
+--										)
+--								}
+--						)
+--				end
+--		}
+--)
 vim.diagnostic.config({
     underline = true,
 --    float = true,

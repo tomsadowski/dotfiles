@@ -63,7 +63,7 @@ M.links = {
     rustLifetime                       = {link='Normal'},
     ['@lsp.type.struct.rust']          = {link='Normal'},
     ['@lsp.type.enumMember.rust']      = {link='Special'},
-    ['@lsp.type.enum.rust']            = {link='Special'},
+    ['@lsp.type.enum.rust']            = {link='Tag'},
     rustSelf                           = {link='Statement'},
     ['@lsp.type.selfKeyword.rust'] = {link='Statement'},
     ['@lsp.type.selfTypeKeyword.rust'] = {link='Keyword'},

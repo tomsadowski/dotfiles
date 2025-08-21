@@ -95,8 +95,6 @@ require("color.util").apply({
     Identifier = {
         ctermfg = p.GREEN[1],
         fg      = p.GREEN[2],
---        ctermfg = p.CYAN[1],
---        fg      = p.CYAN[2],
     }, 
     Structure = {
         ctermfg = p.GREY[1],
@@ -148,22 +146,6 @@ require("color.util").apply({
         ctermbg = p.GREY[1],
         bg      = p.GREY[2],
     }, 
-    xmlTagName = {
-        ctermfg = p.GREEN[1],
-        fg      = p.GREEN[2],
-    },
-    xmlEqual = {
-        ctermfg = p.YELLOW[1],
-        fg      = p.YELLOW[2],
-    },
-    xmlString = {
-        ctermfg = p.GREEN[1],
-        fg      = p.GREEN[2],
-    },
-    xmlAttrib = {
-        ctermfg = p.MAGENTA[1],
-        fg      = p.MAGENTA[2],
-    },
 
     -- UI
     Title = {
