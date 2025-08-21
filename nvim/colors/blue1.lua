@@ -1,3 +1,4 @@
+-- blue1
 local p = require("color.palette.term")
 require("color.util").apply({
     Normal = {
