@@ -11,11 +11,11 @@ return {
     GREY         = "#c0c0c0",
     DARK_GREY    = "#808080",
 
-    RED          =  "#ff0000",
-    GREEN        =  "#00ff00",
-    YELLOW       =  "#ffff00",
-    BLUE         =  "#0000ff", 
-    MAGENTA      =  "#ff00ff",
-    CYAN         =  "#00ffff",
-    WHITE        =  "#ffffff",
+    RED          = "#ff0000",
+    GREEN        = "#00ff00",
+    YELLOW       = "#ffff00",
+    BLUE         = "#0000ff", 
+    MAGENTA      = "#ff00ff",
+    CYAN         = "#00ffff",
+    WHITE        = "#ffffff",
 }

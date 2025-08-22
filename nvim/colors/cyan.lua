@@ -114,8 +114,8 @@ require("color.util").apply({
     }, 
 
     Function = {
-        ctermfg = t.DARK_GREY,
-        fg      = g.DARK_GREY,
+        ctermfg = t.GREY,
+        fg      = g.GREY,
     }, 
     Keyword = {
         ctermfg = t.DARK_GREY,
