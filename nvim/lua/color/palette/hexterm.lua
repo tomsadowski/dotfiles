@@ -1,4 +1,4 @@
--- term16
+-- hexterm
 return {
     BLACK        = "#000000",
     DARK_RED     = "#800000",

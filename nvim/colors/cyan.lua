@@ -1,6 +1,6 @@
 -- cyan
 local t = require("color.palette.term")
-local g = require("color.palette.hexterm")
+local g = require("color.palette.cyan")
 require("color.util").apply({
     Normal = {
         ctermfg = t.WHITE, 
