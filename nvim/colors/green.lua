@@ -169,11 +169,11 @@ require("color.util").apply({
     -- UI
     LineNr = {
         ctermfg = t.DARK_GREY,
-        fg      = g.DARK_GREY,
+        fg      = g.DARK_BLUE,
     }, 
     CursorLineNr = {
 	  		ctermfg = t.GREY,
-	  		fg      = g.GREY,
+	  		fg      = g.BLUE,
         bold = true,
     }, 
     Cursor = {
