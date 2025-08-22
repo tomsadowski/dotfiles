@@ -1,4 +1,4 @@
--- red_magenta
+-- magenta
 local t = require("color.palette.term")
 local g = require("color.palette.hexterm")
 require("color.util").apply({

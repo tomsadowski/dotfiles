@@ -1,4 +1,4 @@
--- blue_yellow
+-- cyan
 local t = require("color.palette.term")
 local g = require("color.palette.hexterm")
 require("color.util").apply({
@@ -19,22 +19,22 @@ require("color.util").apply({
 
 		-- variables
     Identifier = {
-        ctermfg = t.GREEN,
-        fg      = g.GREEN,
+        ctermfg = t.RED,
+        fg      = g.RED,
     }, 
     Constant = {
-        ctermfg = t.DARK_GREEN,
-        fg      = g.DARK_GREEN,
+        ctermfg = t.DARK_RED,
+        fg      = g.DARK_RED,
     }, 
 
 		-- string
     String = {
-        ctermfg = t.DARK_GREEN,
-        fg      = g.DARK_GREEN,
+        ctermfg = t.DARK_RED,
+        fg      = g.DARK_RED,
     }, 
     Character = {
-        ctermfg = t.DARK_GREEN,
-        fg      = g.DARK_GREEN,
+        ctermfg = t.DARK_RED,
+        fg      = g.DARK_RED,
     }, 
     SpecialChar = {
         ctermfg = t.CYAN,
@@ -47,34 +47,34 @@ require("color.util").apply({
 
 		-- params
     PreCondit = {
-        ctermfg = t.YELLOW,
-        fg      = g.YELLOW,
+        ctermfg = t.MAGENTA,
+        fg      = g.MAGENTA,
     }, 
     Statement = {
-        ctermfg = t.DARK_YELLOW,
-        fg      = g.DARK_YELLOW,
+        ctermfg = t.DARK_MAGENTA,
+        fg      = g.DARK_MAGENTA,
     }, 
 
 		-- preproc
     PreProc = {
-        ctermfg = t.DARK_YELLOW,
-        fg      = g.DARK_YELLOW,
+        ctermfg = t.DARK_MAGENTA,
+        fg      = g.DARK_MAGENTA,
     },
     Include = {
-        ctermfg = t.DARK_YELLOW,
-        fg      = g.DARK_YELLOW,
+        ctermfg = t.DARK_MAGENTA,
+        fg      = g.DARK_MAGENTA,
     }, 
     Define = {
-        ctermfg = t.DARK_YELLOW,
-        fg      = g.DARK_YELLOW,
+        ctermfg = t.DARK_MAGENTA,
+        fg      = g.DARK_MAGENTA,
     }, 
     Macro = {
-        ctermfg = t.DARK_YELLOW,
-        fg      = g.DARK_YELLOW,
+        ctermfg = t.DARK_MAGENTA,
+        fg      = g.DARK_MAGENTA,
     }, 
     Debug = {
-        ctermfg = t.DARK_YELLOW,
-        fg      = g.DARK_YELLOW,
+        ctermfg = t.DARK_MAGENTA,
+        fg      = g.DARK_MAGENTA,
     },
 
 		-- comment
@@ -162,8 +162,8 @@ require("color.util").apply({
     }, 
     Todo = {
         bold    = true,
-        ctermfg = t.GREEN,
-        fg      = g.GREEN,
+        ctermfg = t.RED,
+        fg      = g.RED,
     }, 
 
     -- UI
@@ -345,8 +345,8 @@ require("color.util").apply({
     }, 
     DiffDelete = {
         bold    = true,
-        ctermfg = t.YELLOW, 
-        fg      = g.YELLOW, 
+        ctermfg = t.MAGENTA, 
+        fg      = g.MAGENTA, 
     }, 
 
     Added = {
@@ -358,8 +358,8 @@ require("color.util").apply({
         fg      = g.GREY,
     }, 
     Removed = {
-        ctermfg = t.YELLOW, 
-        fg      = g.YELLOW,
+        ctermfg = t.MAGENTA, 
+        fg      = g.MAGENTA,
     }, 
 
     ModeMsg = {
@@ -371,8 +371,8 @@ require("color.util").apply({
         fg      = g.GREY,
     }, 
     WarningMsg = {
-        ctermfg = t.YELLOW, 
-        fg      = g.YELLOW,
+        ctermfg = t.MAGENTA, 
+        fg      = g.MAGENTA,
     }, 
     ErrorMsg = {
         ctermfg = t.RED,
