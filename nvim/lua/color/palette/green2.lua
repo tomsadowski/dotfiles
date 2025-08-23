@@ -1,9 +1,9 @@
--- green
+-- green2 (dark)
 return {
     GREEN        = "#50d070",
     CYAN         = "#50c0c0",
 
-    BLACK        = "#000810",
+    BLACK        = "#000010",
     GREY         = "#9090d0",
     WHITE        = "#c8d0d0",
 

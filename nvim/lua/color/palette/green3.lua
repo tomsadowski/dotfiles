@@ -1,4 +1,4 @@
--- green
+-- green3 (light)
 return {
     GREEN        = "#50d070",
     CYAN         = "#50c0c0",
