@@ -167,11 +167,11 @@ return function(palette) return {
     -- UI
     LineNr = {
         ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_BLUE,
+        fg      = palette.gui.DARK_GREY,
     }, 
     CursorLineNr = {
 	  		ctermfg = palette.term.GREY,
-	  		fg      = palette.gui.BLUE,
+	  		fg      = palette.gui.GREY,
         bold = true,
     }, 
     Cursor = {
