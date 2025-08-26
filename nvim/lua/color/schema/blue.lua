@@ -27,16 +27,16 @@ return function(palette) return {
 
 		-- string
     String = {
-        ctermfg = palette.term.CYAN,
-        fg      = palette.gui.CYAN,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     }, 
     Character = {
-        ctermfg = palette.term.CYAN,
-        fg      = palette.gui.CYAN,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     }, 
     SpecialChar = {
-        ctermfg = palette.term.CYAN,
-        fg      = palette.gui.CYAN,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     }, 
 
 		-- params

@@ -30,16 +30,16 @@ return function(palette) return {
 
 		-- string
     String = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Character = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     SpecialChar = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
 
 		-- params
@@ -54,44 +54,44 @@ return function(palette) return {
 
 		-- preproc
     PreProc = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.DARK_BLUE,
+        fg      = palette.gui.DARK_BLUE,
     },
     Include = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.DARK_BLUE,
+        fg      = palette.gui.DARK_BLUE,
     }, 
     Define = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.DARK_BLUE,
+        fg      = palette.gui.DARK_BLUE,
     }, 
     Macro = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.DARK_BLUE,
+        fg      = palette.gui.DARK_BLUE,
     }, 
     Debug = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.DARK_BLUE,
+        fg      = palette.gui.DARK_BLUE,
     },
 
 		-- comment
     Comment = {
-        ctermfg = palette.term.GREEN,
-        fg      = palette.gui.GREEN,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     SpecialComment = {
-        ctermfg = palette.term.GREEN,
-        fg      = palette.gui.GREEN,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
 
 		-- enum
     Tag = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     },
     Special = {
-        ctermfg = palette.term.YELLOW,
-        fg      = palette.gui.YELLOW,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     },
 
     Label = {
