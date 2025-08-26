@@ -1,7 +1,7 @@
--- bgyc
+-- black
 
 require("color.util").apply_spec({
-	scheme = require("color.schema.bgyc"),
+	scheme = require("color.schema.black"),
 	palette = {
 		gui  = require("color.palette.gui"),
 		term = require("color.palette.term"),

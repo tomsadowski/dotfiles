@@ -85,24 +85,24 @@ return function(palette) return {
 
 
     Label = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     },
     Structure = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Type = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Typedef = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Directory = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
 
 

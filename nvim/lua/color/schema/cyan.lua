@@ -1,19 +1,19 @@
 -- cyan
 return function(palette) return {
     Normal = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_BLUE, 
         fg      = palette.gui.DARK_BLUE, 
         ctermbg = palette.term.DARK_CYAN,
         bg      = palette.gui.DARK_CYAN,
     }, 
     Number = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_BLUE, 
         fg      = palette.gui.DARK_BLUE, 
     }, 
     Float = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_BLUE, 
         fg      = palette.gui.DARK_BLUE, 
     }, 
@@ -95,28 +95,28 @@ return function(palette) return {
     },
 
     Label = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     },
     Structure = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Type = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Typedef = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Directory = {
-        ctermfg = palette.term.GREY,
-        fg      = palette.gui.GREY,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
 
     Function = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.BLUE,
         fg      = palette.gui.BLUE,
     }, 
@@ -146,12 +146,10 @@ return function(palette) return {
         fg      = palette.gui.CYAN,
     }, 
     Delimiter = {
-				bold    = true,
         ctermfg = palette.term.DARK_BLUE,
         fg      = palette.gui.DARK_BLUE,
     }, 
     Operator = {
-				bold    = true,
         ctermfg = palette.term.DARK_BLUE,
         fg      = palette.gui.DARK_BLUE,
     }, 

@@ -1,4 +1,4 @@
--- bgyc
+-- black
 return function(palette) return {
     Normal = {
         ctermfg = palette.term.WHITE, 
