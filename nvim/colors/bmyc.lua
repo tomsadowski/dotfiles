@@ -1,7 +1,7 @@
--- tyellow
+-- bmyc
 
 require("color.util").apply_spec({
-	scheme = require("color.schema.yellow"),
+	scheme = require("color.schema.bmyc"),
 	palette = {
 		gui  = require("color.palette.gui"),
 		term = require("color.palette.term"),

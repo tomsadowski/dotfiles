@@ -3,7 +3,7 @@
 require("color.util").apply_spec({
 	scheme = require("color.schema.magenta"),
 	palette = {
-		gui  = require("color.palette.magenta"),
+		gui  = require("color.palette.gui"),
 		term = require("color.palette.term"),
 	},
 	link   = require("color.link.one"),

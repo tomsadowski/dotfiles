@@ -1,7 +1,7 @@
--- tblue
+-- ball
 
 require("color.util").apply_spec({
-	scheme = require("color.schema.blue"),
+	scheme = require("color.schema.ball"),
 	palette = {
 		gui  = require("color.palette.gui"),
 		term = require("color.palette.term"),

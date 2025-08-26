@@ -3,8 +3,8 @@ return function(palette) return {
     Normal = {
         ctermfg = palette.term.WHITE, 
         fg      = palette.gui.WHITE, 
-        ctermbg = palette.term.BLACK,
-        bg      = palette.gui.BLACK,
+        ctermbg = palette.term.DARK_GREEN,
+        bg      = palette.gui.DARK_GREEN,
     }, 
     Number = {
         ctermfg = palette.term.WHITE, 
@@ -21,75 +21,76 @@ return function(palette) return {
         fg      = palette.gui.GREEN,
     }, 
     Constant = {
-        ctermfg = palette.term.DARK_GREEN,
-        fg      = palette.gui.DARK_GREEN,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
 
 		-- string
     String = {
-        ctermfg = palette.term.DARK_GREEN,
-        fg      = palette.gui.DARK_GREEN,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     Character = {
-        ctermfg = palette.term.DARK_GREEN,
-        fg      = palette.gui.DARK_GREEN,
+        ctermfg = palette.term.CYAN,
+        fg      = palette.gui.CYAN,
     }, 
     SpecialChar = {
         ctermfg = palette.term.CYAN,
         fg      = palette.gui.CYAN,
     }, 
-    Special = {
-        ctermfg = palette.term.CYAN,
-        fg      = palette.gui.CYAN,
-    },
 
 		-- params
     PreCondit = {
-        ctermfg = palette.term.MAGENTA,
-        fg      = palette.gui.MAGENTA,
+        ctermfg = palette.term.RED,
+        fg      = palette.gui.RED,
     }, 
     Statement = {
-        ctermfg = palette.term.DARK_MAGENTA,
-        fg      = palette.gui.DARK_MAGENTA,
+        ctermfg = palette.term.MAGENTA,
+        fg      = palette.gui.MAGENTA,
     }, 
 
 		-- preproc
     PreProc = {
-        ctermfg = palette.term.DARK_MAGENTA,
-        fg      = palette.gui.DARK_MAGENTA,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     },
     Include = {
-        ctermfg = palette.term.DARK_MAGENTA,
-        fg      = palette.gui.DARK_MAGENTA,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     }, 
     Define = {
-        ctermfg = palette.term.DARK_MAGENTA,
-        fg      = palette.gui.DARK_MAGENTA,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     }, 
     Macro = {
-        ctermfg = palette.term.DARK_MAGENTA,
-        fg      = palette.gui.DARK_MAGENTA,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     }, 
     Debug = {
-        ctermfg = palette.term.DARK_MAGENTA,
-        fg      = palette.gui.DARK_MAGENTA,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     },
 
 		-- comment
     Comment = {
-        ctermfg = palette.term.DARK_CYAN,
-        fg      = palette.gui.DARK_CYAN,
+        ctermfg = palette.term.DARK_GREEN,
+        fg      = palette.gui.DARK_GREEN,
     }, 
     SpecialComment = {
-        ctermfg = palette.term.DARK_CYAN,
-        fg      = palette.gui.DARK_CYAN,
+        ctermfg = palette.term.DARK_GREEN,
+        fg      = palette.gui.DARK_GREEN,
     }, 
 
 		-- enum
     Tag = {
-        ctermfg = palette.term.CYAN,
-        fg      = palette.gui.CYAN,
+        ctermfg = palette.term.YELLOW,
+        fg      = palette.gui.YELLOW,
     },
+    Special = {
+        ctermfg = palette.term.YELLOW,
+        fg      = palette.gui.YELLOW,
+    },
+
     Label = {
         ctermfg = palette.term.GREY,
         fg      = palette.gui.GREY,
@@ -115,44 +116,46 @@ return function(palette) return {
         ctermfg = palette.term.GREY,
         fg      = palette.gui.GREY,
     }, 
+
     Keyword = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     StorageClass = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
-    }, 
-    Delimiter = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
-    }, 
-    Operator = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Conditional = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Repeat = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Exception = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Boolean = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
+    }, 
+
+    Delimiter = {
+        ctermfg = palette.term.WHITE,
+        fg      = palette.gui.WHITE,
+    }, 
+    Operator = {
+        ctermfg = palette.term.WHITE,
+        fg      = palette.gui.WHITE,
     }, 
 
     Error = {
-        ctermfg = palette.term.RED, 
-        fg      = palette.gui.RED, 
-        ctermbg = palette.term.BLACK,
-        bg      = palette.gui.BLACK,
+        ctermfg = palette.term.YELLOW, 
+        fg      = palette.gui.YELLOW, 
+        ctermbg = palette.term.WHITE,
+        bg      = palette.gui.WHITE,
     }, 
     Ignore = {
         ctermfg = palette.term.BLUE, 
@@ -160,18 +163,22 @@ return function(palette) return {
     }, 
     Todo = {
         bold    = true,
-        ctermfg = palette.term.GREEN,
-        fg      = palette.gui.GREEN,
+        ctermfg = palette.term.YELLOW,
+        fg      = palette.gui.YELLOW,
     }, 
 
     -- UI
     LineNr = {
-        ctermfg = palette.term.DARK_GREY,
-        fg      = palette.gui.DARK_GREY,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
+        ctermbg = palette.term.DARK_GREEN,
+        bg      = palette.gui.DARK_GREEN,
     }, 
     CursorLineNr = {
-	  		ctermfg = palette.term.GREY,
-	  		fg      = palette.gui.GREY,
+	  		ctermfg = palette.term.DARK_GREEN,
+	  		fg      = palette.gui.DARK_GREEN,
+	  		ctermbg = palette.term.GREEN,
+	  		bg      = palette.gui.GREEN,
         bold = true,
     }, 
     Cursor = {
@@ -189,13 +196,17 @@ return function(palette) return {
     }, 
 
     Visual = {
-        ctermbg = palette.term.DARK_BLUE,
-        bg      = palette.gui.DARK_BLUE,
+        ctermfg = palette.term.MAGENTA,
+        fg      = palette.gui.MAGENTA,
+        ctermbg = palette.term.DARK_MAGENTA,
+        bg      = palette.gui.DARK_MAGENTA,
     }, 
     Search = {
 				bold    = true,
-        ctermbg = palette.term.DARK_BLUE,
-        bg      = palette.gui.DARK_BLUE,
+        ctermfg = palette.term.DARK_GREEN,
+        fg      = palette.gui.DARK_GREEN,
+        ctermfg = palette.term.GREEN,
+        fg      = palette.gui.GREEN,
     },
     MatchParen = {
         bold      = true, 
@@ -251,7 +262,7 @@ return function(palette) return {
         ctermfg = palette.term.GREY, 
         fg      = palette.gui.GREY, 
         ctermbg = palette.term.CYAN, 
-        bg      = palette.gui.CYAN, 
+				bg      = palette.gui.CYAN, 
     }, 
 
     NormalFloat = {
@@ -300,8 +311,8 @@ return function(palette) return {
         strikethrough = true,
     }, 
     DiagnosticError = {
-        ctermfg = palette.term.DARK_RED, 
-        fg      = palette.gui.DARK_RED,
+        ctermfg = palette.term.DARK_YELLOW, 
+        fg      = palette.gui.DARK_YELLOW,
     }, 
     DiagnosticWarn = {
         ctermfg = palette.term.DARK_YELLOW, 
@@ -343,8 +354,8 @@ return function(palette) return {
     }, 
     DiffDelete = {
         bold    = true,
-        ctermfg = palette.term.MAGENTA, 
-        fg      = palette.gui.MAGENTA, 
+        ctermfg = palette.term.GREEN, 
+        fg      = palette.gui.GREEN, 
     }, 
 
     Added = {
@@ -356,8 +367,8 @@ return function(palette) return {
         fg      = palette.gui.GREY,
     }, 
     Removed = {
-        ctermfg = palette.term.MAGENTA, 
-        fg      = palette.gui.MAGENTA,
+        ctermfg = palette.term.GREEN, 
+        fg      = palette.gui.GREEN,
     }, 
 
     ModeMsg = {
@@ -369,12 +380,12 @@ return function(palette) return {
         fg      = palette.gui.GREY,
     }, 
     WarningMsg = {
-        ctermfg = palette.term.MAGENTA, 
-        fg      = palette.gui.MAGENTA,
+        ctermfg = palette.term.GREEN, 
+        fg      = palette.gui.GREEN,
     }, 
     ErrorMsg = {
-        ctermfg = palette.term.RED,
-        fg      = palette.gui.RED,
+        ctermfg = palette.term.YELLOW,
+        fg      = palette.gui.YELLOW,
     }, 
     MsgSeparator = {
         ctermfg = palette.term.BLACK, 
@@ -432,4 +443,3 @@ return function(palette) return {
         reverse = true,
     }, 
 } end
-
