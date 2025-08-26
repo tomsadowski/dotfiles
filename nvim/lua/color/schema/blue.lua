@@ -123,33 +123,33 @@ return function(palette) return {
     }, 
     Keyword = {
 				bold    = true,
-        ctermfg = palette.term.BLUE,
-        fg      = palette.gui.BLUE,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     StorageClass = {
 				bold    = true,
-        ctermfg = palette.term.BLUE,
-        fg      = palette.gui.BLUE,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Conditional = {
 				bold    = true,
-        ctermfg = palette.term.BLUE,
-        fg      = palette.gui.BLUE,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Repeat = {
 				bold    = true,
-        ctermfg = palette.term.BLUE,
-        fg      = palette.gui.BLUE,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Exception = {
 				bold    = true,
-        ctermfg = palette.term.BLUE,
-        fg      = palette.gui.BLUE,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
     Boolean = {
 				bold    = true,
-        ctermfg = palette.term.BLUE,
-        fg      = palette.gui.BLUE,
+        ctermfg = palette.term.DARK_CYAN,
+        fg      = palette.gui.DARK_CYAN,
     }, 
 
     Delimiter = {
