@@ -3,7 +3,7 @@
 local scheme  = require("color.schema.blue")
 local palette = vim.deepcopy(require("color.palette.flat"))
 
-palette.gui.DARK_BLUE = "#000050"
+palette.gui.DARK_BLUE[1] = "#000050"
 
 require("color.util").apply_spec({
     scheme  = scheme, 
