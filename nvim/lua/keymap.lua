@@ -51,29 +51,11 @@ local lsp_attach = function(args)
             method = vim.lsp.diagnostic.show
         }
     }
-    local s = ""
-    for _, p in ipairs(caps) do
-        if vim.lsp
-            .get_client_by_id(args.data.client_id)
-            .supports_method(p.name) 
-        then
-            map(p.mode, p.cmd, p.method)
-            s = s .. string.format("%s does %s in %s", p.cmd, p.name, p.mode)
-        else 
-            s = s .. string.format("there is no %s", p.name)
-        end
-    end
-    map({"n"}, "bs", function()
-        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-    end)
-    vim.g.lsp_cap = function() 
-        vim.print(vim.lsp.get_clients()[1].server_capabilities) 
-    end
 end
 
---vim.api.nvim_create_autocmd(
---		'LspAttach', 
---		{
---				callback = lsp_attach
---		}
---)
+vim.api.nvim_create_autocmd(
+    'LspAttach', 
+    {
+        callback = lsp_attach
+    }
+)

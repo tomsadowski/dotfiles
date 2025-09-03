@@ -71,14 +71,14 @@ return function(palette) return {
         fg      = palette.gui.GREEN,
     },
 
-		-- comment
+    -- comment
     Comment = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_GREEN,
         fg      = palette.gui.DARK_GREEN,
     }, 
     SpecialComment = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_GREEN,
         fg      = palette.gui.DARK_GREEN,
     }, 
@@ -106,7 +106,7 @@ return function(palette) return {
     }, 
 
 
-		-- enum
+    -- enum
     Tag = {
         ctermfg = palette.term.YELLOW,
         fg      = palette.gui.YELLOW,
@@ -117,32 +117,32 @@ return function(palette) return {
     },
 
     Function = {
-				bold    = true,
-        ctermfg = palette.term.DARK_CYAN,
-        fg      = palette.gui.DARK_CYAN,
+        bold    = true,
+        ctermfg = palette.term.DARK_YELLOW,
+        fg      = palette.gui.DARK_YELLOW,
     }, 
     Keyword = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_CYAN,
         fg      = palette.gui.DARK_CYAN,
     }, 
     StorageClass = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_CYAN,
         fg      = palette.gui.DARK_CYAN,
     }, 
     Conditional = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_CYAN,
         fg      = palette.gui.DARK_CYAN,
     }, 
     Repeat = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_CYAN,
         fg      = palette.gui.DARK_CYAN,
     }, 
     Exception = {
-				bold    = true,
+        bold    = true,
         ctermfg = palette.term.DARK_CYAN,
         fg      = palette.gui.DARK_CYAN,
     }, 
@@ -212,9 +212,9 @@ return function(palette) return {
         bg      = palette.gui.DARK_YELLOW,
     }, 
     Search = {
-				bold    = true,
-        ctermbg = palette.term.DARK_BLUE,
-        bg      = palette.gui.DARK_BLUE,
+        bold    = true,
+        ctermbg = palette.term.BLUE,
+        bg      = palette.gui.BLUE,
     },
     MatchParen = {
         bold      = true, 

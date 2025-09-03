@@ -85,6 +85,10 @@ return {
     -- csharp
     csClassType                         = {link='Normal'},
     csGenericBraces                     = {link='Normal'},
+    ['@lsp.type.class.cs']              = {link='Normal'},
+    ['@lsp.typemod.class.static.cs']    = {link='Normal'},
+    ['@lsp.type.struct.cs']             = {link='Normal'},
+    ['@lsp.type.property.cs']           = {link='Normal'},
     csXmlTag                            = {link='Special'},
     ['@lsp.type.enumMember.cs']         = {link='Special'},
     ['@lsp.type.enum.cs']               = {link='Special'},
@@ -92,7 +96,6 @@ return {
     csAccessModifier                    = {link='Keyword'},
     csClass                             = {link='Keyword'},
     csNull                              = {link='Keyword'},
-    ['@lsp.typemod.class.static.cs']    = {link='Keyword'},
     ['@lsp.type.keyword.cs']            = {link='Keyword'},
     ['@lsp.type.builtinType.cs']        = {link='Keyword'},
     ['@lsp.type.interface.cs']          = {link='Function'},

@@ -1,19 +1,19 @@
 -- cyan
 return function(palette) return {
     Normal = {
-        bold    = true,
+    --    bold    = true,
         ctermfg = palette.term.DARK_BLUE, 
         fg      = palette.gui.DARK_BLUE, 
         ctermbg = palette.term.DARK_CYAN,
         bg      = palette.gui.DARK_CYAN,
     }, 
     Number = {
-        bold    = true,
+    --    bold    = true,
         ctermfg = palette.term.DARK_BLUE, 
         fg      = palette.gui.DARK_BLUE, 
     }, 
     Float = {
-        bold    = true,
+    --    bold    = true,
         ctermfg = palette.term.DARK_BLUE, 
         fg      = palette.gui.DARK_BLUE, 
     }, 
@@ -74,7 +74,7 @@ return function(palette) return {
         fg      = palette.gui.DARK_BLUE,
     },
 
-		-- comment
+    -- comment
     Comment = {
         ctermfg = palette.term.CYAN,
         fg      = palette.gui.CYAN,
@@ -84,7 +84,7 @@ return function(palette) return {
         fg      = palette.gui.CYAN,
     }, 
 
-		-- enum
+    -- enum
     Tag = {
         ctermfg = palette.term.CYAN,
         fg      = palette.gui.CYAN,
@@ -116,7 +116,7 @@ return function(palette) return {
     }, 
 
     Function = {
-        bold    = true,
+        -- bold    = true,
         ctermfg = palette.term.BLUE,
         fg      = palette.gui.BLUE,
     }, 
@@ -178,10 +178,10 @@ return function(palette) return {
         bg      = palette.gui.DARK_CYAN,
     }, 
     CursorLineNr = {
-	  		ctermbg = palette.term.DARK_YELLOW,
-	  		bg      = palette.gui.DARK_YELLOW,
-	  		ctermfg = palette.term.YELLOW,
-	  		fg      = palette.gui.YELLOW,
+        ctermbg = palette.term.DARK_YELLOW,
+        bg      = palette.gui.DARK_YELLOW,
+        ctermfg = palette.term.YELLOW,
+        fg      = palette.gui.YELLOW,
         bold = true,
     }, 
     Cursor = {
@@ -205,7 +205,7 @@ return function(palette) return {
         bg      = palette.gui.DARK_YELLOW,
     }, 
     Search = {
-				bold    = true,
+		bold    = true,
         ctermfg = palette.term.DARK_CYAN,
         fg      = palette.gui.DARK_CYAN,
         ctermbg = palette.term.CYAN,
@@ -213,8 +213,8 @@ return function(palette) return {
     },
     MatchParen = {
         bold      = true, 
-        ctermbg = palette.term.DARK_BLUE,
-        bg      = palette.gui.DARK_BLUE, 
+        ctermbg = palette.term.BLUE,
+        bg      = palette.gui.BLUE, 
     }, 
     Folded = {
         ctermfg = palette.term.CYAN, 
