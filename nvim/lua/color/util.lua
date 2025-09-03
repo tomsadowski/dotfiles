@@ -8,11 +8,11 @@ M.apply_spec = function(spec)
     		vim.api.nvim_set_hl(0, group, {})
     end
     -- apply scheme
-    for k, v in pairs(spec.scheme(spec.palette)) do
+    for k, v in pairs(spec.scheme.base(spec.palette)) do
         vim.api.nvim_set_hl(0, k, v)
     end
     -- apply links
-    for k, v in pairs(spec.link) do
+    for k, v in pairs(spec.scheme.link) do
         vim.api.nvim_set_hl(0, k, v)
     end
 end

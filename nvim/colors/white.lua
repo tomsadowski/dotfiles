@@ -1,10 +1,9 @@
 -- white
 
+local scheme  = require("color.schema.white")
+local palette = vim.deepcopy(require("color.palette.flat"))
+
 require("color.util").apply_spec({
-	scheme = require("color.schema.white"),
-	palette = {
-		gui  = require("color.palette.gui"),
-		term = require("color.palette.term"),
-	},
-	link   = require("color.link.one"),
+    scheme  = scheme, 
+    palette = palette,
 })
