@@ -23,6 +23,7 @@ map({"n", "v"}, "I", "<C-y>")          -- screen down
 map({"n", "v"}, "O", "<C-e>")          -- screen up
 map({"n", "v"}, "<S-e>", "b")          -- word left
 map({"n", "v"}, "<S-n>", "w")          -- word right
+map({"n", "v"}, "ZZ", "zz")            -- center screen (NO EXIT)
 map({"n", "v"}, "<C-o>", "kzz")        -- scroll screen and cursor up
 map({"n", "v"}, "<C-i>", "jzz")        -- scroll screen and cursor down
 map({"n"}, "<PageDown>", "10jzz")      -- scroll screen and cursor down 10x
