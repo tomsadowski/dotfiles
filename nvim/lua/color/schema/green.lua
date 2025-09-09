@@ -8,6 +8,10 @@ return {
             ctermbg = palette.term.DARK_GREEN,
             bg      = palette.gui.DARK_GREEN[1],
         }, 
+        Structure = {
+            ctermfg = palette.term.GREEN,
+            fg      = palette.gui.GREEN[1],
+        }, 
         Number = {
             ctermfg = palette.term.GREEN, 
             fg      = palette.gui.GREEN[1], 
@@ -99,10 +103,6 @@ return {
             ctermfg = palette.term.YELLOW,
             fg      = palette.gui.YELLOW[1],
         },
-        Structure = {
-            ctermfg = palette.term.YELLOW,
-            fg      = palette.gui.YELLOW[1],
-        }, 
         Type = {
             ctermfg = palette.term.YELLOW,
             fg      = palette.gui.YELLOW[1],

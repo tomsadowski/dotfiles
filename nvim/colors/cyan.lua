@@ -10,20 +10,14 @@
 local palette = vim.deepcopy(require("color.palette.flat"))
 
 
-  palette.gui.YELLOW[1]       = "#a0ff80"
+--  palette.gui.YELLOW[1]       = "#80a010"
+--  palette.gui.YELLOW[2]       = "#a0ff60"
+  palette.gui.DARK_BLUE[1]    = "#2080a0"
+  palette.gui.DARK_BLUE[2]    = "#60a0ff"
 
-  palette.gui.GREEN[1]        = "#80ffa0"
-  palette.gui.GREEN[2]        = "#208060"
-
-
-  palette.gui.DARK_YELLOW[2]  = "#80a000"
-  palette.gui.DARK_YELLOW[1]  = "#408000"
-
-  palette.gui.DARK_MAGENTA[1] = "#8080a0"
-  palette.gui.DARK_MAGENTA[2] = "#a0a0ff"
-
-  palette.gui.DARK_YELLOW[2]   = "#40ff40"
-  palette.gui.DARK_YELLOW[1]   = "#208020"
+  palette.gui.YELLOW[1]        = "#80ffa0"
+  palette.gui.YELLOW[2]        = "#a0ff80"
+  palette.gui.YELLOW[3]        = "#20a060"
 
   palette.gui.CYAN[2]         = "#00ffff"
   palette.gui.CYAN[1]         = "#008080"

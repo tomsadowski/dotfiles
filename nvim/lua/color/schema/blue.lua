@@ -8,9 +8,21 @@ return {
             ctermbg = palette.term.DARK_BLUE,
             bg      = palette.gui.DARK_BLUE[1],
         }, 
+        Delimiter = {
+            ctermfg = palette.term.CYAN,
+            fg      = palette.gui.CYAN[1],
+        }, 
+        Operator = {
+            ctermfg = palette.term.CYAN,
+            fg      = palette.gui.CYAN[1],
+        }, 
         Number = {
             ctermfg = palette.term.CYAN, 
             fg      = palette.gui.CYAN[1], 
+        }, 
+        Structure = {
+            ctermfg = palette.term.CYAN,
+            fg      = palette.gui.CYAN[1],
         }, 
         Float = {
             ctermfg = palette.term.CYAN, 
@@ -19,39 +31,38 @@ return {
 
         -- variables
         Identifier = {
-            ctermfg = palette.term.YELLOW,
-            fg      = palette.gui.YELLOW[1],
+            ctermfg = palette.term.GREEN,
+            fg      = palette.gui.GREEN[1],
         }, 
         Constant = {
-            ctermfg = palette.term.YELLOW,
-            fg      = palette.gui.YELLOW[1],
+            ctermfg = palette.term.GREEN,
+            fg      = palette.gui.GREEN[1],
+        }, 
+        -- params
+        PreCondit = {
+            bold    = true,
+            ctermfg = palette.term.DARK_YELLOW,
+            fg      = palette.gui.DARK_YELLOW[1],
+        }, 
+        Statement = {
+            bold    = true,
+            ctermfg = palette.term.DARK_YELLOW,
+            fg      = palette.gui.DARK_YELLOW[1],
         }, 
 
         -- string
         String = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
+            ctermfg = palette.term.DARK_YELLOW,
+            fg      = palette.gui.DARK_YELLOW[1],
         }, 
         Character = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
-        }, 
-        SpecialChar = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
+            ctermfg = palette.term.DARK_YELLOW,
+            fg      = palette.gui.DARK_YELLOW[1],
         }, 
 
-            -- params
-        PreCondit = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
-        }, 
-        Statement = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
-        }, 
 
-            -- preproc
+
+        -- preproc
         PreProc = {
             ctermfg = palette.term.GREEN,
             fg      = palette.gui.GREEN[1],
@@ -64,14 +75,6 @@ return {
             ctermfg = palette.term.GREEN,
             fg      = palette.gui.GREEN[1],
         }, 
-        Macro = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
-        }, 
-        Debug = {
-            ctermfg = palette.term.GREEN,
-            fg      = palette.gui.GREEN[1],
-        },
 
         -- comment
         Comment = {
@@ -84,16 +87,24 @@ return {
             ctermfg = palette.term.DARK_GREEN,
             fg      = palette.gui.DARK_GREEN[1],
         }, 
+        SpecialChar = {
+            ctermfg = palette.term.DARK_GREEN,
+            fg      = palette.gui.DARK_GREEN[1],
+        }, 
+        Macro = {
+            ctermfg = palette.term.DARK_GREEN,
+            fg      = palette.gui.DARK_GREEN[1],
+        }, 
+        Debug = {
+            ctermfg = palette.term.DARK_GREEN,
+            fg      = palette.gui.DARK_GREEN[1],
+        },
 
 
         Label = {
             ctermfg = palette.term.CYAN,
             fg      = palette.gui.CYAN[1],
         },
-        Structure = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
-        }, 
         Type = {
             ctermfg = palette.term.CYAN,
             fg      = palette.gui.CYAN[1],
@@ -120,8 +131,8 @@ return {
 
         Function = {
             bold    = true,
-            ctermfg = palette.term.DARK_YELLOW,
-            fg      = palette.gui.DARK_YELLOW[1],
+            ctermfg = palette.term.DARK_CYAN,
+            fg      = palette.gui.DARK_CYAN[1],
         }, 
         Keyword = {
             bold    = true,
@@ -154,14 +165,6 @@ return {
             fg      = palette.gui.DARK_CYAN[1],
         }, 
 
-        Delimiter = {
-            ctermfg = palette.term.DARK_CYAN,
-            fg      = palette.gui.DARK_CYAN[1],
-        }, 
-        Operator = {
-            ctermfg = palette.term.DARK_CYAN,
-            fg      = palette.gui.DARK_CYAN[1],
-        }, 
 
         Error = {
             ctermfg = palette.term.YELLOW, 

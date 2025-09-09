@@ -8,6 +8,10 @@ return {
             ctermbg = palette.term.DARK_YELLOW,
             bg      = palette.gui.DARK_YELLOW[1],
         }, 
+        Structure = {
+            ctermfg = palette.term.DARK_BLUE,
+            fg      = palette.gui.DARK_BLUE[1],
+        }, 
         Number = {
             ctermfg = palette.term.DARK_BLUE, 
             fg      = palette.gui.DARK_BLUE[1], 
@@ -17,7 +21,7 @@ return {
             fg      = palette.gui.DARK_BLUE[1], 
         }, 
 
-            -- variables
+        -- variables
         Identifier = {
             ctermfg = palette.term.BLUE,
             fg      = palette.gui.BLUE[1],
@@ -27,7 +31,7 @@ return {
             fg      = palette.gui.BLUE[1],
         }, 
 
-            -- string
+        -- string
         String = {
             ctermfg = palette.term.BLUE,
             fg      = palette.gui.BLUE[1],
@@ -41,7 +45,7 @@ return {
             fg      = palette.gui.BLUE[1],
         }, 
 
-            -- params
+        -- params
         PreCondit = {
             ctermfg = palette.term.DARK_MAGENTA,
             fg      = palette.gui.DARK_MAGENTA[1],
@@ -51,7 +55,7 @@ return {
             fg      = palette.gui.DARK_MAGENTA[1],
         }, 
 
-            -- preproc
+        -- preproc
         PreProc = {
             ctermfg = palette.term.BLUE,
             fg      = palette.gui.BLUE[1],
@@ -88,10 +92,6 @@ return {
             ctermfg = palette.term.GREY,
             fg      = palette.gui.GREY[1],
         },
-        Structure = {
-            ctermfg = palette.term.GREY,
-            fg      = palette.gui.GREY[1],
-        }, 
         Type = {
             ctermfg = palette.term.GREY,
             fg      = palette.gui.GREY[1],

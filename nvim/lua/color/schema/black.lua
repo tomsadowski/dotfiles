@@ -8,6 +8,10 @@ return {
             ctermbg = palette.term.BLACK,
             bg      = palette.gui.BLACK[1],
         }, 
+        Structure = {
+            ctermfg = palette.term.WHITE,
+            fg      = palette.gui.WHITE[1],
+        }, 
         Number = {
             ctermfg = palette.term.WHITE, 
             fg      = palette.gui.WHITE[1], 
@@ -17,7 +21,7 @@ return {
             fg      = palette.gui.WHITE[1], 
         }, 
 
-            -- variables
+        -- variables
         Identifier = {
             ctermfg = palette.term.YELLOW,
             fg      = palette.gui.YELLOW[1],
@@ -27,7 +31,7 @@ return {
             fg      = palette.gui.DARK_YELLOW[1],
         }, 
 
-            -- string
+        -- string
         String = {
             ctermfg = palette.term.DARK_YELLOW,
             fg      = palette.gui.DARK_YELLOW[1],
@@ -41,7 +45,7 @@ return {
             fg      = palette.gui.CYAN[1],
         }, 
 
-            -- params
+        -- params
         PreCondit = {
             ctermfg = palette.term.GREEN,
             fg      = palette.gui.GREEN[1],
@@ -51,7 +55,7 @@ return {
             fg      = palette.gui.DARK_GREEN[1],
         }, 
 
-            -- preproc
+        -- preproc
         PreProc = {
             ctermfg = palette.term.DARK_CYAN,
             fg      = palette.gui.DARK_CYAN[1],
@@ -73,7 +77,7 @@ return {
             fg      = palette.gui.DARK_CYAN[1],
         },
 
-            -- comment
+        -- comment
         Comment = {
             ctermfg = palette.term.DARK_GREEN,
             fg      = palette.gui.DARK_GREEN[1],
@@ -83,7 +87,7 @@ return {
             fg      = palette.gui.DARK_GREEN[1],
         }, 
 
-            -- enum
+        -- enum
         Special = {
             ctermfg = palette.term.CYAN,
             fg      = palette.gui.CYAN[1],
@@ -96,10 +100,6 @@ return {
             ctermfg = palette.term.CYAN,
             fg      = palette.gui.CYAN[1],
         },
-        Structure = {
-            ctermfg = palette.term.GREY,
-            fg      = palette.gui.GREY[1],
-        }, 
         Type = {
             ctermfg = palette.term.GREY,
             fg      = palette.gui.GREY[1],
@@ -113,10 +113,13 @@ return {
             fg      = palette.gui.GREY[1],
         }, 
 
+        -- function
         Function = {
             ctermfg = palette.term.GREY,
             fg      = palette.gui.GREY[1],
         }, 
+
+        -- keyword
         Keyword = {
             ctermfg = palette.term.DARK_GREY,
             fg      = palette.gui.DARK_GREY[1],
