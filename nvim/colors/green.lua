@@ -1,13 +1,19 @@
 -- green
 
-local scheme  = require("color.schema.green")
-local palette = vim.deepcopy(require("color.palette.flat"))
+local s = vim.deepcopy(require("color.schema.green"))
+local p = vim.deepcopy(require("color.palette.flat"))
 
-palette.gui.DARK_GREEN[1] = "#004020"
-palette.gui.GREEN[1]      = "#00ff00"
-palette.gui.BLUE[1]       = "#0060dd"
+-- bg
+p.gui.DARK_GREEN[1] = "#003000"
+
+-- function
+p.gui.GREEN[1]      = "#60ff60"
+
+-- keyword
+p.gui.GREEN[2]      = "#20aa20"
+
 
 require("color.util").apply_spec({
-    scheme  = scheme, 
-    palette = palette,
+    scheme  = s, 
+    palette = p,
 })

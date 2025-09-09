@@ -1,9 +1,9 @@
 -- black
 
-local scheme  = require("color.schema.black")
-local palette = vim.deepcopy(require("color.palette.flat"))
+local s = vim.deepcopy(require("color.schema.black"))
+local p = vim.deepcopy(require("color.palette.flat"))
 
 require("color.util").apply_spec({
-    scheme  = scheme, 
-    palette = palette,
+    scheme  = s, 
+    palette = p,
 })

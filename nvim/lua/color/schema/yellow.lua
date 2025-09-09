@@ -1,36 +1,34 @@
 -- yellow
 return {
-    link = require("color.link.one"),
+    link = require("color.schema.links"),
     base = function(palette) return {
+        -- normal
         Normal = {
             ctermfg = palette.term.DARK_BLUE, 
             fg      = palette.gui.DARK_BLUE[1], 
             ctermbg = palette.term.DARK_YELLOW,
             bg      = palette.gui.DARK_YELLOW[1],
         }, 
-        Structure = {
+        -- keyword
+        Keyword = {
             ctermfg = palette.term.DARK_BLUE,
             fg      = palette.gui.DARK_BLUE[1],
         }, 
-        Number = {
-            ctermfg = palette.term.DARK_BLUE, 
-            fg      = palette.gui.DARK_BLUE[1], 
+        -- function
+        Function = {
+            ctermfg = palette.term.DARK_RED,
+            fg      = palette.gui.DARK_RED[1],
         }, 
-        Float = {
-            ctermfg = palette.term.DARK_BLUE, 
-            fg      = palette.gui.DARK_BLUE[1], 
+        -- enum
+        Tag = {
+            ctermfg = palette.term.CYAN,
+            fg      = palette.gui.CYAN[1],
+        },
+        -- comment
+        Comment = {
+            ctermfg = palette.term.YELLOW,
+            fg      = palette.gui.YELLOW[1],
         }, 
-
-        -- variables
-        Identifier = {
-            ctermfg = palette.term.BLUE,
-            fg      = palette.gui.BLUE[1],
-        }, 
-        Constant = {
-            ctermfg = palette.term.BLUE,
-            fg      = palette.gui.BLUE[1],
-        }, 
-
         -- string
         String = {
             ctermfg = palette.term.BLUE,
@@ -40,21 +38,24 @@ return {
             ctermfg = palette.term.BLUE,
             fg      = palette.gui.BLUE[1],
         }, 
-        SpecialChar = {
+        -- variables
+        Identifier = {
             ctermfg = palette.term.BLUE,
             fg      = palette.gui.BLUE[1],
         }, 
-
+        Constant = {
+            ctermfg = palette.term.BLUE,
+            fg      = palette.gui.BLUE[1],
+        }, 
         -- params
         PreCondit = {
             ctermfg = palette.term.DARK_MAGENTA,
             fg      = palette.gui.DARK_MAGENTA[1],
         }, 
-        Statement = {
+        Label = {
             ctermfg = palette.term.DARK_MAGENTA,
             fg      = palette.gui.DARK_MAGENTA[1],
         }, 
-
         -- preproc
         PreProc = {
             ctermfg = palette.term.BLUE,
@@ -76,22 +77,21 @@ return {
             ctermfg = palette.term.BLUE,
             fg      = palette.gui.BLUE[1],
         },
-
-            -- comment
-        Comment = {
-            ctermfg = palette.term.YELLOW,
-            fg      = palette.gui.YELLOW[1],
-        }, 
+        -- special
         SpecialComment = {
             ctermfg = palette.term.YELLOW,
             fg      = palette.gui.YELLOW[1],
         }, 
-
-
-        Label = {
-            ctermfg = palette.term.GREY,
-            fg      = palette.gui.GREY[1],
+        SpecialChar = {
+            ctermfg = palette.term.BLUE,
+            fg      = palette.gui.BLUE[1],
+        }, 
+        Special = {
+            ctermfg = palette.term.CYAN,
+            fg      = palette.gui.CYAN[1],
         },
+
+
         Type = {
             ctermfg = palette.term.GREY,
             fg      = palette.gui.GREY[1],
@@ -103,54 +103,6 @@ return {
         Directory = {
             ctermfg = palette.term.GREY,
             fg      = palette.gui.GREY[1],
-        }, 
-
-        Function = {
-            ctermfg = palette.term.DARK_RED,
-            fg      = palette.gui.DARK_RED[1],
-        }, 
-            -- enum
-        Tag = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
-        },
-        Special = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
-        },
-
-        Keyword = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-        StorageClass = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-        Conditional = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-        Repeat = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-        Exception = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-        Boolean = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-
-        Delimiter = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
-        }, 
-        Operator = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1],
         }, 
 
         Error = {
@@ -198,10 +150,8 @@ return {
         }, 
 
         Visual = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
-            ctermbg = palette.term.DARK_CYAN,
-            bg      = palette.gui.DARK_CYAN[1],
+            ctermbg = palette.term.BLACK,
+            bg      = palette.gui.BLACK[1],
         }, 
         Search = {
                     bold    = true,

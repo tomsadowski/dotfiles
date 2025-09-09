@@ -1,30 +1,40 @@
 -- cyan
 
+local s = vim.deepcopy(require("color.schema.cyan"))
+local p = vim.deepcopy(require("color.palette.flat"))
 
+-- bg
+p.gui.DARK_CYAN[1] = "#003030"
 
+-- fg
+p.gui.WHITE[1]     = "#e0ffff"
 
+-- function
+p.gui.CYAN[1]      = "#20ffff"
 
+-- keyword, defaultLibrary
+p.gui.CYAN[2]      = "#00b0e0"
 
+-- linenumber
+p.gui.CYAN[3]      = "#006060"
 
+-- comment, macro
+p.gui.GREY[1]      = "#80a0a0"
+p.gui.GREY[2]      = "#80a0a0"
+p.gui.GREY[3]      = "#80a0a0"
 
-local palette = vim.deepcopy(require("color.palette.flat"))
+-- variable
+p.gui.GREEN[1]     = "#00ff00" -- mutable
+p.gui.GREEN[2]     = "#00a000" -- immutable
 
+-- param
+p.gui.YELLOW[1]    = "#ffff20" -- mutable
+p.gui.YELLOW[2]    = "#a0a020" -- immutable
 
---  palette.gui.YELLOW[1]       = "#80a010"
---  palette.gui.YELLOW[2]       = "#a0ff60"
-  palette.gui.DARK_BLUE[1]    = "#2080a0"
-  palette.gui.DARK_BLUE[2]    = "#60a0ff"
+-- enum
+p.gui.RED[1]       = "#ff6060"
 
-  palette.gui.YELLOW[1]        = "#80ffa0"
-  palette.gui.YELLOW[2]        = "#a0ff80"
-  palette.gui.YELLOW[3]        = "#20a060"
-
-  palette.gui.CYAN[2]         = "#00ffff"
-  palette.gui.CYAN[1]         = "#008080"
-  palette.gui.DARK_CYAN[1]    = "#004040"
-
-local scheme = require("color.schema.cyan")
 require("color.util").apply_spec({
-    scheme  = scheme, 
-    palette = palette,
+    scheme  = s, 
+    palette = p,
 })
