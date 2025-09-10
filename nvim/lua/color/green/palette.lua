@@ -1,14 +1,9 @@
 -- green
 
-local p = vim.deepcopy(require("color.common.palette"))
+local p = vim.deepcopy(require("color.common.palette").gui)
 
--- bg
-p.gui.DARK_GREEN[1] = "#003000"
-
--- function
-p.gui.GREEN[1]      = "#60ff60"
-
--- keyword
-p.gui.GREEN[2]      = "#20aa20"
+p.darkgreen[1] = "#003000"
+p.green[1]     = "#60ff60"
+p.green[2]     = "#20aa20"
 
 return p

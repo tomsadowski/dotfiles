@@ -1,36 +1,17 @@
 -- cyan
 
-local p = vim.deepcopy(require("color.common.palette"))
+local p = vim.deepcopy(require("color.common.palette").gui)
 
--- bg
-p.gui.DARK_CYAN[1] = "#003030"
-
--- fg
-p.gui.WHITE[1]     = "#e0ffff"
-
--- function
-p.gui.CYAN[1]      = "#20ffff"
-
--- keyword, defaultLibrary
-p.gui.CYAN[2]      = "#00b0e0"
-
--- linenumber
-p.gui.CYAN[3]      = "#006060"
-
--- comment, macro
-p.gui.GREY[1]      = "#80a0a0"
-p.gui.GREY[2]      = "#80a0a0"
-p.gui.GREY[3]      = "#80a0a0"
-
--- variable
-p.gui.GREEN[1]     = "#00ff00" -- mutable
-p.gui.GREEN[2]     = "#00a000" -- immutable
-
--- param
-p.gui.YELLOW[1]    = "#ffff20" -- mutable
-p.gui.YELLOW[2]    = "#a0a020" -- immutable
-
--- enum
-p.gui.RED[1]       = "#ff6060"
+p.darkcyan[1] = "#003030"
+p.cyan[3]     = "#006060"
+p.cyan[2]     = "#00b0e0"
+p.cyan[1]     = "#20ffff"
+p.grey[1]     = "#80a0a0"
+p.grey[2]     = "#80a0a0"
+p.grey[3]     = "#80a0a0"
+p.green[1]    = "#00ff00"
+p.yellow[1]   = "#ffff20"
+p.red[1]      = "#ff6060"
+p.white[1]    = "#e0ffff"
 
 return p

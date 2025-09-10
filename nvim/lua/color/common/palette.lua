@@ -1,87 +1,40 @@
--- flat
+-- common
+
 return {
-    term = require("color.common.term"),
-    gui  =
-    {
-        BLACK        = {
-            "#000000",
-            "#000000",
-            "#000000",
-        },
-        DARK_RED     = {
-            "#800000",
-            "#800000",
-            "#800000",
-        },
-        DARK_GREEN   = {
-            "#008000",
-            "#008000",
-            "#008000",
-        },
-        DARK_YELLOW  = {
-            "#808000",
-            "#808000",
-            "#808000",
-        }, 
-        DARK_BLUE    = {
-            "#000080",
-            "#000080",
-            "#000080",
-        }, 
-        DARK_MAGENTA = {
-            "#800080",
-            "#800080",
-            "#800080",
-        },
-        DARK_CYAN    = {
-            "#008080",
-            "#008080",
-            "#008080",
-        }, 
-        GREY         = {
-            "#c0c0c0",
-            "#c0c0c0",
-            "#c0c0c0",
-        },
-        DARK_GREY    = {
-            "#808080",
-            "#808080",
-            "#808080",
-        },
-        RED          = {
-            "#ff0000",
-            "#ff0000",
-            "#ff0000",
-        },
-        GREEN        = {
-            "#00ff00",
-            "#00ff00",
-            "#00ff00",
-        },
-        YELLOW       = {
-            "#ffff00",
-            "#ffff00",
-            "#ffff00",
-        },
-        BLUE         = {
-            "#0000ff",
-            "#0000ff",
-            "#0000ff",
-        }, 
-        MAGENTA      = {
-            "#ff00ff",
-            "#ff00ff",
-            "#ff00ff",
-        },
-        CYAN         = {
-            "#00ffff",
-            "#00ffff",
-            "#00ffff",
-        },
-        WHITE        = {
-            "#ffffff",
-            "#ffffff",
-            "#ffffff",
-        },
+    term = {
+        black        = 0, 
+        darkred      = 1, 
+        darkgreen    = 2, 
+        darkyellow   = 3,  
+        darkblue     = 4,  
+        darkmagenta  = 5, 
+        darkcyan     = 6,  
+        grey         = 7,
+        darkgrey     = 8,
+        red          = 9, 
+        green        = 10,
+        yellow       = 11,
+        blue         = 12, 
+        magenta      = 13,
+        cyan         = 14,
+        white        = 15,
+    },
+    gui = {
+        black       = { "#000000", "#000000", "#000000" },
+        darkred     = { "#800000", "#800000", "#800000" },
+        darkgreen   = { "#008000", "#008000", "#008000" },
+        darkyellow  = { "#808000", "#808000", "#808000" }, 
+        darkblue    = { "#000080", "#000080", "#000080" }, 
+        darkmagenta = { "#800080", "#800080", "#800080" },
+        darkcyan    = { "#008080", "#008080", "#008080" }, 
+        grey        = { "#c0c0c0", "#c0c0c0", "#c0c0c0" },
+        darkgrey    = { "#808080", "#808080", "#808080" },
+        red         = { "#ff0000", "#ff0000", "#ff0000" },
+        green       = { "#00ff00", "#00ff00", "#00ff00" },
+        yellow      = { "#ffff00", "#ffff00", "#ffff00" },
+        blue        = { "#0000ff", "#0000ff", "#0000ff" }, 
+        magenta     = { "#ff00ff", "#ff00ff", "#ff00ff" },
+        cyan        = { "#00ffff", "#00ffff", "#00ffff" },
+        white       = { "#ffffff", "#ffffff", "#ffffff" },
     },
 }
