@@ -1,6 +1,6 @@
 -- flat
 return {
-    term = require("color.palette.term"),
+    term = require("color.common.term"),
     gui  =
     {
         BLACK        = {

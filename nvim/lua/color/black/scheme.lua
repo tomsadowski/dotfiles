@@ -1,19 +1,18 @@
--- blue
+-- black
 return {
-    link = require("color.schema.links"),
+    link = require("color.common.links"),
     base = function(palette) return {
         -- normal
         Normal = {
             ctermfg = palette.term.WHITE, 
             fg      = palette.gui.WHITE[1], 
-            ctermbg = palette.term.DARK_BLUE,
-            bg      = palette.gui.DARK_BLUE[1],
+            ctermbg = palette.term.BLACK,
+            bg      = palette.gui.BLACK[1],
         }, 
         -- keyword
         Keyword = {
-            ctermfg = palette.term.DARK_CYAN,
-            fg      = palette.gui.DARK_CYAN[2],
-            bold    = true,
+            ctermfg = palette.term.DARK_GREY,
+            fg      = palette.gui.DARK_GREY[1],
         }, 
         -- function
         Function = {
@@ -27,8 +26,17 @@ return {
         },
         -- comment
         Comment = {
-            ctermfg = palette.term.DARK_GREY,
-            fg      = palette.gui.DARK_GREY[2],
+            ctermfg = palette.term.DARK_CYAN,
+            fg      = palette.gui.DARK_CYAN[1],
+        }, 
+        -- string
+        String = {
+            ctermfg = palette.term.GREY,
+            fg      = palette.gui.GREY[1],
+        }, 
+        Character = {
+            ctermfg = palette.term.GREY,
+            fg      = palette.gui.GREY[1],
         }, 
         -- variables
         Identifier = {
@@ -47,15 +55,6 @@ return {
         Label = {
             ctermfg = palette.term.DARK_YELLOW,
             fg      = palette.gui.DARK_YELLOW[1],
-        }, 
-        -- string
-        String = {
-            ctermfg = palette.term.GREY,
-            fg      = palette.gui.GREY[1],
-        }, 
-        Character = {
-            ctermfg = palette.term.GREY,
-            fg      = palette.gui.GREY[1],
         }, 
         -- preproc
         PreProc = {
@@ -81,40 +80,40 @@ return {
         },
         -- special
         SpecialComment = {
-            ctermfg = palette.term.DARK_GREEN,
-            fg      = palette.gui.DARK_GREEN[1],
+            ctermfg = palette.term.DARK_CYAN,
+            fg      = palette.gui.DARK_CYAN[1],
         }, 
         SpecialChar = {
-            ctermfg = palette.term.DARK_GREEN,
-            fg      = palette.gui.DARK_GREEN[1],
+            ctermfg = palette.term.DARK_CYAN,
+            fg      = palette.gui.DARK_CYAN[1],
         }, 
         Special = {
-            ctermfg = palette.term.YELLOW,
-            fg      = palette.gui.YELLOW[1],
+            ctermfg = palette.term.CYAN,
+            fg      = palette.gui.CYAN[1],
         },
 
-        -- misc
         Type = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
+            ctermfg = palette.term.GREY,
+            fg      = palette.gui.GREY[1],
         }, 
         Typedef = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
+            ctermfg = palette.term.GREY,
+            fg      = palette.gui.GREY[1],
         }, 
         Directory = {
-            ctermfg = palette.term.CYAN,
-            fg      = palette.gui.CYAN[1],
+            ctermfg = palette.term.GREY,
+            fg      = palette.gui.GREY[1],
         }, 
+
         Error = {
-            ctermfg = palette.term.YELLOW, 
-            fg      = palette.gui.YELLOW[1], 
-            ctermbg = palette.term.WHITE,
-            bg      = palette.gui.WHITE[1],
+            ctermfg = palette.term.RED, 
+            fg      = palette.gui.RED[1], 
+            ctermbg = palette.term.BLACK,
+            bg      = palette.gui.BLACK[1],
         }, 
         Ignore = {
-            ctermfg = palette.term.BLUE, 
-            fg      = palette.gui.BLUE[1], 
+            ctermfg = palette.term.RED, 
+            fg      = palette.gui.RED[1], 
         }, 
         Todo = {
             bold    = true,
@@ -124,23 +123,19 @@ return {
 
         -- UI
         LineNr = {
-            ctermfg = palette.term.BLUE,
-            fg      = palette.gui.BLUE[1],
-            ctermbg = palette.term.DARK_BLUE,
-            bg      = palette.gui.DARK_BLUE[1],
+            ctermfg = palette.term.DARK_GREY,
+            fg      = palette.gui.DARK_GREY[1],
         }, 
         CursorLineNr = {
-                ctermfg = palette.term.DARK_BLUE,
-                fg      = palette.gui.DARK_BLUE[1],
-                ctermbg = palette.term.BLUE,
-                bg      = palette.gui.BLUE[1],
+            ctermfg = palette.term.GREY,
+            fg      = palette.gui.GREY[1],
             bold = true,
         }, 
         Cursor = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1], 
-            ctermbg = palette.term.DARK_BLUE,
-            bg      = palette.gui.DARK_BLUE[1],
+            ctermfg = palette.term.DARK_RED,
+            fg      = palette.gui.DARK_RED[1], 
+            ctermbg = palette.term.DARK_RED,
+            bg      = palette.gui.DARK_RED[1],
         }, 
         CursorLine = {
             underline = true,
@@ -151,18 +146,17 @@ return {
         }, 
 
         Visual = {
-            ctermbg = palette.term.BLACK,
-            bg      = palette.gui.BLACK[1],
+            ctermbg = palette.term.DARK_BLUE,
+            bg      = palette.gui.DARK_BLUE[1],
         }, 
         Search = {
-            ctermbg = palette.term.BLUE,
-            bg      = palette.gui.BLUE[1],
+            ctermbg = palette.term.DARK_MAGENTA,
+            bg      = palette.gui.DARK_MAGENTA[1],
         },
         MatchParen = {
-            ctermfg = palette.term.DARK_BLUE,
-            fg      = palette.gui.DARK_BLUE[1], 
-            ctermbg = palette.term.BLUE,
-            bg      = palette.gui.BLUE[1], 
+            bold      = true, 
+            ctermbg = palette.term.DARK_GREY,
+            bg      = palette.gui.DARK_GREY[1], 
         }, 
         Folded = {
             ctermfg = palette.term.CYAN, 
@@ -213,7 +207,7 @@ return {
             ctermfg = palette.term.GREY, 
             fg      = palette.gui.GREY[1], 
             ctermbg = palette.term.CYAN, 
-                    bg      = palette.gui.CYAN[1], 
+            bg      = palette.gui.CYAN[1], 
         }, 
 
         NormalFloat = {
@@ -262,12 +256,12 @@ return {
             strikethrough = true,
         }, 
         DiagnosticError = {
-            ctermfg = palette.term.DARK_YELLOW, 
-            fg      = palette.gui.DARK_YELLOW[1],
+            ctermfg = palette.term.DARK_RED, 
+            fg      = palette.gui.DARK_RED[1],
         }, 
         DiagnosticWarn = {
-            ctermfg = palette.term.DARK_YELLOW, 
-            fg      = palette.gui.DARK_YELLOW[1],
+            ctermfg = palette.term.DARK_CYAN, 
+            fg      = palette.gui.DARK_CYAN[1],
         }, 
         DiagnosticUnderlineError = {
             underline = true,
@@ -305,8 +299,8 @@ return {
         }, 
         DiffDelete = {
             bold    = true,
-            ctermfg = palette.term.GREEN, 
-            fg      = palette.gui.GREEN[1], 
+            ctermfg = palette.term.MAGENTA, 
+            fg      = palette.gui.MAGENTA[1], 
         }, 
 
         Added = {
@@ -318,8 +312,8 @@ return {
             fg      = palette.gui.GREY[1],
         }, 
         Removed = {
-            ctermfg = palette.term.GREEN, 
-            fg      = palette.gui.GREEN[1],
+            ctermfg = palette.term.MAGENTA, 
+            fg      = palette.gui.MAGENTA[1],
         }, 
 
         ModeMsg = {
@@ -331,12 +325,12 @@ return {
             fg      = palette.gui.GREY[1],
         }, 
         WarningMsg = {
-            ctermfg = palette.term.GREEN, 
-            fg      = palette.gui.GREEN[1],
+            ctermfg = palette.term.MAGENTA, 
+            fg      = palette.gui.MAGENTA[1],
         }, 
         ErrorMsg = {
-            ctermfg = palette.term.YELLOW,
-            fg      = palette.gui.YELLOW[1],
+            ctermfg = palette.term.RED,
+            fg      = palette.gui.RED[1],
         }, 
         MsgSeparator = {
             ctermfg = palette.term.BLACK, 
@@ -392,6 +386,6 @@ return {
         }, 
         RedrawDebugNormal = {
             reverse = true,
-        }, 
+        },
     } end
 }

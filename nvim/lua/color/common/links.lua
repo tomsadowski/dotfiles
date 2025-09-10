@@ -64,6 +64,8 @@ return {
     ['@diff.minus']                 = {link='Removed'}, 
     ['@diff.delta']                 = {link='Changed'}, 
 
+    ['@lsp.type.typeParameter']     = {link='Tag'}, 
+
     -- clang
     cType         = {link='Type'},
     cTypeDef      = {link='Type'},
@@ -108,9 +110,9 @@ return {
     ['@lsp.typemod.class.static.cs']    = {link='Normal'},
     ['@lsp.type.struct.cs']             = {link='Normal'},
     ['@lsp.type.property.cs']           = {link='Normal'},
-    csXmlTag                            = {link='Special'},
-    ['@lsp.type.enumMember.cs']         = {link='Special'},
-    ['@lsp.type.enum.cs']               = {link='Special'},
+    csXmlTag                            = {link='Tag'},
+    ['@lsp.type.enumMember.cs']         = {link='Tag'},
+    ['@lsp.type.enum.cs']               = {link='Tag'},
     csModifier                          = {link='Keyword'},
     csAccessModifier                    = {link='Keyword'},
     csClass                             = {link='Keyword'},

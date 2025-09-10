@@ -1,6 +1,6 @@
 -- green
 return {
-    link = require("color.schema.links"),
+    link = require("color.common.links"),
     base = function(palette) return {
         -- normal
         Normal = {
