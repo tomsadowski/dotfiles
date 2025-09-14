@@ -1,7 +1,7 @@
 require "options"
 require "keymap"
 require "lsp"
-require "treesitter"
+--require "treesitter"
 
 vim.cmd "colo blue"
 

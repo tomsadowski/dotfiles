@@ -1,8 +1,8 @@
 -- black
 
-local t = require("color.common.term")
+local t = require "color.common.term" 
 return {
-    scheme = function(p) return {
+    groups = function(p) return {
         -- normal
         Normal = {
             ctermfg = t.white, 
@@ -388,5 +388,5 @@ return {
             reverse = true,
         },
     } end,
-    link = require("color.common.links"),
+    link = require "color.common.links",
 }

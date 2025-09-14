@@ -2,15 +2,17 @@
 
 local p = vim.deepcopy(require("color.common.palette"))
 
-p.darkblue[1]  = "#000030"
+p.darkblue[1]  = "#000038"
 p.blue[1]      = "#0000a0"
 p.darkgrey[1]  = "#90b090"
 p.grey[1]      = "#a0d0a0"
-p.darkcyan[1]  = "#008080"
-p.cyan[1]      = "#00ffff"
-p.green[1]     = "#00ff40"
-p.yellow[1]    = "#ffff40"
-p.magenta[1]   = "#ff60ff"
-p.white[1]     = "#c0ffff"
+p.darkcyan[1]  = "#0080c0"
+p.cyan[1]      = "#00d8ff"
+p.green[1]     = "#00ff00"
+p.green[2]     = "#00c898"
+p.yellow[1]    = "#ffff00"
+p.yellow[2]    = "#c0c060"
+p.magenta[1]   = "#ff00ff"
+p.white[1]     = "#a8d8d8"
 
 return p

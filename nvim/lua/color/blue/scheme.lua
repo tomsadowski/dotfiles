@@ -1,8 +1,8 @@
 -- blue
 
-local t = require("color.common.term")
+local t = require "color.common.term" 
 return {
-    scheme = function(p) return {
+    groups = function(p) return {
         -- normal
         Normal = {
             ctermfg = t.white, 
@@ -13,7 +13,7 @@ return {
         -- keyword
         Keyword = {
             ctermfg = t.darkcyan,
-            fg      = p.darkcyan[2],
+            fg      = p.darkcyan[1],
             bold    = true,
         }, 
         -- function
@@ -38,7 +38,7 @@ return {
         }, 
         Constant = {
             ctermfg = t.green,
-            fg      = p.green[1],
+            fg      = p.green[2],
         }, 
         -- params
         PreCondit = {
@@ -47,7 +47,7 @@ return {
         }, 
         Label = {
             ctermfg = t.yellow,
-            fg      = p.yellow[1],
+            fg      = p.yellow[2],
         }, 
         -- string
         String = {
@@ -393,5 +393,5 @@ return {
             reverse = true,
         }, 
     } end,
-    link = require("color.common.links"),
+    link = require "color.common.links",
 }
