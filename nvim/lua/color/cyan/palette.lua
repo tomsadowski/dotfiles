@@ -1,6 +1,6 @@
 -- cyan
 
-local p = vim.deepcopy(require("color.common.palette").gui)
+local p = vim.deepcopy(require("color.common.palette"))
 
 p.darkcyan[1] = "#003030"
 p.cyan[3]     = "#006060"

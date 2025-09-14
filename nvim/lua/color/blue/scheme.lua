@@ -1,11 +1,8 @@
 -- blue
 
-local t = require("color.common.palette").term
-
+local t = require("color.common.term")
 return {
-    link = require("color.common.links"),
-
-    base = function(p) return {
+    scheme = function(p) return {
         -- normal
         Normal = {
             ctermfg = t.white, 
@@ -154,20 +151,18 @@ return {
             bg      = p.black[1],
         }, 
 
+        MatchParen = {
+            ctermbg = t.darkyellow,
+            bg      = p.darkyellow[1],
+        }, 
         Visual = {
-            ctermbg = t.black,
-            bg      = p.black[1],
+            ctermbg = t.blue,
+            bg      = p.blue[1],
         }, 
         Search = {
             ctermbg = t.blue,
             bg      = p.blue[1],
         },
-        MatchParen = {
-            ctermfg = t.darkblue,
-            fg      = p.darkblue[1], 
-            ctermbg = t.blue,
-            bg      = p.blue[1], 
-        }, 
         Folded = {
             ctermfg = t.cyan, 
             fg      = p.cyan[1], 
@@ -397,5 +392,6 @@ return {
         RedrawDebugNormal = {
             reverse = true,
         }, 
-    } end
+    } end,
+    link = require("color.common.links"),
 }

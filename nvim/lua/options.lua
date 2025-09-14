@@ -12,6 +12,8 @@ vim.o.foldmethod = 'syntax'
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
 
+-- turn off highlighting matched parenthesis
+--vim.cmd('let loaded_matchparen = 1')
 -- a reasonable default that was hard to find
 vim.cmd('set foldlevelstart=99') 
 -- needed to paste text from clipboard
