@@ -15,7 +15,6 @@ return {
         _keyword = {
             ctermfg = t.darkcyan,
             fg      = p.darkcyan[1],
-            bold    = true,
         }, 
         _identifier = {
             ctermfg = t.green,
@@ -30,8 +29,8 @@ return {
             fg      = p.darkcyan[1],
         }, 
         _string = {
-            ctermfg = t.darkgreen,
-            fg      = p.darkgreen[2],
+            ctermfg = t.green,
+            fg      = p.green[2],
         }, 
         _annotation = {
             ctermfg = t.darkcyan,
@@ -160,7 +159,6 @@ return {
             bg      = p.darkyellow[1],
         }, 
         _visual = {
-            bold    = true,
             ctermbg = t.blue,
             bg      = p.blue[1],
             ctermfg = t.darkblue,

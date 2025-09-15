@@ -45,8 +45,8 @@ return {
             fg      = p.darkgreen[1],
         }, 
         _comment = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[2],
         }, 
         _doc_comment = {
             ctermfg = t.blue,
@@ -57,8 +57,8 @@ return {
             fg      = p.white[3],
         },
         _typeparam = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _function = {
             ctermfg = t.cyan,
@@ -90,20 +90,20 @@ return {
             fg      = p.yellow[2],
         }, 
         _class = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[3],
+            ctermfg = t.red,
+            fg      = p.red[3],
         },
         _struct = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[2],
+            ctermfg = t.red,
+            fg      = p.red[2],
         },
         _enum = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _enummember = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         -- UI
         _bold = {
