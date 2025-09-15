@@ -1,66 +1,202 @@
 -- treesitter
 
 return {
-    ['@constructor']                = {link='Normal'}, 
-    ['@constant']                   = {link='Constant'}, 
-    ['@constant.builtin']           = {link='Constant'}, 
-    ['@string']                     = {link='String'}, 
-    ['@string.regexp']              = {link='String'}, 
-    ['@string.escape']              = {link='String'}, 
-    ['@string.special']             = {link='String'}, 
-    ['@string.special.url']         = {link='String'}, 
-    ['@character']                  = {link='Character'}, 
-    ['@character.special']          = {link='Character'}, 
-    ['@function']                   = {link='Function'}, 
-    ['@function.method']            = {link='Function'}, 
-    ['@function.builtin']           = {link='Function'}, 
-    ['@punctuation']                = {link='Delimiter'},
-    ['@punctuation.special']        = {link='Delimiter'}, 
-    ['@attribute']                  = {link='PreProc'}, 
-    ['@attribute.builtin']          = {link='PreProc'}, 
-    ['@module']                     = {link='Normal'}, 
-    ['@module.builtin']             = {link='Special'}, 
-    ['@operator']                   = {link='Operator'}, 
-    ['@markup']                     = {link='Macro'}, 
-    ['@markup.link']                = {link='Macro'}, 
-    ['@markup.strong']              = {link='Macro'}, 
-    ['@markup.italic']              = {link='Macro'}, 
-    ['@markup.heading']             = {link='Macro'}, 
-    ['@markup.underline']           = {link='Macro'}, 
-    ['@markup.strikethrough']       = {link='Macro'}, 
-    ['@keyword']                    = {link='Keyword'}, 
-    ['@label']                      = {link='Label'}, 
-    ['@boolean']                    = {link='Boolean'}, 
-    ['@number']                     = {link='Number'}, 
-    ['@number.float']               = {link='Float'}, 
-    ['@variable']                   = {link='Normal'}, 
-    ['@variable.builtin']           = {link='Normal'}, 
-    ['@variable.parameter']         = {link='Normal'}, 
-    ['@variable.parameter.builtin'] = {link='Normal'}, 
-    ['@comment']                    = {link='Comment'}, 
-    ['@comment.warning']            = {link='Comment'}, 
-    ['@comment.error']              = {link='Comment'}, 
-    ['@comment.note']               = {link='Comment'}, 
-    ['@comment.todo']               = {link='Comment'}, 
-    ['@tag']                        = {link='Tag'}, 
-    ['@tag.builtin']                = {link='Tag'}, 
-    ['@property']                   = {link='Identifier'}, 
-    ['@type']                       = {link='Type'}, 
-    ['@type.builtin']               = {link='Type'}, 
-    ['@type.typeParameter']         = {link='Tag'}, 
-    ['@type.property']              = {link='Normal'},
-    ['@type.struct']                = {link='Normal'},
-    ['@type.enum']                  = {link='Tag'},
-    ['@type.enumMember']            = {link='Tag'},
-    ['@type.selfKeyword']           = {link='Statement'},
-    ['@type.selfTypeKeyword']       = {link='Keyword'},
-    ['@type.builtinType']           = {link='Keyword'},
-    ['@type.interface']             = {link='Function'},
-    ['@type.parameter']             = {link='PreCondit'},
-    ['@type.const']                 = {link='Identifier'},
-    ['@type.variable']              = {link='Identifier'},
-    ['@diff.plus']                  = {link='Added'}, 
-    ['@diff.minus']                 = {link='Removed'}, 
-    ['@diff.delta']                 = {link='Changed'}, 
+--  @variable                       various variable names
+--  @variable.builtin               built-in variable names (e.g. `this`, `self`)
+--  @variable.parameter             parameters of a function
+--  @variable.parameter.builtin     special parameters (e.g. `_`, `it`)
+    ['@variable']                   = {link='Identifier'},
+    ['@variable.builtin']           = {link='@variable'}, 
+    ['@variable.parameter']         = {link='@variable'}, 
+    ['@variable.parameter.builtin'] = {link='@variable.parameter'}, 
 
+--  @variable.member                object and struct fields
+--  @operator               symbolic operators (e.g. `+`, `*`)
+--  @boolean                boolean literals
+--  @number                 numeric literals
+--  @number.float           floating-point number literals
+    ['@variable.member'] = {link='Normal'}, 
+    ['@operator']        = {link='Operator'}, 
+    ['@boolean']         = {link='Boolean'}, 
+    ['@number']          = {link='Number'}, 
+    ['@number.float']    = {link='Float'}, 
+
+--  @constant               constant identifiers
+--  @constant.builtin       built-in constant values
+--  @constant.macro         constants defined by the preprocessor
+    ['@constant']         = {link='Constant'}, 
+    ['@constant.builtin'] = {link='Constant'}, 
+    ['@constant.macro']   = {link='Constant'}, 
+
+--  @module                 modules or namespaces
+--  @module.builtin         built-in modules or namespaces
+    ['@module']         = {link='Normal'}, 
+    ['@module.builtin'] = {link='Special'}, 
+
+--  @label                  `GOTO` and other labels (e.g. `label:` in C), including heredoc labels
+    ['@label'] = {link='Label'}, 
+
+--  @string                 string literals
+--  @string.documentation   string documenting code (e.g. Python docstrings)
+--  @string.regexp          regular expressions
+--  @string.escape          escape sequences
+--  @string.special         other special strings (e.g. dates)
+--  @string.special.symbol  symbols or atoms
+--  @string.special.path    filenames
+--  @string.special.url     URIs (e.g. hyperlinks)
+--  @character              character literals
+--  @character.special      special characters (e.g. wildcards)
+    ['@string']                = {link='String'}, 
+    ['@string.documentation']  = {link='@string'}, 
+    ['@string.regexp']         = {link='@string'}, 
+    ['@string.escape']         = {link='@string'}, 
+    ['@string.special']        = {link='@string'}, 
+    ['@string.special.symbol'] = {link='@string.special'}, 
+    ['@string.special.path']   = {link='@string.special'}, 
+    ['@string.special.url']    = {link='@string.special'}, 
+    ['@character']             = {link='Character'}, 
+    ['@character.special']     = {link='Character'}, 
+
+
+--  @type                   type or class definitions and annotations
+--  @type.builtin           built-in types
+--  @type.definition        identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
+    ['@type']            = {link='Type'}, 
+    ['@type.builtin']    = {link='Type'}, 
+    ['@type.definition'] = {link='Type'}, 
+
+--  @attribute              attribute annotations (e.g. Python decorators, Rust lifetimes)
+--  @attribute.builtin      builtin annotations (e.g. `@property` in Python)
+    ['@attribute']         = {link='PreProc'}, 
+    ['@attribute.builtin'] = {link='PreProc', bold = true}, 
+
+--  @property               the key in key/value pairs
+    ['@property'] = {link='Identifier'}, 
+
+--  @function               function definitions
+--  @function.builtin       built-in functions
+--  @function.call          function calls
+--  @function.method        method definitions
+--  @function.method.call   method calls
+--  @constructor            constructor calls and definitions
+--  @tag                    XML-style tag names (e.g. in XML, HTML, etc.)
+--  @tag.builtin            builtin tag names (e.g. HTML5 tags)
+--  @tag.attribute          XML-style tag attributes
+--  @tag.delimiter          XML-style tag delimiters
+    ['@function']             = {link='Function'}, 
+    ['@function.builtin']     = {link='@function'}, 
+    ['@function.call']        = {link='@function'}, 
+    ['@function.method']      = {link='@function'}, 
+    ['@function.method.call'] = {link='@function.method'}, 
+    ['@constructor']          = {link='Function'}, 
+    ['@tag']                  = {link='Function'}, 
+    ['@tag.builtin']          = {link='@tag'}, 
+    ['@tag.attribute']        = {link='@tag'}, 
+    ['@tag.delimeter']        = {link='@tag'}, 
+
+--  @function.macro         preprocessor macros
+    ['@function.macro']       = {link='Macro'}, 
+
+
+--  @keyword                keywords not fitting into specific categories
+--  @keyword.coroutine      keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
+--  @keyword.function       keywords that define a function (e.g. `func` in Go, `def` in Python)
+--  @keyword.operator       operators that are English words (e.g. `and`, `or`)
+--  @keyword.import         keywords for including or exporting modules (e.g. `import`, `from` in Python)
+--  @keyword.type           keywords describing namespaces and composite types (e.g. `struct`, `enum`)
+--  @keyword.modifier       keywords modifying other constructs (e.g. `const`, `static`, `public`)
+--  @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
+--  @keyword.return         keywords like `return` and `yield`
+--  @keyword.debug          keywords related to debugging
+--  @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
+--  @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
+--  @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
+--  @keyword.directive           various preprocessor directives and shebangs
+--  @keyword.directive.define    preprocessor definition directives
+    ['@keyword']                     = {link='Keyword'}, 
+    ['@keyword.coroutine']           = {link='@keyword'}, 
+    ['@keyword.function']            = {link='@keyword'}, 
+    ['@keyword.operator']            = {link='@keyword'}, 
+    ['@keyword.import']              = {link='@keyword'}, 
+    ['@keyword.type']                = {link='@keyword'}, 
+    ['@keyword.modifier']            = {link='@keyword'}, 
+    ['@keyword.repeat']              = {link='@keyword'}, 
+    ['@keyword.return']              = {link='@keyword'}, 
+    ['@keyword.debug']               = {link='@keyword'}, 
+    ['@keyword.exception']           = {link='@keyword'}, 
+    ['@keyword.conditional']         = {link='@keyword'}, 
+    ['@keyword.conditional.ternary'] = {link='@keyword.conditional'}, 
+    ['@keyword.directive']           = {link='@keyword'}, 
+    ['@keyword.directive.define']    = {link='@keyword.directive'}, 
+
+--  @punctuation.delimiter  delimiters (e.g. `;`, `.`, `,`)
+--  @punctuation.bracket    brackets (e.g. `()`, `{}`, `[]`)
+--  @punctuation.special    special symbols (e.g. `{}` in string interpolation)
+    ['@punctuation']         = {link='Delimiter'},
+    ['@punctuation.bracket'] = {link='Delimiter'}, 
+    ['@punctuation.special'] = {link='Delimiter'}, 
+
+--  @comment                line and block comments
+--  @comment.documentation  comments documenting code
+--  @comment.error          error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
+--  @comment.warning        warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
+--  @comment.todo           todo-type comments (e.g. `TODO`, `WIP`)
+--  @comment.note           note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
+    ['@comment']               = {link='Comment'}, 
+    ['@comment.documentation'] = {link='@comment'}, 
+    ['@comment.error']         = {link='@comment'}, 
+    ['@comment.warning']       = {link='@comment'}, 
+    ['@comment.todo']          = {link='@comment'}, 
+    ['@comment.note']          = {link='@comment'}, 
+
+--  @markup.strong          bold text
+--  @markup.italic          italic text
+--  @markup.strikethrough   struck-through text
+--  @markup.underline       underlined text (only for literal underline markup!)
+--  @markup.heading         headings, titles (including markers)
+--  @markup.heading.1       top-level heading
+--  @markup.heading.2       section heading
+--  @markup.heading.3       subsection heading
+--  @markup.heading.4       and so on
+--  @markup.heading.5       and so forth
+--  @markup.heading.6       six levels ought to be enough for anybody
+--  @markup.quote           block quotes
+--  @markup.math            math environments (e.g. `$ ... $` in LaTeX)
+--  @markup.link            text references, footnotes, citations, etc.
+--  @markup.link.label      link, reference descriptions
+--  @markup.link.url        URL-style links
+--  @markup.raw             literal or verbatim text (e.g. inline code)
+--  @markup.raw.block       literal or verbatim text as a stand-alone block
+--  @markup.list            list markers
+--  @markup.list.checked    checked todo-style list markers
+--  @markup.list.unchecked  unchecked todo-style list markers
+    ['@markup']                = {link='Macro'}, 
+    ['@markup.strong']         = {link='@markup'}, 
+    ['@markup.italic']         = {link='@markup'}, 
+    ['@markup.strikethrough']  = {link='@markup'}, 
+    ['@markup.underline']      = {link='@markup'}, 
+    ['@markup.heading']        = {link='@markup'}, 
+    ['@markup.heading1']       = {link='@markup.heading'}, 
+    ['@markup.heading2']       = {link='@markup.heading'}, 
+    ['@markup.heading3']       = {link='@markup.heading'}, 
+    ['@markup.heading4']       = {link='@markup.heading'}, 
+    ['@markup.heading5']       = {link='@markup.heading'}, 
+    ['@markup.heading6']       = {link='@markup.heading'}, 
+    ['@markup.quote']          = {link='@markup'}, 
+    ['@markup.math']           = {link='@markup'}, 
+    ['@markup.link']           = {link='@markup'}, 
+    ['@markup.link.label']     = {link='@markup.link'}, 
+    ['@markup.link.url']       = {link='@markup.link'}, 
+    ['@markup.raw']            = {link='@markup'}, 
+    ['@markup.raw.block']      = {link='@markup.raw'}, 
+    ['@markup.list']           = {link='@markup'}, 
+    ['@markup.list.checked']   = {link='@markup.list'}, 
+    ['@markup.list.unchecked'] = {link='@markup.list.unchecked'}, 
+
+--  @diff.plus              added text (for diff files)
+--  @diff.minus             deleted text (for diff files)
+--  @diff.delta             changed text (for diff files)
+    ['@diff.plus']  = {link='Added'}, 
+    ['@diff.minus'] = {link='Removed'}, 
+    ['@diff.delta'] = {link='Changed'}, 
 }

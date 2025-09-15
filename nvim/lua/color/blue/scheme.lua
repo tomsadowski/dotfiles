@@ -28,8 +28,8 @@ return {
         },
         -- comment
         Comment = {
-            ctermfg = t.darkyellow,
-            fg      = p.darkyellow[1],
+            ctermfg = t.darkgrey,
+            fg      = p.darkgrey[1],
         }, 
         -- variables
         Identifier = {
