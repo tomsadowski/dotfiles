@@ -4,7 +4,7 @@ local t = require "color.common.term"
 return {
     groups = function(p) return {
         -- normal
-        Normal = {
+        _normal = {
             ctermfg = t.white, 
             fg      = p.white[1], 
             ctermbg = t.darkblue,
@@ -375,22 +375,6 @@ return {
         }, 
         SpellCap = {
             undercurl = true,
-        }, 
-
-        RedrawDebugClear = {
-            ctermbg = t.grey,
-            bg      = p.grey[1],
-        }, 
-        RedrawDebugComposed = {
-            ctermbg = t.grey,
-            bg      = p.grey[1],
-        }, 
-        RedrawDebugRecompose = {
-            ctermbg = t.grey,
-            bg      = p.grey[1],
-        }, 
-        RedrawDebugNormal = {
-            reverse = true,
         }, 
     } end,
     link = require "color.common.links",

@@ -10,7 +10,7 @@ return {
     ['@variable.parameter']         = {link='@variable'}, 
     ['@variable.parameter.builtin'] = {link='@variable.parameter'}, 
 
---  @variable.member                object and struct fields
+--  @variable.member        object and struct fields
 --  @operator               symbolic operators (e.g. `+`, `*`)
 --  @boolean                boolean literals
 --  @number                 numeric literals
@@ -25,13 +25,13 @@ return {
 --  @constant.builtin       built-in constant values
 --  @constant.macro         constants defined by the preprocessor
     ['@constant']         = {link='Constant'}, 
-    ['@constant.builtin'] = {link='Constant'}, 
-    ['@constant.macro']   = {link='Constant'}, 
+    ['@constant.builtin'] = {link='@constant'}, 
+    ['@constant.macro']   = {link='@constant'}, 
 
 --  @module                 modules or namespaces
 --  @module.builtin         built-in modules or namespaces
     ['@module']         = {link='Normal'}, 
-    ['@module.builtin'] = {link='Special'}, 
+    ['@module.builtin'] = {link='@module'}, 
 
 --  @label                  `GOTO` and other labels (e.g. `label:` in C), including heredoc labels
     ['@label'] = {link='Label'}, 
@@ -62,8 +62,8 @@ return {
 --  @type.builtin           built-in types
 --  @type.definition        identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
     ['@type']            = {link='Type'}, 
-    ['@type.builtin']    = {link='Type'}, 
-    ['@type.definition'] = {link='Type'}, 
+    ['@type.builtin']    = {link='@type'}, 
+    ['@type.definition'] = {link='@type'}, 
 
 --  @attribute              attribute annotations (e.g. Python decorators, Rust lifetimes)
 --  @attribute.builtin      builtin annotations (e.g. `@property` in Python)
@@ -133,8 +133,8 @@ return {
 --  @punctuation.bracket    brackets (e.g. `()`, `{}`, `[]`)
 --  @punctuation.special    special symbols (e.g. `{}` in string interpolation)
     ['@punctuation']         = {link='Delimiter'},
-    ['@punctuation.bracket'] = {link='Delimiter'}, 
-    ['@punctuation.special'] = {link='Delimiter'}, 
+    ['@punctuation.bracket'] = {link='@punctiation'}, 
+    ['@punctuation.special'] = {link='@punctiation'}, 
 
 --  @comment                line and block comments
 --  @comment.documentation  comments documenting code
