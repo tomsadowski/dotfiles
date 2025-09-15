@@ -57,8 +57,8 @@ return {
             fg      = p.white[3],
         },
         _typeparam = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _function = {
             ctermfg = t.cyan,
@@ -98,12 +98,12 @@ return {
             fg      = p.magenta[2],
         },
         _enum = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _enummember = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         -- UI
         _bold = {
@@ -137,15 +137,15 @@ return {
         }, 
         _linenumber = {
             ctermfg = t.cyan,
-            fg      = p.cyan[3],
+            fg      = p.cyan[2],
             ctermbg = t.darkcyan,
             bg      = p.darkcyan[1],
         }, 
         _cursorlinenumber = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
-            ctermbg = t.cyan,
-            bg      = p.cyan[3],
+            ctermfg = t.darkblue,
+            fg      = p.darkblue[1],
+            ctermbg = t.blue,
+            bg      = p.blue[1],
             bold    = true,
         }, 
         _cursor = {

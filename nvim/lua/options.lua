@@ -1,6 +1,6 @@
 
 vim.o.undofile = false
-vim.o.wrap = false
+vim.o.wrap = true
 vim.o.expandtab = true
 vim.o.shiftwidth=4
 vim.o.tabstop=4
