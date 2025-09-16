@@ -159,11 +159,10 @@ return {
             bg      = p.darkyellow[1],
         }, 
         _visual = {
-            bold    = true,
-            ctermbg = t.blue,
-            bg      = p.blue[1],
-            ctermfg = t.darkblue,
-            fg      = p.darkblue[1],
+            ctermbg = t.cyan,
+            bg      = p.cyan[3],
+            ctermfg = t.darkcyan,
+            fg      = p.darkcyan[1],
         }, 
         _search = {
             ctermbg = t.blue,
