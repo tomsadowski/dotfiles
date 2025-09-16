@@ -14,6 +14,6 @@ p.green[2]    = "#78d898"
 p.magenta[1]  = "#d8b8f8"
 p.magenta[2]  = "#a898d8"
 p.red[1]      = "#e89898"
-p.white[1]    = "#d0ffe8"
+p.yellow[1]   = "#d0ffe8"
 
 return p

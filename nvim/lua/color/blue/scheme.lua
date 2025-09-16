@@ -5,8 +5,8 @@ return {
     links  = require "color.common.links",
     groups = function(p) return {
         Normal = {
-            ctermfg = t.white, 
-            fg      = p.white[1], 
+            ctermfg = t.yellow, 
+            fg      = p.yellow[1], 
             ctermbg = t.darkblue,
             bg      = p.darkblue[1],
         }, 
@@ -53,12 +53,12 @@ return {
             fg      = p.blue[1],
         }, 
         _type = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[3],
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
         },
         _typeparam = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _function = {
             ctermfg = t.cyan,
@@ -82,34 +82,34 @@ return {
             fg      = p.green[2],
         }, 
         _mut_funcparam = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[1],
+            ctermfg = t.magenta,
+            fg      = p.magenta[1],
         }, 
         _funcparam = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[2],
-        }, 
-        _class = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[3],
-        },
-        _struct = {
             ctermfg = t.magenta,
             fg      = p.magenta[2],
+        }, 
+        _class = {
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
+        },
+        _struct = {
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
         },
         _enum = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _enummember = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         -- UI
         _bold = {
             bold    = true,
-            ctermfg = t.white,
-            fg      = p.white[1],
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
         }, 
         _bad = {
             ctermfg = t.cyan,

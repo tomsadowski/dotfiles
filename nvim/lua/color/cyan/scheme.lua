@@ -5,8 +5,8 @@ return {
     links  = require "color.common.links",
     groups = function(p) return {
         Normal = {
-            ctermfg = t.white, 
-            fg      = p.white[1], 
+            ctermfg = t.yellow, 
+            fg      = p.yellow[1], 
             ctermbg = t.darkcyan,
             bg      = p.darkcyan[1],
         }, 
@@ -37,8 +37,8 @@ return {
             fg      = p.darkcyan[1],
         }, 
         _markup = {
-            ctermfg = t.white,
-            fg      = p.white[1],
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
         }, 
         _special = {
             ctermfg = t.darkgreen,
@@ -53,8 +53,8 @@ return {
             fg      = p.blue[1],
         }, 
         _type = {
-            ctermfg = t.white,
-            fg      = p.white[3],
+            ctermfg = t.yellow,
+            fg      = p.yellow[3],
         },
         _typeparam = {
             ctermfg = t.red,
@@ -108,8 +108,8 @@ return {
         -- UI
         _bold = {
             bold    = true,
-            ctermfg = t.white,
-            fg      = p.white[1],
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
         }, 
         _bad = {
             ctermfg = t.red,
