@@ -29,8 +29,8 @@ return {
             fg      = p.cyan[1],
         }, 
         _string = {
-            ctermfg = t.green,
-            fg      = p.green[2],
+            ctermfg = t.grey,
+            fg      = p.grey[1],
         }, 
         _annotation = {
             ctermfg = t.darkcyan,
@@ -136,16 +136,16 @@ return {
             fg      = p.red[1],
         }, 
         _linenumber = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[3],
+            ctermfg = t.darkgrey,
+            fg      = p.darkgrey[1],
             ctermbg = t.darkcyan,
             bg      = p.darkcyan[1],
         }, 
         _cursorlinenumber = {
             ctermfg = t.darkcyan,
             fg      = p.darkcyan[1],
-            ctermbg = t.cyan,
-            bg      = p.cyan[3],
+            ctermbg = t.darkgrey,
+            bg      = p.darkgrey[1],
             bold    = true,
         }, 
         _cursor = {
@@ -159,10 +159,8 @@ return {
             bg      = p.darkyellow[1],
         }, 
         _visual = {
-            ctermbg = t.cyan,
-            bg      = p.cyan[3],
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermbg = t.darkgrey,
+            bg      = p.darkgrey[1],
         }, 
         _search = {
             ctermbg = t.blue,

@@ -29,8 +29,8 @@ return {
             fg      = p.darkcyan[1],
         }, 
         _string = {
-            ctermfg = t.green,
-            fg      = p.green[2],
+            ctermfg = t.darkgrey,
+            fg      = p.darkgrey[1],
         }, 
         _annotation = {
             ctermfg = t.darkcyan,
@@ -161,8 +161,6 @@ return {
         _visual = {
             ctermbg = t.blue,
             bg      = p.blue[1],
-            ctermfg = t.darkblue,
-            fg      = p.darkblue[1],
         }, 
         _search = {
             ctermbg = t.blue,
