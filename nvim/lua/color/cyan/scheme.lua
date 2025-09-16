@@ -82,12 +82,12 @@ return {
             fg      = p.green[2],
         }, 
         _mut_funcparam = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[1],
+            ctermfg = t.magenta,
+            fg      = p.magenta[1],
         }, 
         _funcparam = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[2],
+            ctermfg = t.magenta,
+            fg      = p.magenta[2],
         }, 
         _class = {
             ctermfg = t.red,
@@ -116,8 +116,8 @@ return {
             fg      = p.red[1],
         }, 
         _warn = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[1],
+            ctermfg = t.magenta,
+            fg      = p.magenta[1],
         }, 
         _hide = {
             ctermfg = t.cyan,
@@ -128,8 +128,8 @@ return {
             fg      = p.green[1],
         }, 
         _changed = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[1],
+            ctermfg = t.magenta,
+            fg      = p.magenta[1],
         }, 
         _removed = {
             ctermfg = t.red,
