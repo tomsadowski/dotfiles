@@ -46,12 +46,15 @@ return {
     ['@lsp.type.selfKeyword']            = {link='_funcparam'},
     ['@lsp.typemod.parameter.mutable']   = {link='_mut_funcparam'},
     ['@lsp.typemod.selfKeyword.mutable'] = {link='_mut_funcparam'},
+    ['@lsp.type.parameter.cs']           = {link='_mut_funcparam'},
 
 -- @lsp.type.variable Identifiers that declare or reference a local or 
 --                    global variable
     ['@lsp.type.variable']            = {link='_var'},
     ['@lsp.typemod.variable.mutable'] = {link='_mut_var'},
     ['@lsp.type.const']               = {link='_constant'},
+    ['@lsp.type.variable.cs']         = {link='_mut_var'},
+    ['@lsp.typemod.property.static']  = {link='_var'},
 
 -- @lsp.type.keyword  Tokens that represent a language keyword
 -- @lsp.type.modifier Tokens that represent a modifier

@@ -13,8 +13,8 @@ return {
         _normal = {link='Normal'}, 
         -- syntax
         _keyword = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermfg = t.darkyellow,
+            fg      = p.darkyellow[1],
         }, 
         _identifier = {
             ctermfg = t.green,
@@ -29,8 +29,8 @@ return {
             fg      = p.darkcyan[1],
         }, 
         _string = {
-            ctermfg = t.darkgrey,
-            fg      = p.darkgrey[1],
+            ctermfg = t.darkcyan,
+            fg      = p.darkcyan[1],
         }, 
         _annotation = {
             ctermfg = t.darkcyan,
@@ -57,16 +57,16 @@ return {
             fg      = p.yellow[1],
         },
         _typeparam = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         },
         _function = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.darkyellow,
+            fg      = p.darkyellow[2],
         }, 
         _interface = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.darkyellow,
+            fg      = p.darkyellow[2],
         }, 
         -- semantics
         _mut_var = {
@@ -98,12 +98,12 @@ return {
             fg      = p.yellow[1],
         },
         _enum = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         },
         _enummember = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         },
         -- UI
         _bold = {

@@ -209,7 +209,7 @@ return {
 --  rustFoldBraces   = {link='_normal'},
 --  rustModPath      = {link='_normal'},
 --  rustLifetime     = {link='_normal'},
---  rustEnum         = {link='_enum'},
+    rustEnum         = {link='_enum'},
 --  rustSelf         = {link='_keyword'},
 --  rustEscape       = {link='_annotation'},
 --  rustQuestionMark = {link='_keyword'},

@@ -3,7 +3,8 @@
 local p = vim.deepcopy(require("color.common.palette"))
 
 p.darkcyan[1] = "#081818"
-p.darkgrey[1] = "#006060"
+p.black[1]    = "#003030"
+p.cyan[3]     = "#006060"
 p.cyan[2]     = "#30a0a0"
 p.cyan[1]     = "#80d8ff"
 p.grey[1]     = "#808080"
