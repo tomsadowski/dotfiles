@@ -68,8 +68,10 @@ return {
 
 -- @lsp.type.string Tokens that represent a string literal
 -- @lsp.type.regexp Tokens that represent a regular expression literal
-    ['@lsp.type.string'] = {link='_string'},
-    ['@lsp.type.regexp'] = {link='_string'},
+    ['@lsp.type.string']          = {link='_string'},
+    ['@lsp.type.regexp']          = {link='_macro'},
+    ['@lsp.type.escapeSequence']  = {link='_macro'},
+    ['@lsp.type.formatSpecifier'] = {link='_macro'},
 
 -- @lsp.type.comment Tokens that represent a comment
     ['@lsp.type.comment'] = {link='_comment'},

@@ -95,7 +95,7 @@ return {
 --                              (e.g. `and`, `or`)
 -- @keyword.import              keywords for including or exporting modules 
 --                              (e.g. `import`, `from` in Python)
---  @keyword.type               keywords describing namespaces and 
+-- @keyword.type                keywords describing namespaces and 
 --                              composite types (e.g. `struct`, `enum`)
 -- @keyword.modifier            keywords modifying other constructs 
 --                              (e.g. `const`, `static`, `public`)
@@ -139,7 +139,7 @@ return {
 -- @comment.todo          todo-type comments (e.g. `TODO`, `WIP`)
 -- @comment.note          note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
     ['@comment']               = {link='_comment'}, 
-    ['@comment.documentation'] = {link='_annotation'}, 
+    ['@comment.documentation'] = {link='_doc_comment'}, 
     ['@comment.error']         = {link='_annotation'}, 
     ['@comment.warning']       = {link='_annotation'}, 
     ['@comment.todo']          = {link='_annotation'}, 

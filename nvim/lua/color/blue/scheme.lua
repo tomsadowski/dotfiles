@@ -45,12 +45,12 @@ return {
             fg      = p.cyan[1],
         }, 
         _comment = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermfg = t.blue,
+            fg      = p.blue[1],
         }, 
         _doc_comment = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermfg = t.blue,
+            fg      = p.blue[1],
         }, 
         _type = {
             ctermfg = t.yellow,
@@ -106,6 +106,14 @@ return {
             fg      = p.red[1],
         },
         -- UI
+        _alt_normal = {
+            ctermbg = t.black,
+            bg      = p.black[1],
+        }, 
+        _virtual = {
+            ctermbg = t.black,
+            bg      = p.black[1],
+        },
         _bold = {
             bold    = true,
             ctermfg = t.yellow,
@@ -159,12 +167,14 @@ return {
             bg      = p.darkyellow[1],
         }, 
         _visual = {
+            ctermfg = t.yellow,
+            fg      = p.yellow[1], 
             ctermbg = t.blue,
             bg      = p.blue[1],
         }, 
         _search = {
-            ctermbg = t.blue,
-            bg      = p.blue[1],
+            ctermbg = t.black,
+            bg      = p.black[1],
         },
         _folded = {
             ctermfg = t.cyan, 

@@ -6,6 +6,16 @@ map({"n", "v"}, "H", "O")
 map({"n", "v"}, "t", "i")
 map({"n", "v"}, "T", "I")
 
+
+-- fold
+map({"n"}, "Fg", "zR") -- Open all
+map({"n"}, "Fm", "zM") -- Close all
+map({"n"}, "fg", "zr") -- Open one level
+map({"n"}, "fm", "zm") -- Close one level
+map({"n"}, "fo", "zk") -- previous
+map({"n"}, "fi", "zj") -- next
+map({"n"}, "ff", "za") -- Toggle fold under cursor
+
 -- movement
 map({"n", "v"}, "e", "h")              -- cursor left
 map({"n", "v"}, "<Left>", "h")            

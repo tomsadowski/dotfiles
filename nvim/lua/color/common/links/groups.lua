@@ -41,7 +41,7 @@ return {
 
 -- Folded      Line used for closed folds.
 -- FoldColumn 'foldcolumn'
-    Folded        = {link='_normal'}, 
+    Folded        = {link='_alt_normal'}, 
     FoldColumn    = {link='SignColumn'}, 
 
 -- SignColumn Column where |signs| are displayed.
@@ -110,7 +110,7 @@ return {
 -- FloatBorder Border of floating windows.
 -- FloatTitle  Title of floating windows.
 -- FloatFooter Footer of floating windows.
-    NormalFloat = {link='_normal'},
+    NormalFloat = {link='_alt_normal'},
     FloatBorder = {link='_normal'}, 
     FloatTitle  = {link='_normal'}, 
     FloatFooter = {link='_normal'}, 
@@ -127,16 +127,16 @@ return {
 --               |hl-Pmenu|.
 -- PmenuMatchSel Popup menu: Matched text in selected item. Combined with
 --               |hl-PmenuMatch| and |hl-PmenuSel|.
-    Pmenu         = {link='_normal'}, 
-    PmenuSel      = {link='_normal'}, 
-    PmenuKind     = {link='_normal'}, 
-    PmenuKindSel  = {link='_normal'}, 
-    PmenuExtra    = {link='_normal'}, 
-    PmenuExtraSel = {link='_normal'}, 
-    PmenuSbar     = {link='_normal'}, 
-    PmenuThumb    = {link='_normal'}, 
-    PmenuMatch    = {link='_normal'}, 
-    PmenuMatchSel = {link='_normal'}, 
+    Pmenu         = {link='_alt_normal'}, 
+    PmenuSel      = {link='_alt_normal'}, 
+    PmenuKind     = {link='_alt_normal'}, 
+    PmenuKindSel  = {link='_alt_normal'}, 
+    PmenuExtra    = {link='_alt_normal'}, 
+    PmenuExtraSel = {link='_alt_normal'}, 
+    PmenuSbar     = {link='_alt_normal'}, 
+    PmenuThumb    = {link='_alt_normal'}, 
+    PmenuMatch    = {link='_alt_normal'}, 
+    PmenuMatchSel = {link='_alt_normal'}, 
 
 -- SpellBad	  Word that is not recognized by the spellchecker. |spell|
 --            Combined with the highlighting used otherwise.
@@ -390,11 +390,11 @@ return {
 -- DiagnosticVirtualTextInfo  Used for "Info" diagnostic virtual text.
 -- DiagnosticVirtualTextHint  Used for "Hint" diagnostic virtual text.
 -- DiagnosticVirtualTextOk    Used for "Ok" diagnostic virtual text.
-    DiagnosticVirtualTextError = {link='_normal'},
-    DiagnosticVirtualTextWarn  = {link='_normal'},
-    DiagnosticVirtualTextInfo  = {link='_normal'},
-    DiagnosticVirtualTextHint  = {link='_normal'},
-    DiagnosticVirtualTextOk    = {link='_normal'},
+    DiagnosticVirtualTextError = {link='_virtual'},
+    DiagnosticVirtualTextWarn  = {link='_virtual'},
+    DiagnosticVirtualTextInfo  = {link='_virtual'},
+    DiagnosticVirtualTextHint  = {link='_virtual'},
+    DiagnosticVirtualTextOk    = {link='_virtual'},
 
 -- DiagnosticVirtualLinesError Used for "Error" diagnostic virtual lines.
 -- DiagnosticVirtualLinesWarn  Used for "Warn" diagnostic virtual lines.
