@@ -21,44 +21,44 @@ return {
             fg      = p.green[2],
         }, 
         _preproc = {
-            ctermfg = t.darkgreen,
-            fg      = p.darkgreen[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         },
         _macro = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         }, 
         _string = {
             ctermfg = t.darkcyan,
             fg      = p.darkcyan[1],
         }, 
         _annotation = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         }, 
         _markup = {
-            ctermfg = t.white,
-            fg      = p.white[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         }, 
         _special = {
-            ctermfg = t.darkgreen,
-            fg      = p.darkgreen[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         }, 
         _comment = {
             ctermfg = t.darkcyan,
             fg      = p.darkcyan[1],
         }, 
         _doc_comment = {
-            ctermfg = t.blue,
-            fg      = p.blue[1],
+            ctermfg = t.darkcyan,
+            fg      = p.darkcyan[1],
         }, 
         _type = {
             ctermfg = t.yellow,
             fg      = p.yellow[1],
         },
         _typeparam = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _function = {
             ctermfg = t.darkyellow,
@@ -98,12 +98,12 @@ return {
             fg      = p.yellow[1],
         },
         _enum = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _enummember = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         -- UI
         _bold = {
