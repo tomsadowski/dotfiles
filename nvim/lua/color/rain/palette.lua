@@ -2,26 +2,25 @@
 
 local p = vim.deepcopy(require("color.common.palette"))
 
-p.darkcyan[1] = "#101820" -- _normal
+p.darkcyan[1] = "#0c1420" -- _normal
+p.cyan[3]     = "#103040" -- _linenumber
+p.cyan[1]     = "#206060" -- _comment
+p.green[2]    = "#20a060" -- _var
+p.green[1]    = "#30e080" -- _mut_var
 
-p.cyan[2]  = "#908070" -- _keyword
---p.cyan[1]     = "#80a0c0" -- _comment
-p.cyan[1]     = "#808080" -- _comment
-p.cyan[3]     = "#203040" -- _linenumber
+p.cyan[2]     = "#587890" -- _keyword
+p.yellow[2]   = "#a88078" -- _function
+p.yellow[1]   = "#a8a878" -- _normal
+--p.yellow[1]   = "#e8b860" -- _normal
+p.red[1]      = "#ff6060" -- _enum, _typeparam
 
-p.yellow[1]   = "#ffffc8" -- _normal
 
-p.yellow[2]   = "#80c8c8" -- _function
 
-p.grey[1]     = "#b49070" -- _string
 
-p.green[1]    = "#60ff60" -- _mut_var
-p.green[2]    = "#80e0b0" -- _var
-
+p.grey[1]     = "#b08860" -- _string
 p.magenta[1]  = "#ff80ff" -- _mut_funcparam
 p.magenta[2]  = "#b090d0" -- _funcparam
 
-p.red[1]      = "#ff9090" -- _enum, _typeparam
 
 
 return p
