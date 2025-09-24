@@ -5,8 +5,8 @@ return {
     links  = require "color.common.links",
     groups = function(p) return {
         Normal = {
-            ctermfg = t.yellow, 
-            fg      = p.yellow[1], 
+            ctermfg = t.white, 
+            fg      = p.white[1], 
             ctermbg = t.darkcyan,
             bg      = p.darkcyan[1],
         }, 
@@ -49,8 +49,8 @@ return {
             fg      = p.cyan[2],
         }, 
         _doc_comment = {
-            ctermfg = t.blue,
-            fg      = p.blue[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[2],
         }, 
         _type = {
             ctermfg = t.yellow,
@@ -82,12 +82,12 @@ return {
             fg      = p.green[2],
         }, 
         _mut_funcparam = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.yellow,
+            fg      = p.yellow[1],
         }, 
         _funcparam = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[2],
+            ctermfg = t.yellow,
+            fg      = p.yellow[2],
         }, 
         _class = {
             ctermfg = t.red,

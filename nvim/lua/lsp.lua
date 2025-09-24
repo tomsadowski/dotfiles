@@ -40,6 +40,23 @@
         }
     )
     vim.api.nvim_create_autocmd(
+        'FileType', 
+        {
+            pattern  = 'go',
+            callback = function(args) 
+                vim.lsp.start({
+                        name = 'go-lsp',
+                        cmd = {'gopls'},
+                        root_dir = vim.fs.root(
+                            args.buf, 
+                            {'go.mod'}
+                        )
+                    }
+                )
+            end
+        }
+    )
+    vim.api.nvim_create_autocmd(
         {'BufEnter', 'BufWinEnter'}, 
         {
             pattern  = '*.cs',
