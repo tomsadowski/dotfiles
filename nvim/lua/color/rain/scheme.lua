@@ -29,8 +29,8 @@ return {
             fg      = p.cyan[1],
         }, 
         _string = {
-            ctermfg = t.grey,
-            fg      = p.grey[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         }, 
         _annotation = {
             ctermfg = t.darkcyan,
@@ -45,8 +45,8 @@ return {
             fg      = p.darkgreen[1],
         }, 
         _comment = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.grey,
+            fg      = p.grey[1],
         }, 
         _doc_comment = {
             ctermfg = t.cyan,
