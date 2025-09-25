@@ -1,4 +1,4 @@
--- powderblue
+-- lightrain
 
 local t = require "color.common.term" 
 return {
@@ -29,8 +29,8 @@ return {
             fg      = p.cyan[1],
         }, 
         _string = {
-            ctermfg = t.grey,
-            fg      = p.grey[1],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
         }, 
         _annotation = {
             ctermfg = t.darkcyan,
@@ -45,8 +45,8 @@ return {
             fg      = p.darkgreen[1],
         }, 
         _comment = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[1],
+            ctermfg = t.grey,
+            fg      = p.grey[1],
         }, 
         _doc_comment = {
             ctermfg = t.cyan,
@@ -70,24 +70,24 @@ return {
         }, 
         -- semantics
         _mut_var = {
-            ctermfg = t.green,
-            fg      = p.green[1],
-        }, 
-        _var = {
-            ctermfg = t.green,
-            fg      = p.green[2],
-        }, 
-        _constant = {
-            ctermfg = t.green,
-            fg      = p.green[2],
-        }, 
-        _mut_funcparam = {
             ctermfg = t.magenta,
             fg      = p.magenta[1],
         }, 
-        _funcparam = {
+        _var = {
             ctermfg = t.magenta,
             fg      = p.magenta[2],
+        }, 
+        _constant = {
+            ctermfg = t.magenta,
+            fg      = p.magenta[2],
+        }, 
+        _mut_funcparam = {
+            ctermfg = t.red,
+            fg      = p.red[1],
+        }, 
+        _funcparam = {
+            ctermfg = t.red,
+            fg      = p.red[2],
         }, 
         _class = {
             ctermfg = t.red,
@@ -99,11 +99,11 @@ return {
         },
         _enum = {
             ctermfg = t.red,
-            fg      = p.red[1],
+            fg      = p.red[3],
         },
         _enummember = {
             ctermfg = t.red,
-            fg      = p.red[1],
+            fg      = p.red[3],
         },
         -- UI
         _bold = {

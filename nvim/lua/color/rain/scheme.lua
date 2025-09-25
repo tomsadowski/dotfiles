@@ -1,4 +1,4 @@
--- mist
+-- rain
 
 local t = require "color.common.term" 
 return {
@@ -57,53 +57,53 @@ return {
             fg      = p.yellow[3],
         },
         _typeparam = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.darkred,
+            fg      = p.darkred[3],
         },
         _function = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[2],
+            ctermfg = t.green,
+            fg      = p.green[1],
         }, 
         _interface = {
-            ctermfg = t.yellow,
-            fg      = p.yellow[2],
+            ctermfg = t.green,
+            fg      = p.green[1],
         }, 
         -- semantics
         _mut_var = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.darkmagenta,
+            fg      = p.darkmagenta[1],
         }, 
         _var = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[2],
+            ctermfg = t.darkmagenta,
+            fg      = p.darkmagenta[2],
         }, 
         _constant = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[2],
+            ctermfg = t.darkmagenta,
+            fg      = p.darkmagenta[2],
         }, 
         _mut_funcparam = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.darkred,
+            fg      = p.darkred[1],
         }, 
         _funcparam = {
-            ctermfg = t.red,
-            fg      = p.red[2],
+            ctermfg = t.darkred,
+            fg      = p.darkred[2],
         }, 
         _class = {
-            ctermfg = t.red,
-            fg      = p.red[3],
+            ctermfg = t.darkred,
+            fg      = p.darkred[3],
         },
         _struct = {
-            ctermfg = t.red,
-            fg      = p.red[2],
+            ctermfg = t.darkred,
+            fg      = p.darkred[2],
         },
         _enum = {
-            ctermfg = t.red,
-            fg      = p.red[3],
+            ctermfg = t.darkred,
+            fg      = p.darkred[3],
         },
         _enummember = {
-            ctermfg = t.red,
-            fg      = p.red[3],
+            ctermfg = t.darkred,
+            fg      = p.darkred[3],
         },
         -- UI
         _bold = {
@@ -112,12 +112,12 @@ return {
             fg      = p.yellow[1],
         }, 
         _bad = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.darkred,
+            fg      = p.darkred[1],
         }, 
         _warn = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.darkmagenta,
+            fg      = p.darkmagenta[1],
         }, 
         _hide = {
             ctermfg = t.cyan,
@@ -128,12 +128,12 @@ return {
             fg      = p.green[1],
         }, 
         _changed = {
-            ctermfg = t.magenta,
-            fg      = p.magenta[1],
+            ctermfg = t.darkmagenta,
+            fg      = p.darkmagenta[1],
         }, 
         _removed = {
-            ctermfg = t.red,
-            fg      = p.red[1],
+            ctermfg = t.darkred,
+            fg      = p.darkred[1],
         }, 
         _linenumber = {
             ctermfg = t.cyan,
