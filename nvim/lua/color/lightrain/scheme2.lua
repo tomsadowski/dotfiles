@@ -7,8 +7,8 @@ return {
         Normal = {
             ctermfg = t.yellow, 
             fg      = p.yellow[1], 
-            ctermbg = t.darkcyan,
-            bg      = p.darkcyan[1],
+            ctermbg = t.black,
+            bg      = p.black[1],
         }, 
         _normal = {link='Normal'}, 
         -- syntax
@@ -136,16 +136,16 @@ return {
             fg      = p.darkred[1],
         }, 
         _linenumber = {
-            ctermfg = t.cyan,
-            fg      = p.cyan[3],
-            ctermbg = t.darkcyan,
-            bg      = p.darkcyan[1],
+            ctermfg = t.darkgrey,
+            fg      = p.darkgrey[3],
+            ctermbg = t.black,
+            bg      = p.black[1],
         }, 
         _cursorlinenumber = {
-            ctermfg = t.darkcyan,
-            fg      = p.darkcyan[1],
-            ctermbg = t.cyan,
-            bg      = p.cyan[3],
+            ctermfg = t.cyan,
+            fg      = p.cyan[1],
+            ctermbg = t.black,
+            bg      = p.black[3],
             bold    = true,
         }, 
         _cursor = {
@@ -159,12 +159,12 @@ return {
             bg      = p.darkyellow[1],
         }, 
         _visual = {
-            ctermbg = t.black,
-            bg      = p.black[1],
+            ctermbg = t.darkcyan,
+            bg      = p.darkcyan[1],
         }, 
         _search = {
-            ctermbg = t.blue,
-            bg      = p.blue[1],
+            ctermbg = t.darkcyan,
+            bg      = p.darkcyan[1],
         },
         _folded = {
             ctermfg = t.cyan, 
