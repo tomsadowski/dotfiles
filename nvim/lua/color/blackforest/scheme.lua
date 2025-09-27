@@ -58,7 +58,7 @@ return {
         },
         _typeparam = {
             ctermfg = t.red,
-            fg      = p.red[3],
+            fg      = p.red[1],
         },
         _function = {
             ctermfg = t.green,
@@ -99,11 +99,11 @@ return {
         },
         _enum = {
             ctermfg = t.red,
-            fg      = p.red[3],
+            fg      = p.red[1],
         },
         _enummember = {
             ctermfg = t.red,
-            fg      = p.red[3],
+            fg      = p.red[1],
         },
 
         -- UI

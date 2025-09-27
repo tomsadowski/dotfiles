@@ -57,8 +57,8 @@ return {
             fg      = p.yellow[3],
         },
         _typeparam = {
-            ctermfg = t.darkred,
-            fg      = p.darkred[3],
+            ctermfg = t.red,
+            fg      = p.red[1],
         },
         _function = {
             ctermfg = t.green,
@@ -97,11 +97,11 @@ return {
         },
         _enum = {
             ctermfg = t.red,
-            fg      = p.red[3],
+            fg      = p.red[1],
         },
         _enummember = {
             ctermfg = t.red,
-            fg      = p.red[3],
+            fg      = p.red[1],
         },
         -- UI
         _bold = {
