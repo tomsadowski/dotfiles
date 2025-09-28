@@ -1,4 +1,4 @@
 require("color.util_func").apply_spec({
     palette = require("color.util_palette"),
-    scheme  = require("color.cyan_scheme"), 
+    scheme  = require("color.night_scheme"), 
 })

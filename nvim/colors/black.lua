@@ -1,6 +1,4 @@
--- black
-
-require("color.common.util").apply_spec({
-    palette = require("color.common.palette"),
-    scheme  = require("color.black.scheme"), 
+require("color.util_func").apply_spec({
+    palette = require("color.util_palette"),
+    scheme  = require("color.black_scheme"), 
 })

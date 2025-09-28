@@ -1,6 +1,6 @@
 -- blue
 
-local p = vim.deepcopy(require("color.common.palette"))
+local p = vim.deepcopy(require("color.util_palette"))
 
 p.darkblue[1]   = "#081020" -- _normal
 

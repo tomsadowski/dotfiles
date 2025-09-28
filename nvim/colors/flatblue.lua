@@ -1,6 +1,4 @@
--- flatblue
-
-require("color.common.util").apply_spec({
-    palette = require("color.common.palette"),
-    scheme  = require("color.blue.scheme"), 
+require("color.util_func").apply_spec({
+    palette = require("color.util_palette"),
+    scheme  = require("color.blue_scheme"), 
 })

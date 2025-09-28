@@ -3,5 +3,5 @@ require "keymap"
 require "lsp"
 --require "treesitter"
 
-vim.cmd "colo blackforest"
+vim.cmd "colo blackday"
 

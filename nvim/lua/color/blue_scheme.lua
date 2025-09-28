@@ -1,8 +1,7 @@
 -- blue
 
-local t = require "color.common.term" 
+local t = require "color.util_term" 
 return {
-    links  = require "color.common.links",
     groups = function(p) return {
         Normal = {
             ctermfg = t.yellow, 

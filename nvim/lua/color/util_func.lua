@@ -1,7 +1,7 @@
 local M = {}
 
 M.apply_spec = function(spec)
-    vim.cmd('syntax reset')
+    vim.cmd("syntax reset")
     -- clear lsp highlights
     for _, group in ipairs(
         vim.fn.getcompletion("@lsp", "highlight")
@@ -13,13 +13,13 @@ M.apply_spec = function(spec)
         vim.api.nvim_set_hl(0, k, v)
     end
     -- apply links
-    for k, v in pairs(spec.scheme.links.groups) do
+    for k, v in pairs(require("color.util_links_group")) do
         vim.api.nvim_set_hl(0, k, v)
     end
-    for k, v in pairs(spec.scheme.links.treesitter) do
+    for k, v in pairs(require("color.util_links_ts")) do
         vim.api.nvim_set_hl(0, k, v)
     end
-    for k, v in pairs(spec.scheme.links.lsp) do
+    for k, v in pairs(require("color.util_links_lsp")) do
         vim.api.nvim_set_hl(0, k, v)
     end
 end
