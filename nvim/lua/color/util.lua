@@ -13,13 +13,13 @@ M.apply_spec = function(spec)
         vim.api.nvim_set_hl(0, k, v)
     end
     -- apply links
-    for k, v in pairs(require("color.util_links_group")) do
+    for k, v in pairs(require("color.links_group")) do
         vim.api.nvim_set_hl(0, k, v)
     end
-    for k, v in pairs(require("color.util_links_ts")) do
+    for k, v in pairs(require("color.links_ts")) do
         vim.api.nvim_set_hl(0, k, v)
     end
-    for k, v in pairs(require("color.util_links_lsp")) do
+    for k, v in pairs(require("color.links_lsp")) do
         vim.api.nvim_set_hl(0, k, v)
     end
 end

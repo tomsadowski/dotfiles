@@ -1,4 +1,7 @@
-require("color.util_func").apply_spec({
-    palette = require("color.day_palette"),
-    scheme  = require("color.blackday_scheme"), 
-})
+-- blackday
+
+local f = require "color.util"
+local p = require "color.day_palette"
+local s = require "color.blackday_scheme"
+
+f.apply_spec({palette = p, scheme = s})

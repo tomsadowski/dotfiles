@@ -1,6 +1,6 @@
 -- blackday
 
-local t = require "color.util_term" 
+local t = require "color.term" 
 return function(p) return {
     Normal = {
         ctermfg = t.yellow, 

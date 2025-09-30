@@ -1,6 +1,6 @@
 -- night
 
-local p = vim.deepcopy(require("color.util_palette"))
+local p = vim.deepcopy(require("color.palette"))
 
 p.darkblue[1]   = "#011420" -- _normal bg
 
