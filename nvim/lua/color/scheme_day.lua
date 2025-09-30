@@ -16,10 +16,6 @@ return function(p) return {
         ctermfg = t.darkcyan,
         fg      = p.darkcyan[2],
     },
-    _macro = {
-        ctermfg = t.green,
-        fg      = p.green[1],
-    }, 
     _annotation = {
         ctermfg = t.darkcyan,
         fg      = p.darkcyan[1],
@@ -33,22 +29,16 @@ return function(p) return {
         fg      = p.darkcyan[2],
     }, 
     _comment = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.blue,
+        fg      = p.blue[1],
     }, 
-    _doc_comment = {
-        link = "_comment",
-    }, 
-    _typeparam = {
+    _enum = {
         ctermfg = t.red,
         fg      = p.red[1],
     },
     _function = {
         ctermfg = t.green,
         fg      = p.green[1],
-    }, 
-    _interface = {
-        link = "_function",
     }, 
     _mut_var = {
         ctermfg = t.cyan,
@@ -58,9 +48,6 @@ return function(p) return {
         ctermfg = t.cyan,
         fg      = p.cyan[2],
     }, 
-    _constant = {
-        link = "_var",
-    }, 
     _mut_funcparam = {
         ctermfg = t.magenta,
         fg      = p.magenta[1],
@@ -69,14 +56,13 @@ return function(p) return {
         ctermfg = t.magenta,
         fg      = p.magenta[2],
     }, 
-    _enum = {
-        ctermfg = t.red,
-        fg      = p.red[1],
-    },
-    _enummember = {
-        link = "_enum"
-    },
-    -- UI
+    _macro       = {link = "_preproc"}, 
+    _doc_comment = {link = "_comment"}, 
+    _enummember  = {link = "_enum"},
+    _typeparam   = {link = "_enum"},
+    _interface   = {link = "_function"}, 
+    _constant    = {link = "_var"}, 
+
     _linenumber = {
         ctermfg = t.blue,
         fg      = p.blue[1],
@@ -85,12 +71,6 @@ return function(p) return {
         ctermfg = t.darkcyan,
         fg      = p.darkcyan[1],
         bold    = true,
-    }, 
-    _cursor = {
-        ctermfg = t.darkblue,
-        fg      = p.darkblue[2], 
-        ctermbg = t.darkblue,
-        bg      = p.darkblue[2],
     }, 
     _matchparen = {
         ctermbg = t.darkyellow,
@@ -101,14 +81,22 @@ return function(p) return {
         bg      = p.black[1],
     }, 
     _search = {
-        ctermbg = t.blue,
-        bg      = p.blue[1],
+        ctermfg = t.white,
+        fg      = p.white[1],
+        ctermbg = t.darkyellow,
+        bg      = p.darkyellow[3],
     },
     _folded = {
         ctermfg = t.cyan, 
         fg      = p.cyan[1], 
         ctermbg = t.black,
         bg      = p.black[1],
+    }, 
+    _cursor = {
+        ctermfg = t.darkblue,
+        fg      = p.darkblue[2], 
+        ctermbg = t.darkblue,
+        bg      = p.darkblue[2],
     }, 
     _bold = {
         bold    = true,
