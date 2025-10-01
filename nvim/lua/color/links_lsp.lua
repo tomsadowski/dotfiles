@@ -11,7 +11,7 @@ return {
 -- @lsp.type.class     Identifiers that declare or reference a class type
 -- @lsp.type.property  Identifiers that declare or reference a member 
 --                     property, member field, or member variable
-    ['@lsp.type.namespace'] = {link='_normal'},
+    ['@lsp.type.namespace'] = {link='_keyword'},
     ['@lsp.type.number']    = {link='_normal'},
     ['@lsp.type.operator']  = {link='_normal'},
     ['@lsp.type.type']      = {link='_normal'},

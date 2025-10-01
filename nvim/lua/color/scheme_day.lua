@@ -56,7 +56,7 @@ return function(p) return {
         ctermfg = t.magenta,
         fg      = p.magenta[2],
     }, 
-    _macro       = {link = "_preproc"}, 
+    _macro       = {link = "_normal"}, 
     _doc_comment = {link = "_comment"}, 
     _enummember  = {link = "_enum"},
     _typeparam   = {link = "_enum"},
@@ -68,8 +68,8 @@ return function(p) return {
         fg      = p.blue[1],
     }, 
     _cursorlinenumber = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.darkyellow,
+        fg      = p.darkyellow[3],
         bold    = true,
     }, 
     _matchparen = {
@@ -81,8 +81,8 @@ return function(p) return {
         bg      = p.black[1],
     }, 
     _search = {
-        ctermfg = t.white,
-        fg      = p.white[1],
+        ctermfg = t.blue,
+        fg      = p.blue[1],
         ctermbg = t.darkyellow,
         bg      = p.darkyellow[3],
     },
