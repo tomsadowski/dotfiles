@@ -46,7 +46,7 @@ return function(p) return {
     }, 
     _linenumber = {
         ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        fg      = p.darkcyan[2],
     }, 
     _cursorlinenumber = {
         ctermfg = t.cyan,
