@@ -5,16 +5,16 @@ return function(p) return {
     Normal = {
         ctermfg = t.yellow, 
         fg      = p.yellow[1], 
-        ctermbg = t.darkblue,
-        bg      = p.darkblue[1],
+        ctermbg = t.black,
+        bg      = p.black[1],
     }, _normal = {link="Normal"}, 
     _keyword = {
         ctermfg = t.darkyellow,
         fg      = p.darkyellow[1],
     }, 
     _preproc = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[2],
+        ctermfg = t.cyan,
+        fg      = p.cyan[1],
     },
     _annotation = {
         ctermfg = t.darkcyan,
@@ -55,8 +55,8 @@ return function(p) return {
     _constant      = {link = "_var"}, 
 
     _linenumber = {
-        ctermfg = t.blue,
-        fg      = p.blue[1],
+        ctermfg = t.darkblue,
+        fg      = p.darkblue[1],
     }, 
     _cursorlinenumber = {
         ctermfg = t.darkcyan,
@@ -67,8 +67,8 @@ return function(p) return {
         bg      = p.darkyellow[2],
     }, 
     _visual = {
-        ctermbg = t.black,
-        bg      = p.black[1],
+        ctermbg = t.darkblue,
+        bg      = p.darkblue[1],
     }, 
     _search = {
         ctermfg = t.blue,
