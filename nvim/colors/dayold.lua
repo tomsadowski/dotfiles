@@ -1,11 +1,10 @@
--- blackday
+-- dayold
 
 local util    = require("color.util")
 local scheme  = require("color.scheme_day")
 local palette = vim.deepcopy(require("color.palette"))
 
-palette.darkblue[1]   = "#000000" -- _normal bg
-palette.black[1]      = "#002838" -- _visual
+palette.darkblue[1]   = "#002838" -- _normal bg
 palette.blue[1]       = "#204060" -- _linenumber
 palette.darkcyan[1]   = "#2080c0" -- _comment
 palette.darkcyan[2]   = "#2080c0" -- _string, _macro

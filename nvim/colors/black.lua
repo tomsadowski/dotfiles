@@ -1,7 +1,7 @@
--- blue
+-- black
 
-local f = require "color.util"
-local p = require "color.palette"
-local s = require "color.scheme_black"
+local util    = require("color.util")
+local scheme  = require("color.scheme_black")
+local palette = require("color.palette")
 
-f.apply_spec({palette = p, scheme = s})
+util.apply(scheme(palette))

@@ -1,6 +1,6 @@
 local M = {}
 
-M.apply_spec = function(spec)
+M.apply = function(spec)
     vim.cmd("syntax reset")
     -- clear lsp highlights
     for _, group in ipairs(
@@ -9,7 +9,7 @@ M.apply_spec = function(spec)
         vim.api.nvim_set_hl(0, group, {})
     end
     -- apply scheme
-    for k, v in pairs(spec.scheme(spec.palette)) do
+    for k, v in pairs(spec) do
         vim.api.nvim_set_hl(0, k, v)
     end
     -- apply links
