@@ -5,10 +5,8 @@ local scheme  = require("color.scheme_simple")
 local palette = vim.deepcopy(require("color.palette"))
 
 palette.black[1]      = "#101820" -- _normal bg
-palette.darkgrey[1]   = "#203040" -- _linenumber
 palette.darkblue[1]   = "#203040" -- _visual, _search
-palette.blue[1]       = "#3060c0" -- _cursorlinenumber
-palette.darkcyan[1]   = "#3060c0" -- _comment
+palette.darkcyan[1]   = "#306080" -- _linenumber, _comment
 palette.cyan[1]       = "#00d0d0" -- _string, _macro
 palette.darkyellow[1] = "#b08040" -- _keyword
 palette.yellow[1]     = "#ffd888" -- _normal fg
