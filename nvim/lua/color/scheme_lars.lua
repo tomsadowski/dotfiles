@@ -29,8 +29,8 @@ return function(p) return {
         fg      = p.darkcyan[2],
     }, 
     _comment = {
-        ctermfg = t.blue,
-        fg      = p.blue[1],
+        ctermfg = t.darkcyan,
+        fg      = p.darkcyan[1],
     }, 
     _enum = {
         ctermfg = t.red,
@@ -44,30 +44,23 @@ return function(p) return {
         ctermfg = t.cyan,
         fg      = p.cyan[1],
     }, 
-    _mut_var = {
-        link = "_var", 
-    }, 
-    _funcparam = {
-        link = "_var", 
-    }, 
-    _mut_funcparam = {
-        link = "_var", 
-    }, 
-    _macro       = {link = "_normal"}, 
-    _doc_comment = {link = "_comment"}, 
-    _enummember  = {link = "_enum"},
-    _typeparam   = {link = "_enum"},
-    _interface   = {link = "_function"}, 
-    _constant    = {link = "_var"}, 
+    _mut_var       = {link = "_var"}, 
+    _funcparam     = {link = "_var"}, 
+    _mut_funcparam = {link = "_var"}, 
+    _macro         = {link = "_normal"}, 
+    _doc_comment   = {link = "_comment"}, 
+    _enummember    = {link = "_enum"},
+    _typeparam     = {link = "_enum"},
+    _interface     = {link = "_function"}, 
+    _constant      = {link = "_var"}, 
 
     _linenumber = {
         ctermfg = t.blue,
         fg      = p.blue[1],
     }, 
     _cursorlinenumber = {
-        ctermfg = t.darkyellow,
-        fg      = p.darkyellow[3],
-        bold    = true,
+        ctermfg = t.darkcyan,
+        fg      = p.darkcyan[1],
     }, 
     _matchparen = {
         ctermbg = t.darkyellow,
