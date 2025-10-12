@@ -25,8 +25,8 @@ return function(p) return {
         fg      = p.yellow[1],
     }, 
     _string = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[2],
+        ctermfg = t.cyan,
+        fg      = p.cyan[1],
     }, 
     _comment = {
         ctermfg = t.darkcyan,
@@ -41,8 +41,8 @@ return function(p) return {
         fg      = p.green[1],
     }, 
     _var = {
-        ctermfg = t.cyan,
-        fg      = p.cyan[1],
+        ctermfg = t.magenta,
+        fg      = p.magenta[1],
     }, 
     _mut_var       = {link = "_var"}, 
     _funcparam     = {link = "_var"}, 

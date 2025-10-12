@@ -1,7 +1,7 @@
 -- larsnight
 
 local util    = require("color.util")
-local scheme  = require("color.scheme_lars")
+local scheme  = require("color.scheme_simple")
 local palette = vim.deepcopy(require("color.palette"))
 
 palette.darkblue[1]   = "#001020" -- _normal bg
