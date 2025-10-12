@@ -48,7 +48,15 @@ return function(p) return {
         ctermfg = t.darkgrey,
         fg      = p.darkgrey[1],
     }, 
+    _cursorlinenumber = {
+        ctermfg = t.darkcyan,
+        fg      = p.darkcyan[1],
+    }, 
     _visual     = {
+        ctermbg = t.blue,
+        bg      = p.blue[1],
+    },
+    _search = {
         ctermbg = t.darkblue,
         bg      = p.darkblue[1],
     },
@@ -56,12 +64,6 @@ return function(p) return {
         ctermbg = t.darkyellow,
         bg      = p.darkyellow[2],
     }, 
-    _search = {
-        ctermfg = t.blue,
-        fg      = p.blue[1],
-        ctermbg = t.darkyellow,
-        bg      = p.darkyellow[3],
-    },
     _folded = {
         ctermfg = t.cyan, 
         fg      = p.cyan[1], 
@@ -83,5 +85,4 @@ return function(p) return {
     _typeparam        = {link = "_enum"},
     _interface        = {link = "_function"}, 
     _constant         = {link = "_var"}, 
-    _cursorlinenumber = {link = "_comment"}, 
 } end
