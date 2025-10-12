@@ -49,12 +49,12 @@ return function(p) return {
         fg      = p.darkgrey[1],
     }, 
     _cursorlinenumber = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.blue,
+        fg      = p.blue[1],
     }, 
     _visual     = {
-        ctermbg = t.blue,
-        bg      = p.blue[1],
+        ctermbg = t.darkblue,
+        bg      = p.darkblue[1],
     },
     _search = {
         ctermbg = t.darkblue,
