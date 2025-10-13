@@ -45,12 +45,12 @@ return function(p) return {
         fg      = p.magenta[1],
     }, 
     _linenumber = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[2],
+        ctermfg = t.darkgrey,
+        fg      = p.darkgrey[1],
     }, 
     _cursorlinenumber = {
         ctermfg = t.darkcyan,
-        fg      = p.darkcyan[2],
+        fg      = p.darkcyan[1],
         ctermbg = t.darkblue,
         bg      = p.darkblue[1],
     }, 
