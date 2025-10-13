@@ -29,8 +29,8 @@ return function(p) return {
         fg      = p.cyan[1],
     }, 
     _comment = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.darkgrey,
+        fg      = p.darkgrey[1],
     }, 
     _enum = {
         ctermfg = t.red,
