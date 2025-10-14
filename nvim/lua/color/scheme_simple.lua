@@ -21,8 +21,8 @@ return function(p) return {
         fg      = p.darkcyan[1],
     }, 
     _markup = {
-        ctermfg = t.yellow,
-        fg      = p.yellow[1],
+        ctermfg = t.darkyellow,
+        fg      = p.darkyellow[1],
     }, 
     _string = {
         ctermfg = t.darkcyan,

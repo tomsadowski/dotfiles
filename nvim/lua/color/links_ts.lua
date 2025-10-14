@@ -45,9 +45,9 @@ return {
 -- @character.special     special characters (e.g. wildcards)
     ['@string']                = {link='_string'}, 
     ['@string.documentation']  = {link='@string'}, 
-    ['@string.regexp']         = {link='@string'}, 
-    ['@string.escape']         = {link='@string'}, 
-    ['@string.special']        = {link='@string'}, 
+    ['@string.regexp']         = {link='_markup'}, 
+    ['@string.escape']         = {link='_markup'}, 
+    ['@string.special']        = {link='_markup'}, 
     ['@string.special.symbol'] = {link='@string.special'}, 
     ['@string.special.path']   = {link='@string.special'}, 
     ['@string.special.url']    = {link='@string.special'}, 
