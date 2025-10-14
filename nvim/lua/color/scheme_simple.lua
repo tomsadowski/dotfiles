@@ -10,7 +10,7 @@ return function(p) return {
     }, _normal = {link="Normal"}, 
     _keyword = {
         ctermfg = t.darkgreen,
-        fg      = p.darkgreen[2],
+        fg      = p.darkgreen[1],
     }, 
     _preproc = {
         ctermfg = t.darkcyan,
@@ -30,15 +30,15 @@ return function(p) return {
     }, 
     _comment = {
         ctermfg = t.darkgreen,
-        fg      = p.darkgreen[3],
+        fg      = p.darkgreen[2],
     }, 
     _enum = {
-        ctermfg = t.darkmagenta,
-        fg      = p.darkmagenta[1],
+        ctermfg = t.red,
+        fg      = p.red[1],
     },
     _function = {
-        ctermfg = t.darkyellow,
-        fg      = p.darkyellow[1],
+        ctermfg = t.yellow,
+        fg      = p.yellow[1],
     }, 
     _var = {
         ctermfg = t.magenta,
@@ -46,7 +46,7 @@ return function(p) return {
     }, 
     _linenumber = {
         ctermfg = t.darkgreen,
-        fg      = p.darkgreen[3],
+        fg      = p.darkgreen[2],
     }, 
     _cursorlinenumber = {
         ctermfg = t.yellow,
