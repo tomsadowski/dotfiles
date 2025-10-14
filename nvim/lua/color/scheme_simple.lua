@@ -13,8 +13,8 @@ return function(p) return {
         fg      = p.darkyellow[1],
     }, 
     _preproc = {
-        ctermfg = t.cyan,
-        fg      = p.cyan[1],
+        ctermfg = t.darkcyan,
+        fg      = p.darkcyan[1],
     },
     _annotation = {
         ctermfg = t.darkcyan,
@@ -25,8 +25,8 @@ return function(p) return {
         fg      = p.yellow[1],
     }, 
     _string = {
-        ctermfg = t.cyan,
-        fg      = p.cyan[1],
+        ctermfg = t.darkcyan,
+        fg      = p.darkcyan[1],
     }, 
     _comment = {
         ctermfg = t.darkgrey,
@@ -64,11 +64,11 @@ return function(p) return {
     },
     _matchparen = {
         ctermbg = t.darkyellow,
-        bg      = p.darkyellow[2],
+        bg      = p.darkyellow[1],
     }, 
     _folded = {
-        ctermfg = t.cyan, 
-        fg      = p.cyan[1], 
+        ctermfg = t.darkcyan, 
+        fg      = p.darkcyan[1], 
         ctermbg = t.black,
         bg      = p.black[1],
     }, 
