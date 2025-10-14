@@ -9,11 +9,12 @@ palette.darkblue[1]   = "#202020" -- _visual, _search
 
 palette.darkgrey[1]   = "#505050" -- _linenumber
 palette.darkcyan[1]   = "#0080b0" -- _string, _macro
+palette.darkgreen[1]  = "#408020" -- _keyword
 
 palette.darkyellow[1] = "#707020" -- _keyword
-palette.yellow[1]     = "#c0c080" -- _normal fg
+palette.yellow[1]     = "#ffff00" -- _normal fg
 
-palette.green[1]      = "#20c040" -- _function
+palette.green[1]      = "#00c000" -- _function
 palette.magenta[1]    = "#c040c0" -- _var
 
 palette.red[1]        = "#c05050" -- _enum, _typeparam

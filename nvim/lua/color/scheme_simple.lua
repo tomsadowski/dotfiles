@@ -3,14 +3,14 @@
 local t = require "color.term" 
 return function(p) return {
     Normal = {
-        ctermfg = t.yellow, 
-        fg      = p.yellow[1], 
+        ctermfg = t.green, 
+        fg      = p.green[1], 
         ctermbg = t.black,
         bg      = p.black[1],
     }, _normal = {link="Normal"}, 
     _keyword = {
-        ctermfg = t.darkyellow,
-        fg      = p.darkyellow[1],
+        ctermfg = t.darkgreen,
+        fg      = p.darkgreen[1],
     }, 
     _preproc = {
         ctermfg = t.darkcyan,
@@ -25,34 +25,34 @@ return function(p) return {
         fg      = p.yellow[1],
     }, 
     _string = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.darkgreen,
+        fg      = p.darkgreen[1],
     }, 
     _comment = {
-        ctermfg = t.darkgrey,
-        fg      = p.darkgrey[1],
+        ctermfg = t.darkgreen,
+        fg      = p.darkgreen[1],
     }, 
     _enum = {
-        ctermfg = t.red,
-        fg      = p.red[1],
+        ctermfg = t.darkmagenta,
+        fg      = p.darkmagenta[1],
     },
     _function = {
-        ctermfg = t.green,
-        fg      = p.green[1],
+        ctermfg = t.yellow,
+        fg      = p.yellow[1],
     }, 
     _var = {
         ctermfg = t.magenta,
         fg      = p.magenta[1],
     }, 
     _linenumber = {
-        ctermfg = t.darkgrey,
-        fg      = p.darkgrey[1],
+        ctermfg = t.darkgreen,
+        fg      = p.darkgreen[1],
     }, 
     _cursorlinenumber = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
-        ctermbg = t.darkblue,
-        bg      = p.darkblue[1],
+        ctermfg = t.yellow,
+        fg      = p.yellow[1],
+   --     ctermbg = t.darkblue,
+     --   bg      = p.darkblue[1],
     }, 
     _visual     = {
         ctermbg = t.darkblue,
