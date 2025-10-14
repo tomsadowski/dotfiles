@@ -229,6 +229,8 @@ return {
 --  csInterpolationDelimiter = {link='_annotation'},
 --  csType                   = {link='_type'},
 --  csStorage                = {link='_keyword'},
+csInterpolationDelimiter = {link='_markup'},
+csSpecialChar            = {link='_markup'},
 
 -- NAMING CONVENTIONS		    *group-name* *{group-name}* *E669* *E5248*
 -- A syntax group name is to be used for syntax items that match the same kind of
