@@ -1,10 +1,9 @@
--- lars
+-- scheme
 
-local t = require "color.term" 
-return function(p) return {
+return function(t, p) return {
     Normal = {
-        ctermfg = t.green, 
-        fg      = p.green[1], 
+        ctermfg = t.white, 
+        fg      = p.white[1], 
         ctermbg = t.black,
         bg      = p.black[1],
     }, _normal = {link="Normal"}, 
@@ -37,8 +36,8 @@ return function(p) return {
         fg      = p.red[1],
     },
     _function = {
-        ctermfg = t.yellow,
-        fg      = p.yellow[1],
+        ctermfg = t.green,
+        fg      = p.green[1],
     }, 
     _var = {
         ctermfg = t.magenta,
