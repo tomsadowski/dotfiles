@@ -1,4 +1,4 @@
--- scheme
+-- scheme lars
 
 return function(t, p) return {
     Normal = {
@@ -8,8 +8,8 @@ return function(t, p) return {
         bg      = p.black[1],
     }, _normal = {link="Normal"}, 
     _keyword = {
-        ctermfg = t.darkgreen,
-        fg      = p.darkgreen[1],
+        ctermfg = t.cyan,
+        fg      = p.cyan[1],
     }, 
     _preproc = {
         ctermfg = t.darkcyan,
@@ -20,8 +20,8 @@ return function(t, p) return {
         fg      = p.darkcyan[1],
     }, 
     _markup = {
-        ctermfg = t.darkyellow,
-        fg      = p.darkyellow[1],
+        ctermfg = t.red,
+        fg      = p.red[1],
     }, 
     _string = {
         ctermfg = t.darkcyan,
@@ -29,7 +29,7 @@ return function(t, p) return {
     }, 
     _comment = {
         ctermfg = t.darkgreen,
-        fg      = p.darkgreen[2],
+        fg      = p.darkgreen[1],
     }, 
     _enum = {
         ctermfg = t.red,
@@ -45,13 +45,11 @@ return function(t, p) return {
     }, 
     _linenumber = {
         ctermfg = t.darkgreen,
-        fg      = p.darkgreen[2],
+        fg      = p.darkgreen[1],
     }, 
     _cursorlinenumber = {
         ctermfg = t.yellow,
         fg      = p.yellow[1],
-   --     ctermbg = t.darkblue,
-     --   bg      = p.darkblue[1],
     }, 
     _visual     = {
         ctermbg = t.darkblue,
@@ -80,7 +78,7 @@ return function(t, p) return {
     _mut_var          = {link = "_var"}, 
     _funcparam        = {link = "_var"}, 
     _mut_funcparam    = {link = "_var"}, 
-    _macro            = {link = "_normal"}, 
+    _macro            = {link = "_keyword"}, 
     _doc_comment      = {link = "_comment"}, 
     _enummember       = {link = "_enum"},
     _typeparam        = {link = "_enum"},
