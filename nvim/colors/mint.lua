@@ -5,19 +5,19 @@ local util    = require("color.util")
 local term    = require("color.term")
 local palette = vim.deepcopy(require("color.palette"))
 
-palette.black[1]       = "#040c18" -- _normal bg
-palette.white[1]       = "#c8c0b8" -- _normal fg
-palette.yellow[1]      = "#a8a850" -- _cursorlinenumber
+palette.black[1]       = "#06080a" -- _normal bg
 
 palette.darkblue[1]    = "#042020" -- _visual, _search
-palette.darkgreen[2]   = "#686868" -- _comment
-palette.darkgreen[1]   = "#608060" -- _keyword
 
-palette.green[1]       = "#90c870" -- _function
-palette.magenta[1]     = "#c070b0" -- _var
+palette.darkcyan[1]    = "#406080" -- _comment, _linenumber
+palette.darkgreen[1]   = "#88c8b0" -- _keyword
 
-palette.darkcyan[1]    = "#20a0c8" -- _string, _macro
-palette.red[1]         = "#c87050" -- _enum, _typeparam
-palette.darkyellow[1]  = "#c87050" -- _markup
+palette.green[1]       = "#a0e830" -- _function
+palette.magenta[1]     = "#d878ff" -- _var
+
+palette.cyan[1]        = "#20b0ff" -- _string, _macro
+palette.red[1]         = "#ff7038" -- _enum, _typeparam
+
+palette.white[1]       = "#e8e8e8" -- _normal bg
 
 util.apply(scheme(term, palette))

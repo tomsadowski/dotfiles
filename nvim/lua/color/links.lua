@@ -205,7 +205,7 @@ return {
 --  cStorageClass = {link='_keyword'},
 
 --  -- rust
---  rustSigil        = {link='_normal'},
+    rustSigil        = {link='_normal'},
 --  rustFoldBraces   = {link='_normal'},
 --  rustModPath      = {link='_normal'},
 --  rustLifetime     = {link='_normal'},
@@ -214,7 +214,7 @@ return {
 --  rustEscape       = {link='_annotation'},
 --  rustQuestionMark = {link='_keyword'},
 --  rustTrait        = {link='_interface'},
---  rustDeriveTrait  = {link='_interface'},
+    rustDeriveTrait  = {link='_interface'},
 --  rustStorage      = {link='_keyword'},
 
 --  -- csharp
