@@ -19,10 +19,6 @@ return function(t, p) return {
         ctermfg = t.darkcyan,
         fg      = p.darkcyan[1],
     }, 
-    _markup = {
-        ctermfg = t.red,
-        fg      = p.red[1],
-    }, 
     _string = {
         ctermfg = t.cyan,
         fg      = p.cyan[1],
@@ -84,4 +80,5 @@ return function(t, p) return {
     _typeparam        = {link = "_enum"},
     _interface        = {link = "_function"}, 
     _constant         = {link = "_var"}, 
+    _markup           = {link = "_keyword"},
 } end
