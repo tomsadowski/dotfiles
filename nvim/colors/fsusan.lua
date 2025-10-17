@@ -1,6 +1,6 @@
--- flatmint
+-- flatsusan
 
-local scheme  = require("color.scheme_mint")
+local scheme  = require("color.scheme_susan")
 local util    = require("color.util")
 local term    = require("color.term")
 local palette = require("color.palette")
