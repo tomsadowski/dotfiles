@@ -1,8 +1,11 @@
 # neovim config
 
+### rose
+![rose](docs/rose.png)  
+
 ### susan
-![susan](docs/colorscheme_susan.png)  
+![susan](docs/susan.png)  
 
 ### lars
-![lars](docs/colorscheme_lars.png)  
+![lars](docs/lars.png)  
 

@@ -11,7 +11,7 @@ palette.darkcyan[1]    = "#506070" -- _comment, _linenumber
 palette.darkgreen[1]   = "#40c890" -- _keyword, _macro
 palette.green[1]       = "#a8c848" -- _function, _interface
 palette.magenta[1]     = "#c080e8" -- _var
-palette.cyan[1]        = "#68a8e8" -- _string, _preproc
+palette.cyan[1]        = "#48a8e8" -- _string, _preproc
 palette.red[1]         = "#e878a0" -- _enum, _typeparam, _markup
 palette.white[1]       = "#c8c8c8" -- _normal fg
 
