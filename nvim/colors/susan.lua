@@ -1,18 +1,26 @@
 -- susan
 
-local scheme  = require("color.scheme_susan")
-local util    = require("color.util")
-local term    = require("color.term")
-local palette = vim.deepcopy(require("color.palette"))
+require "colorscheme" {
+    lsp        = true,
+    treesitter = false,
 
-palette.black[1]       = "#04080c" -- _normal bg
-palette.darkblue[1]    = "#102030" -- _visual, _search
-palette.darkcyan[1]    = "#506070" -- _comment, _linenumber
-palette.darkgreen[1]   = "#40c890" -- _keyword, _macro
-palette.green[1]       = "#a8c848" -- _function, _interface
-palette.magenta[1]     = "#c080e8" -- _var
-palette.cyan[1]        = "#48a8e8" -- _string, _preproc
-palette.red[1]         = "#e878a0" -- _enum, _typeparam, _markup
-palette.white[1]       = "#c8c8c8" -- _normal fg
+    window     = {1, 1, "#000000"}, -- black
+    background = {2, 2, "#04080c"}, -- grey
+    linenumber = {3, 3, "#102030"}, -- grey
+    comment    = {4, 4, "#506070"}, -- grey
 
-util.apply(scheme(term, palette))
+    text       = {5, 5, "#c8c8c8"}, -- white
+    type       = {7, 7, "#c8c8c8"}, -- white
+    struct     = {7, 7, "#c8c8c8"}, -- white
+    class      = {7, 7, "#c8c8c8"}, -- white
+
+    keyword    = {6, 6, "#40c890"}, -- green
+
+    string     = {4, 4, "#48a8e8"}, -- grey
+
+    variable   = {6, 6, "#c080e8"}, -- magenta
+
+    func       = {5, 5, "#a8c848"}, -- green
+
+    enum       = {7, 7, "#e878a0"}, -- red
+}

@@ -10,6 +10,9 @@
 ((identifier) @constant
  (#match? @constant "^[A-Z][A-Z_]+"))
 
+((use_list (identifier) @type)
+ (#match? @type "^[a-z][a-z_]+"))
+
 ; uppercase names are types
 (((identifier) @type)
  (#match? @type "^[A-Z]+[a-z]+"))
@@ -115,7 +118,6 @@
 "yield" @keyword
 (crate) @keyword
 (mutable_specifier) @keyword
-;(use_list (self) @keyword)
 ;(scoped_use_list (self) @keyword)
 ;(scoped_identifier (self) @keyword)
 (super) @keyword

@@ -1,17 +1,23 @@
 -- rose
 
-local scheme  = require("color.scheme_rose")
-local util    = require("color.util")
-local term    = require("color.term")
-local palette = vim.deepcopy(require("color.palette"))
+require "colorscheme" {
+    lsp        = false,
+    treesitter = true,
 
-palette.black[1]       = "#101010" -- _normal bg
-palette.darkgrey[1]    = "#323232" -- _visual, _search
-palette.darkblue[1]    = "#202020" -- _linenumber
-palette.grey[1]        = "#808080" -- _comment
-palette.darkcyan[1]    = "#6898d8" -- _string
-palette.magenta[1]     = "#6898d8" -- _keyword
-palette.red[1]         = "#d87858" -- _function, _enum
-palette.green[1]       = "#80d880" -- _normal fg
+    window     = {1, 1, "#000000"}, -- black
+    background = {2, 2, "#181818"}, -- grey
+    linenumber = {3, 3, "#303030"}, -- grey
+    comment    = {4, 4, "#606060"}, -- grey
 
-util.apply(scheme(term, palette))
+    text       = {5, 5, "#98f098"}, -- green
+    variable   = {6, 6, "#98f098"}, -- magenta
+
+    keyword    = {6, 6, "#90a0f0"}, -- blue
+    string     = {4, 4, "#90a0f0"}, -- grey
+
+    type       = {7, 7, "#f0a090"}, -- red
+    enum       = {7, 7, "#f0a090"}, -- red
+    class      = {7, 7, "#f0a090"}, -- green
+    struct     = {7, 7, "#f0a090"}, -- green
+    func       = {5, 5, "#f0a090"}, -- yellow
+}

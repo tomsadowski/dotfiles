@@ -1,13 +1,13 @@
 ; ADT definitions
 
-(struct_item
-    name: (type_identifier) @name) @definition.class
+(struct_item 
+  name: (type_identifier) @name) @definition.class
 
-(enum_item
-    name: (type_identifier) @name) @definition.class
+(enum_item   
+  name: (type_identifier) @name) @definition.class
 
-(union_item
-    name: (type_identifier) @name) @definition.class
+(union_item  
+  name: (type_identifier) @name) @definition.class
 
 ; type aliases
 
