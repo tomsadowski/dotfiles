@@ -71,6 +71,15 @@ return function(t, p) return {
         ctermbg = t.darkblue,
         bg      = p.darkblue[2],
     }, 
+    _type             = {
+        link = "_normal"
+    },
+    _struct             = {
+        link = "_normal"
+    },
+    _property            = {
+        link = "_normal"
+    },
     _mut_var          = {link = "_var"}, 
     _funcparam        = {link = "_var"}, 
     _mut_funcparam    = {link = "_var"}, 

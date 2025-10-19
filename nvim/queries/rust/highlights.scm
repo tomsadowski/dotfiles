@@ -1,41 +1,20 @@
-; Identifiers
+; identifiers
+; ------------------------------
+(primitive_type) @type.builtin
 
 (type_identifier) @type
-(primitive_type) @type.builtin
-(field_identifier) @property
+; type in a tuple struct pattern is a type
+(tuple_struct_pattern type: (identifier) @type)
 
-; Identifier conventions
-
-; Assume all-caps names are constants
+; all-caps names are constants
 ((identifier) @constant
- (#match? @constant "^[A-Z][A-Z\\d_]+$'"))
+ (#match? @constant "^[A-Z][A-Z_]+"))
 
-; Assume uppercase names are enum constructors
-((identifier) @constructor
- (#match? @constructor "^[A-Z]"))
+; uppercase names are types
+(((identifier) @type)
+ (#match? @type "^[A-Z]+[a-z]+"))
 
-; Assume that uppercase names in paths are types
-((scoped_identifier
-  path: (identifier) @type)
- (#match? @type "^[A-Z]"))
-((scoped_identifier
-  path: (scoped_identifier
-    name: (identifier) @type))
- (#match? @type "^[A-Z]"))
-((scoped_type_identifier
-  path: (identifier) @type)
- (#match? @type "^[A-Z]"))
-((scoped_type_identifier
-  path: (scoped_identifier
-    name: (identifier) @type))
- (#match? @type "^[A-Z]"))
-
-; Assume all qualified names in struct patterns are enum constructors. (They're
-; either that, or struct names; highlighting both as constructors seems to be
-; the less glaring choice of error, visually.)
-(struct_pattern
-  type: (scoped_type_identifier
-    name: (type_identifier) @constructor))
+(field_identifier) @property
 
 ; Function calls
 
@@ -136,20 +115,20 @@
 "yield" @keyword
 (crate) @keyword
 (mutable_specifier) @keyword
-(use_list (self) @keyword)
-(scoped_use_list (self) @keyword)
-(scoped_identifier (self) @keyword)
+;(use_list (self) @keyword)
+;(scoped_use_list (self) @keyword)
+;(scoped_identifier (self) @keyword)
 (super) @keyword
 
-(self) @variable.builtin
 
 (char_literal) @string
 (string_literal) @string
 (raw_string_literal) @string
 
+(self) @variable.builtin
 (boolean_literal) @constant.builtin
-(integer_literal) @constant.builtin
-(float_literal) @constant.builtin
+(integer_literal) @constant
+(float_literal)   @constant
 
 (escape_sequence) @escape
 
@@ -159,3 +138,8 @@
 "*" @operator
 "&" @operator
 "'" @operator
+
+; try operator
+"?" @function
+
+

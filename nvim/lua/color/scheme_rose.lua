@@ -1,4 +1,4 @@
--- scheme season
+-- scheme rose
 
 return function(t, p) return {
     Normal = {
@@ -20,12 +20,12 @@ return function(t, p) return {
         fg      = p.magenta[1],
     }, 
     _comment = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.grey,
+        fg      = p.grey[1],
     }, 
     _linenumber = {
-        ctermfg = t.darkcyan,
-        fg      = p.darkcyan[1],
+        ctermfg = t.darkgrey,
+        fg      = p.darkgrey[1],
     }, 
     _visual     = {
         ctermbg = t.darkblue,
@@ -54,6 +54,17 @@ return function(t, p) return {
     _preproc          = {link = "_normal"},
     _cursorlinenumber = {link = "_normal"}, 
     _var              = {link = "_normal"}, 
+    _type             = {
+        ctermfg = t.red, 
+        fg      = p.red[1], 
+    },
+    _struct             = {
+        ctermfg = t.red, 
+        fg      = p.red[1], 
+    },
+    _property            = {
+        link = "_normal"
+    },
     _enum             = {
         ctermfg = t.red, 
         fg      = p.red[1], 
@@ -69,7 +80,7 @@ return function(t, p) return {
     _doc_comment      = {link = "_comment"}, 
     _enummember       = {link = "_enum"},
     _typeparam        = {link = "_enum"},
-    _interface        = {link = "_function"}, 
+    _interface        = {link = "_struct"}, 
     _constant         = {link = "_var"}, 
     _markup           = {link = "_string"},
 } end
