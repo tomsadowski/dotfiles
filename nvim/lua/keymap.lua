@@ -1,12 +1,9 @@
 local map = vim.keymap.set
-
 -- enter insert
 map({"n", "v"}, "h", "o")
 map({"n", "v"}, "H", "O")
 map({"n", "v"}, "t", "i")
 map({"n", "v"}, "T", "I")
-
-
 -- fold
 map({"n"}, "Fg", "zR") -- Open all
 map({"n"}, "Fm", "zM") -- Close all
@@ -15,7 +12,11 @@ map({"n"}, "fm", "zm") -- Close one level
 map({"n"}, "fo", "zk") -- previous
 map({"n"}, "fi", "zj") -- next
 map({"n"}, "ff", "za") -- Toggle fold under cursor
-
+-- window
+map({"n"}, "<C-w><Left>", "<C-w>H")    -- move window left
+map({"n"}, "<C-w><Down>", "<C-w>J")    -- move window down
+map({"n"}, "<C-w><Up>", "<C-w>K")      -- move window up
+map({"n"}, "<C-w><Right>", "<C-w>L")   -- move window right
 -- movement
 map({"n", "v"}, "e", "h")              -- cursor left
 map({"n", "v"}, "<Left>", "h")            
@@ -43,30 +44,30 @@ map({"n"}, "<S-Right>", "<cmd>bn<CR>") -- next buffer
 map({"n"}, "<C-Down>", "<C-i>")        -- next jump
 map({"n"}, "<C-Up>", "<C-o>")          -- previous jump
 
-local lsp_attach = function(args)
-    local caps = {{
-            mode = {"n"}, cmd = "br", 
-            name = "textDocument/rename",
-            method = vim.lsp.buf.rename
-        }, {
-            mode = {"n"}, cmd = "bi", 
-            name = "textDocument/implementation",
-            method = vim.lsp.buf.implementation
-        }, {
-            mode = {"n"}, cmd = "bh", 
-            name = "textDocument/hover",
-            method = vim.lsp.buf.hover
-        }, {
-            mode = {"n"}, cmd = "bs", 
-            name = "textDocument/diagnostic",
-            method = vim.lsp.diagnostic.show
-        }
-    }
-end
+--  local lsp_attach = function(args)
+--      local caps = {{
+--              mode = {"n"}, cmd = "br", 
+--              name = "textDocument/rename",
+--              method = vim.lsp.buf.rename
+--          }, {
+--              mode = {"n"}, cmd = "bi", 
+--              name = "textDocument/implementation",
+--              method = vim.lsp.buf.implementation
+--          }, {
+--              mode = {"n"}, cmd = "bh", 
+--              name = "textDocument/hover",
+--              method = vim.lsp.buf.hover
+--          }, {
+--              mode = {"n"}, cmd = "bs", 
+--              name = "textDocument/diagnostic",
+--              method = vim.lsp.diagnostic.show
+--          }
+--      }
+--  end
 
-vim.api.nvim_create_autocmd(
-    'LspAttach', 
-    {
-        callback = lsp_attach
-    }
-)
+--  vim.api.nvim_create_autocmd(
+--      'LspAttach', 
+--     {
+--          callback = lsp_attach
+--     }
+--  )

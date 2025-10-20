@@ -14,8 +14,9 @@
 (decorator
   (identifier) @function)
 
-(call
+((call
   function: (attribute attribute: (identifier) @function.method))
+ (#set! priority 105))
 (call
   function: (identifier) @function)
 
