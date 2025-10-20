@@ -9,6 +9,11 @@ require "colorscheme" {
     linenumber = {3, 3, "#1d2022"}, -- grey
     comment    = {4, 4, "#506058"}, -- grey
 
+    macro       = {5, 5, "#88d860"}, -- green
+    added       = {5, 5, "#88d860"}, -- green
+    changed     = {5, 5, "#88d860"}, -- green
+    removed     = {5, 5, "#88d860"}, -- green
+
     text       = {5, 5, "#88d860"}, -- green
     type       = {7, 7, "#88d860"}, -- green
     struct     = {7, 7, "#88d860"}, -- green
@@ -16,9 +21,9 @@ require "colorscheme" {
 
     keyword    = {6, 6, "#40c8b8"}, -- green
 
-    string     = {4, 4, "#4090d8"}, -- grey
+    str        = {4, 4, "#4090d8"}, -- grey
 
-    variable   = {6, 6, "#c070d8"}, -- magenta
+    identifier = {6, 6, "#c070d8"}, -- magenta
 
     func       = {5, 5, "#d8c850"}, -- yellow
 

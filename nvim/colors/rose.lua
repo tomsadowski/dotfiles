@@ -9,11 +9,16 @@ require "colorscheme" {
     linenumber = {3, 3, "#303030"}, -- grey
     comment    = {4, 4, "#707070"}, -- grey
 
+    macro       = {5, 5, "#89f098"}, -- green
+    added       = {5, 5, "#89f098"}, -- green
+    changed     = {5, 5, "#89f098"}, -- green
+    removed     = {5, 5, "#89f098"}, -- green
+
     text       = {5, 5, "#98f098"}, -- green
-    variable   = {6, 6, "#98f098"}, -- magenta
+    identifier = {6, 6, "#98f098"}, -- magenta
 
     keyword    = {6, 6, "#90a0f0"}, -- blue
-    string     = {4, 4, "#90a0f0"}, -- grey
+    str        = {4, 4, "#90a0f0"}, -- grey
 
     type       = {7, 7, "#f0a090"}, -- red
     enum       = {7, 7, "#f0a090"}, -- red
