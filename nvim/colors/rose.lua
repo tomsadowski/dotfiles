@@ -7,7 +7,7 @@ require "colorscheme" {
     window     = {1, 1, "#000000"}, -- black
     background = {2, 2, "#181818"}, -- grey
     linenumber = {3, 3, "#303030"}, -- grey
-    comment    = {4, 4, "#606060"}, -- grey
+    comment    = {4, 4, "#707070"}, -- grey
 
     text       = {5, 5, "#98f098"}, -- green
     variable   = {6, 6, "#98f098"}, -- magenta

@@ -1,0 +1,1836 @@
+diff --git a/nvim/colors/flars.lua b/nvim/colors/flars.lua
+deleted file mode 100644
+index ccca547..0000000
+--- a/nvim/colors/flars.lua
++++ /dev/null
+@@ -1,8 +0,0 @@
+--- flatlars
+-
+-local scheme  = require("color.scheme_lars")
+-local util    = require("color.util")
+-local term    = require("color.term")
+-local palette = require("color.palette")
+-
+-util.apply(scheme(term, palette))
+diff --git a/nvim/colors/frose.lua b/nvim/colors/frose.lua
+deleted file mode 100644
+index 95a4195..0000000
+--- a/nvim/colors/frose.lua
++++ /dev/null
+@@ -1,8 +0,0 @@
+--- rose
+-
+-local scheme  = require("color.scheme_rose")
+-local util    = require("color.util")
+-local term    = require("color.term")
+-local palette = require("color.palette")
+-
+-util.apply(scheme(term, palette))
+diff --git a/nvim/colors/fsusan.lua b/nvim/colors/fsusan.lua
+deleted file mode 100644
+index bcf61ec..0000000
+--- a/nvim/colors/fsusan.lua
++++ /dev/null
+@@ -1,8 +0,0 @@
+--- flatsusan
+-
+-local scheme  = require("color.scheme_susan")
+-local util    = require("color.util")
+-local term    = require("color.term")
+-local palette = require("color.palette")
+-
+-util.apply(scheme(term, palette))
+diff --git a/nvim/colors/lars.lua b/nvim/colors/lars.lua
+index 25cd3d2..41bbcc7 100644
+--- a/nvim/colors/lars.lua
++++ b/nvim/colors/lars.lua
+@@ -1,18 +1,26 @@
+ -- lars
+ 
+-local scheme  = require("color.scheme_lars")
+-local util    = require("color.util")
+-local term    = require("color.term")
+-local palette = vim.deepcopy(require("color.palette"))
+-
+-palette.black[1]       = "#06080a" -- _normal bg
+-palette.darkblue[1]    = "#1d2022" -- _visual, _search
+-palette.darkgreen[1]   = "#506058" -- _comment, _linenumber
+-palette.darkcyan[1]    = "#4090d8" -- _string, _preproc
+-palette.cyan[1]        = "#40c8b8" -- _keyword, _macro
+-palette.green[1]       = "#88d860" -- _normal fg
+-palette.yellow[1]      = "#d8c850" -- _function, _interface
+-palette.magenta[1]     = "#c070d8" -- _var
+-palette.red[1]         = "#d86060" -- _enum, _typeparam, _markup
+-
+-util.apply(scheme(term, palette))
++require "colorscheme" {
++    lsp        = true,
++    treesitter = false,
++
++    window     = {1, 1, "#000000"}, -- black
++    background = {2, 2, "#06080a"}, -- grey
++    linenumber = {3, 3, "#1d2022"}, -- grey
++    comment    = {4, 4, "#506058"}, -- grey
++
++    text       = {5, 5, "#88d860"}, -- green
++    type       = {7, 7, "#88d860"}, -- green
++    struct     = {7, 7, "#88d860"}, -- green
++    class      = {7, 7, "#88d860"}, -- green
++
++    keyword    = {6, 6, "#40c8b8"}, -- green
++
++    string     = {4, 4, "#4090d8"}, -- grey
++
++    variable   = {6, 6, "#c070d8"}, -- magenta
++
++    func       = {5, 5, "#d8c850"}, -- yellow
++
++    enum       = {7, 7, "#d86060"}, -- red
++}
+diff --git a/nvim/colors/rose.lua b/nvim/colors/rose.lua
+index c65f1e4..3f1d5f5 100644
+--- a/nvim/colors/rose.lua
++++ b/nvim/colors/rose.lua
+@@ -1,17 +1,23 @@
+ -- rose
+ 
+-local scheme  = require("color.scheme_rose")
+-local util    = require("color.util")
+-local term    = require("color.term")
+-local palette = vim.deepcopy(require("color.palette"))
++require "colorscheme" {
++    lsp        = false,
++    treesitter = true,
+ 
+-palette.black[1]       = "#101010" -- _normal bg
+-palette.darkgrey[1]    = "#323232" -- _visual, _search
+-palette.darkblue[1]    = "#202020" -- _linenumber
+-palette.grey[1]        = "#808080" -- _comment
+-palette.darkcyan[1]    = "#6898d8" -- _string
+-palette.magenta[1]     = "#6898d8" -- _keyword
+-palette.red[1]         = "#d87858" -- _function, _enum
+-palette.green[1]       = "#80d880" -- _normal fg
++    window     = {1, 1, "#000000"}, -- black
++    background = {2, 2, "#181818"}, -- grey
++    linenumber = {3, 3, "#303030"}, -- grey
++    comment    = {4, 4, "#606060"}, -- grey
+ 
+-util.apply(scheme(term, palette))
++    text       = {5, 5, "#98f098"}, -- green
++    variable   = {6, 6, "#98f098"}, -- magenta
++
++    keyword    = {6, 6, "#90a0f0"}, -- blue
++    string     = {4, 4, "#90a0f0"}, -- grey
++
++    type       = {7, 7, "#f0a090"}, -- red
++    enum       = {7, 7, "#f0a090"}, -- red
++    class      = {7, 7, "#f0a090"}, -- green
++    struct     = {7, 7, "#f0a090"}, -- green
++    func       = {5, 5, "#f0a090"}, -- yellow
++}
+diff --git a/nvim/colors/susan.lua b/nvim/colors/susan.lua
+index 2307958..9ae8057 100644
+--- a/nvim/colors/susan.lua
++++ b/nvim/colors/susan.lua
+@@ -1,18 +1,26 @@
+ -- susan
+ 
+-local scheme  = require("color.scheme_susan")
+-local util    = require("color.util")
+-local term    = require("color.term")
+-local palette = vim.deepcopy(require("color.palette"))
+-
+-palette.black[1]       = "#04080c" -- _normal bg
+-palette.darkblue[1]    = "#102030" -- _visual, _search
+-palette.darkcyan[1]    = "#506070" -- _comment, _linenumber
+-palette.darkgreen[1]   = "#40c890" -- _keyword, _macro
+-palette.green[1]       = "#a8c848" -- _function, _interface
+-palette.magenta[1]     = "#c080e8" -- _var
+-palette.cyan[1]        = "#48a8e8" -- _string, _preproc
+-palette.red[1]         = "#e878a0" -- _enum, _typeparam, _markup
+-palette.white[1]       = "#c8c8c8" -- _normal fg
+-
+-util.apply(scheme(term, palette))
++require "colorscheme" {
++    lsp        = true,
++    treesitter = false,
++
++    window     = {1, 1, "#000000"}, -- black
++    background = {2, 2, "#04080c"}, -- grey
++    linenumber = {3, 3, "#102030"}, -- grey
++    comment    = {4, 4, "#506070"}, -- grey
++
++    text       = {5, 5, "#c8c8c8"}, -- white
++    type       = {7, 7, "#c8c8c8"}, -- white
++    struct     = {7, 7, "#c8c8c8"}, -- white
++    class      = {7, 7, "#c8c8c8"}, -- white
++
++    keyword    = {6, 6, "#40c890"}, -- green
++
++    string     = {4, 4, "#48a8e8"}, -- grey
++
++    variable   = {6, 6, "#c080e8"}, -- magenta
++
++    func       = {5, 5, "#a8c848"}, -- green
++
++    enum       = {7, 7, "#e878a0"}, -- red
++}
+diff --git a/nvim/init.lua b/nvim/init.lua
+index 294d1df..ab63d06 100644
+--- a/nvim/init.lua
++++ b/nvim/init.lua
+@@ -1,8 +1,9 @@
+ require "options"
+ require "keymap"
+---require "lsp"
++require "lsp"
+ require "treesitter"
+ 
+ vim.cmd "colo rose"
+ 
+-vim.cmd("com LspCap lua =vim.lsp.get_clients()[1].server_capabilities")
++vim.cmd "com LspCap lua =vim.lsp.get_clients()[1].server_capabilities"
++--vim.cmd("com InspectTree lua =vim.treesitter.inspect_tree()")
+diff --git a/nvim/lua/color/links_groups.lua b/nvim/lua/color/links_groups.lua
+deleted file mode 100644
+index 1af730c..0000000
+--- a/nvim/lua/color/links_groups.lua
++++ /dev/null
+@@ -1,455 +0,0 @@
+--- groups
+-
+-return {
+--- These are the builtin highlighting groups.  Note that the highlighting depends
+--- on the value of 'background'.  You can see the current settings with the
+--- ":highlight" command.
+-
+--- NormalNC	Normal text in non-current windows.
+-    NormalNC = {link='_normal'}, 
+-
+--- Cursor		Character under the cursor.
+--- lCursor		Character under the cursor when |language-mapping|
+---              is used (see 'guicursor').
+--- CursorIM	    Like Cursor, but used when in IME mode. *CursorIM*
+--- CursorColumn Screen-column at the cursor, when 'cursorcolumn' is set.
+--- CursorLine	Screen-line at the cursor, when 'cursorline' is set.
+---              Low-priority if foreground (ctermfg OR guifg) is not set.
+--- TermCursor	Cursor in a focused terminal.
+-    Cursor       = {link='_cursor'}, 
+-    lCursor      = {link='_cursor'}, 
+-    CursorIM     = {link='_cursor'}, 
+-    CursorColumn = {link='_cursor'}, 
+-    CursorLine   = {link='_cursor'}, 
+-    TermCursor   = {link='_cursor'}, 
+-
+--- DiffAdd	  Diff mode: Added line. |diff.txt|
+--- DiffChange Diff mode: Changed line. |diff.txt|
+--- DiffDelete Diff mode: Deleted line. |diff.txt|
+--- DiffText	  Diff mode: Changed text within a changed line. |diff.txt|
+-    DiffAdd       = {link='_added'}, 
+-    DiffChange    = {link='_changed'}, 
+-    DiffDelete    = {link='_removed'}, 
+-    DiffText      = {link='_normal'}, 
+-
+--- WinSeparator	Separators between window splits.
+--- WinBar		Window bar of current window.
+--- WinBarNC     Window bar of not-current windows.
+-    WinSeparator = {link='_normal'}, 
+-    WinBar       = {link='_normal'}, 
+-    WinBarNC     = {link='_normal'}, 
+-
+--- Folded      Line used for closed folds.
+--- FoldColumn 'foldcolumn'
+-    Folded        = {link='_alt_normal'}, 
+-    FoldColumn    = {link='SignColumn'}, 
+-
+--- SignColumn Column where |signs| are displayed.
+-    SignColumn    = {link='_normal'}, 
+-
+--- Search     Last search pattern highlighting (see 'hlsearch').
+---            Also used for similar items that need to stand out.
+--- CurSearch  Current match for the last search pattern (see 'hlsearch').
+---            Note: This is correct after a search, but may get outdated if
+---            changes are made or the screen is redrawn.
+--- IncSearch  'incsearch' highlighting; also used for the text replaced with
+---            ":s///c".
+--- Substitute |:substitute| replacement text highlighting.
+-    Search       = {link='_search'},
+-    CurSearch    = {link='_search'}, 
+-    IncSearch    = {link='_search'}, 
+-    Substitute   = {link='_search'}, 
+-
+--- LineNr         Line number for ":number" and ":#" commands, and when 'number'
+---                or 'relativenumber' option is set.
+--- LineNrAbove    Line number for when the 'relativenumber'
+---                option is set, above the cursor line.
+--- LineNrBelow    Line number for when the 'relativenumber'
+---                option is set, below the cursor line.
+--- CursorLineNr	  Like LineNr when 'cursorline' is set and 'cursorlineopt'
+---                contains "number" or is "both", for the cursor line.
+--- CursorLineFold Like FoldColumn when 'cursorline' is set for the cursor line.
+--- CursorLineSign Like SignColumn when 'cursorline' is set for the cursor line.
+-    LineNr         = {link='_linenumber'}, 
+-    LineNrAbove    = {link='_linenumber'}, 
+-    LineNrBelow    = {link='_linenumber'}, 
+-    CursorLineNr   = {link='_cursorlinenumber'}, 
+-    CursorLineFold = {link='FoldColumn'}, 
+-    CursorLineSign = {link='SignColumn'}, 
+-
+--- MatchParen Character under the cursor or just before it, if it
+---            is a paired bracket, and its match. |pi_paren.txt|
+-    MatchParen = {link='_matchparen'}, 
+-
+--- ModeMsg		'showmode' message (e.g., "-- INSERT --").
+--- MoreMsg		|more-prompt|
+--- MsgArea		Area for messages and command-line, see also 'cmdheight'.
+--- MsgSeparator Separator for scrolled messages |msgsep|.
+--- WarningMsg	Warning messages.
+--- ErrorMsg	    Error messages on the command line.
+-    ModeMsg      = {link='_normal'}, 
+-    MoreMsg      = {link='_normal'}, 
+-    MsgArea      = {link='_normal'}, 
+-    MsgSeparator = {link='_normal'}, 
+-    WarningMsg   = {link='_normal'}, 
+-    ErrorMsg     = {link='_normal'}, 
+-
+--- NonText     '@' at the end of the window, characters from 'showbreak'
+---             and other characters that do not really exist in the text
+---             (e.g., ">" displayed when a double-wide character doesn't
+---             fit at the end of the line). See also |hl-EndOfBuffer|.
+--- Whitespace  "nbsp", "space", "tab", "multispace", "lead" and "trail"
+---             in 'listchars'.
+--- EndOfBuffer Filler lines (~) after the end of the buffer.
+---             By default, this is highlighted like |hl-NonText|.
+-    NonText     = {link='_normal'}, 
+-    Whitespace  = {link='_normal'}, 
+-    EndOfBuffer = {link='_normal'}, 
+-
+--- NormalFloat Normal text in floating windows.
+--- FloatBorder Border of floating windows.
+--- FloatTitle  Title of floating windows.
+--- FloatFooter Footer of floating windows.
+-    NormalFloat = {link='_alt_normal'},
+-    FloatBorder = {link='_normal'}, 
+-    FloatTitle  = {link='_normal'}, 
+-    FloatFooter = {link='_normal'}, 
+-
+--- Pmenu		 Popup menu: Normal item.
+--- PmenuSel	     Popup menu: Selected item. Combined with |hl-Pmenu|.
+--- PmenuKind	 Popup menu: Normal item "kind".
+--- PmenuKindSel  Popup menu: Selected item "kind".
+--- PmenuExtra	 Popup menu: Normal item "extra text".
+--- PmenuExtraSel Popup menu: Selected item "extra text".
+--- PmenuSbar	 Popup menu: Scrollbar.
+--- PmenuThumb	 Popup menu: Thumb of the scrollbar.
+--- PmenuMatch	 Popup menu: Matched text in normal item. Combined with 
+---               |hl-Pmenu|.
+--- PmenuMatchSel Popup menu: Matched text in selected item. Combined with
+---               |hl-PmenuMatch| and |hl-PmenuSel|.
+-    Pmenu         = {link='_alt_normal'}, 
+-    PmenuSel      = {link='_alt_normal'}, 
+-    PmenuKind     = {link='_alt_normal'}, 
+-    PmenuKindSel  = {link='_alt_normal'}, 
+-    PmenuExtra    = {link='_alt_normal'}, 
+-    PmenuExtraSel = {link='_alt_normal'}, 
+-    PmenuSbar     = {link='_alt_normal'}, 
+-    PmenuThumb    = {link='_alt_normal'}, 
+-    PmenuMatch    = {link='_alt_normal'}, 
+-    PmenuMatchSel = {link='_alt_normal'}, 
+-
+--- SpellBad	  Word that is not recognized by the spellchecker. |spell|
+---            Combined with the highlighting used otherwise.
+--- SpellCap	  Word that should start with a capital. |spell|
+---            Combined with the highlighting used otherwise.
+--- SpellLocal Word that is recognized by the spellchecker as one that is
+---            used in another region. |spell|
+---            Combined with the highlighting used otherwise.
+--- SpellRare  Word that is recognized by the spellchecker as one that is
+---            hardly ever used. |spell|
+---            Combined with the highlighting used otherwise.
+-    SpellBad   = {link='_normal'}, 
+-    SpellCap   = {link='_normal'}, 
+-    SpellLocal = {link='_normal'}, 
+-    SpellRare  = {link='_normal'}, 
+-
+--- StatusLine	    Status line of current window.
+--- StatusLineNC	    Status lines of not-current windows.
+--- StatusLineTerm	Status line of |terminal| window.
+--- StatusLineTermNC Status line of non-current |terminal| windows.
+-    StatusLine       = {link='_normal'},
+-    StatusLineNC     = {link='_normal'}, 
+-    StatusLineTerm   = {link='_normal'}, 
+-    StatusLineTermNC = {link='_normal'}, 
+-
+--- TabLine     Tab pages line, not active tab page label.
+--- TabLineFill Tab pages line, where there are no labels.
+--- TabLineSel  Tab pages line, active tab page label.
+-    TabLine     = {link='_normal'}, 
+-    TabLineFill = {link='_normal'}, 
+-    TabLineSel  = {link='_normal'},
+-
+--- Visual    Visual mode selection.
+--- VisualNOS Visual mode selection when vim is "Not Owning the Selection".
+-    Visual    = {link='_visual'}, 
+-    VisualNOS = {link='_visual'}, 
+-
+--- Directory 	  Directory names (and other special names in listings).
+--- ComplMatchIns  Matched text of the currently inserted completion.
+--- Question	      |hit-enter| prompt and yes/no questions.
+--- QuickFixLine   Current |quickfix| item in the quickfix window. Combined with
+---                |hl-CursorLine| when the cursor is there.
+--- SnippetTabstop Tabstops in snippets. |vim.snippet|
+--- SpecialKey     Unprintable characters: Text displayed differently from what
+---                it really is. But not 'listchars' whitespace. |hl-Whitespace|
+--- Title	      Titles for output from ":set all", ":autocmd" etc.
+--- WildMenu	      Current match in 'wildmenu' completion.
+--- ColorColumn	  Used for the columns set with 'colorcolumn'.
+--- Conceal		  Placeholder characters substituted for concealed
+---                text (see 'conceallevel').
+-    Directory      = {link='_normal'}, 
+-    ComplMatchIns  = {link='_normal'}, 
+-    Question       = {link='_normal'}, 
+-    QuickFixLine   = {link='_normal'}, 
+-    SnippetTabstop = {link='_normal'}, 
+-    SpecialKey     = {link='_normal'}, 
+-    Title          = {link='_normal'}, 
+-    WildMenu       = {link='_normal'}, 
+-    ColorColumn    = {link='NONE'}, 
+-    Conceal        = {link='_hide'}, 
+-
+---  -- clang
+---  cType         = {link='_type'},
+---  cTypeDef      = {link='_type'},
+---  cFormat       = {link='_annotation'},
+---  cStorageClass = {link='_keyword'},
+-
+---  -- rust
+-    rustSigil        = {link='_normal'},
+---  rustFoldBraces   = {link='_normal'},
+-    rustModPath      = {link='_normal'},
+---  rustLifetime     = {link='_normal'},
+-    rustEnum         = {link='_enum'},
+---  rustSelf         = {link='_keyword'},
+---  rustEscape       = {link='_annotation'},
+-    rustQuestionMark = {link='_enum'},
+---  rustTrait        = {link='_interface'},
+-    rustDeriveTrait  = {link='_interface'},
+---  rustStorage      = {link='_keyword'},
+-
+---  -- csharp
+---  csClassType              = {link='_normal'},
+---  csGenericBraces          = {link='_normal'},
+---  csXmlTag                 = {link='_markup'},
+---  csModifier               = {link='_keyword'},
+---  csAccessModifier         = {link='_keyword'},
+---  csClass                  = {link='_keyword'},
+---  csNull                   = {link='_keyword'},
+---  csSpecialChar            = {link='_annotation'},
+---  csInterpolationDelimiter = {link='_annotation'},
+---  csType                   = {link='_type'},
+---  csStorage                = {link='_keyword'},
+-csInterpolationDelimiter = {link='_markup'},
+-csSpecialChar            = {link='_markup'},
+-
+--- NAMING CONVENTIONS		    *group-name* *{group-name}* *E669* *E5248*
+--- A syntax group name is to be used for syntax items that match the same kind of
+--- thing.  These are then linked to a highlight group that specifies the color.
+--- A syntax group name doesn't specify any color or attributes itself.
+--- The name for a highlight or syntax group must consist of ASCII letters,
+--- digits, underscores, dots, hyphens, or `@`.  As a regexp: `[a-zA-Z0-9_.@-]*`.
+--- The maximum length of a group name is about 200 bytes.  *E1249*
+--- To be able to allow each user to pick their favorite set of colors, there must
+--- be preferred names for highlight groups that are common for many languages.
+--- These are the suggested group names (if syntax highlighting works properly
+--- you can see the actual color, except for "Ignore"):
+-
+--- Comment		any comment
+-    Comment = {link='_comment'}, 
+-
+--- Constant	 any constant
+--- String	 a string constant: "this is a string"
+--- Character a character constant: 'c', '\n'
+--- Number	 a number constant: 234, 0xff
+--- Boolean	 a boolean constant: TRUE, false
+--- Float     a floating point constant: 2.3e10
+-    Constant  = {link='_constant'}, 
+-    String    = {link='_string'}, 
+-    Character = {link='_string'}, 
+-    Number    = {link='_normal'}, 
+-    Boolean   = {link='_keyword'},
+-    Float     = {link='_normal'}, 
+-
+--- Identifier any variable name
+--- Function   function name (also: methods for classes)
+-    Identifier = {link='_normal'},
+-    Function   = {link='_function'},
+-
+--- Statement   any statement
+--- Conditional if, then, else, endif, switch, etc.
+--- Repeat	   for, do, while, etc.
+--- Label	   case, default, etc.
+--- Operator	   "sizeof", "+", "*", etc.
+--- Keyword	   any other keyword
+--- Exception   try, catch, throw
+-    Statement   = {link='_normal'},
+-    Conditional = {link='_keyword'},
+-    Repeat      = {link='_keyword'},
+-    Label       = {link='_keyword'},
+-    Operator    = {link='_normal'}, 
+-    Keyword     = {link='_keyword'},
+-    Exception   = {link='_keyword'},
+-
+--- PreProc	 generic Preprocessor
+--- Include	 preprocessor #include
+--- Define	 preprocessor #define
+--- Macro	 same as Define
+--- PreCondit preprocessor #if, #else, #endif, etc.
+-    PreProc    = {link='_preproc'}, 
+-    Include    = {link='_keyword'},
+-    Define     = {link='_keyword'}, 
+-    Macro      = {link='_normal'}, 
+-    PreCondit  = {link='_keyword'}, 
+-
+--- Type		    int, long, char, etc.
+--- StorageClass static, register, volatile, etc.
+--- Structure    struct, union, enum, etc.
+--- Typedef      a typedef
+-    Type         = {link='_keyword'}, 
+-    StorageClass = {link='_keyword'},
+-    Structure    = {link='_keyword'}, 
+-    Typedef      = {link='_normal'}, 
+-
+--- Special        any special symbol
+--- SpecialChar    special character in a constant
+--- Tag		      you can use CTRL-] on this
+--- Delimiter	  character that needs attention
+--- SpecialComment special things inside a comment
+--- Debug          debugging statements
+-    Special        = {link='_normal'}, 
+-    SpecialChar    = {link='_normal'}, 
+-    Tag            = {link='_normal'}, 
+-    Delimiter      = {link='_normal'}, 
+-    SpecialComment = {link='_normal'}, 
+-    Debug          = {link='_normal'}, 
+-
+--- Underlined text that stands out, HTML links
+--- Ignore     left blank, hidden  |hl-Ignore|
+--- Error      any erroneous construct
+--- Todo       anything that needs extra attention; mostly the
+---            keywords TODO FIXME and XXX
+-    Underlined = {link='_bold'}, 
+-    Ignore     = {link='_hide'}, 
+-    Error      = {link='_bad'}, 
+-    Todo       = {link='_bold'}, 
+-
+--- Added   added line in a diff
+--- Changed changed line in a diff
+--- Removed removed line in a diff
+-    Added   = {link='_added'}, 
+-    Changed = {link='_changed'}, 
+-    Removed = {link='_removed'}, 
+-
+--- Reference Highlights:
+--- Highlight groups that are meant to be used by 
+--- |vim.lsp.buf.document_highlight()|.
+--- You can see more about the differences in types here:
+--- https://microsoft.github.io/language-server-protocol/
+--- specification#textDocument_documentHighlight
+---
+--- LspReferenceText   used for highlighting "text" references
+--- LspReferenceRead   used for highlighting "read" references
+--- LspReferenceWrite  used for highlighting "write" references
+--- LspReferenceTarget used for highlighting reference targets (e.g. in a
+---                    hover range)
+--- LspInlayHint       used for highlighting inlay hints
+-    LspReferenceText   = {link='_normal'}, 
+-    LspReferenceRead   = {link='_normal'},
+-    LspReferenceWrite  = {link='_normal'},
+-    LspReferenceTarget = {link='_normal'},
+-    LspInlayHint       = {link='_normal'},
+-
+--- Highlight groups related to |lsp-codelens| functionality.
+--- LspCodeLens          Used to color the virtual text of the codelens. See
+---                      |nvim_buf_set_extmark()|.
+--- LspCodeLensSeparator Used to color the separator between two or 
+---                      more code lenses.
+-    LspCodeLens          = {link='_normal'},
+-    LspCodeLensSeparator = {link='_normal'},
+-
+--- Highlight groups related to |vim.lsp.handlers.signature_help()|.
+--- LspSignatureActiveParameter Used to highlight the active parameter in the 
+---                             signature help. See 
+---                             |vim.lsp.handlers.signature_help()|.
+-    LspSignatureActiveParameter = {link='_normal'},
+-
+--- All highlights defined for diagnostics begin with `Diagnostic` followed by
+--- the type of highlight (e.g., `Sign`, `Underline`, etc.) and the severity (e.g.
+--- `Error`, `Warn`, etc.)
+--- By default, highlights for signs, floating windows, and virtual text are 
+--- linked to the corresponding default highlight. Underline highlights are not
+--- linked and use their own default highlight groups.
+--- For example, the default highlighting for |hl-DiagnosticSignError| is linked
+--- to |hl-DiagnosticError|. To change the default (and therefore the linked
+--- highlights), use the |:highlight| command: 
+---    >vim highlight DiagnosticError guifg="BrightRed"
+--- DiagnosticError Used as the base highlight group. Other Diagnostic 
+---                 highlights link to this by default (except Underline)
+--- DiagnosticWarn  Used as the base highlight group. Other Diagnostic 
+---                 highlights link to this by default (except Underline)
+--- DiagnosticInfo  Used as the base highlight group. Other Diagnostic 
+---                 highlights link to this by default (except Underline)
+--- DiagnosticHint  Used as the base highlight group. Other Diagnostic 
+---                 highlights link to this by default (except Underline)
+-    DiagnosticOk    = {link='_normal'},
+-    DiagnosticError = {link='_bad'},
+-    DiagnosticWarn  = {link='_warn'},
+-    DiagnosticInfo  = {link='_normal'},
+-    DiagnosticHint  = {link='_normal'},
+-
+--- DiagnosticVirtualTextError Used for "Error" diagnostic virtual text.
+--- DiagnosticVirtualTextWarn  Used for "Warn" diagnostic virtual text.
+--- DiagnosticVirtualTextInfo  Used for "Info" diagnostic virtual text.
+--- DiagnosticVirtualTextHint  Used for "Hint" diagnostic virtual text.
+--- DiagnosticVirtualTextOk    Used for "Ok" diagnostic virtual text.
+-    DiagnosticVirtualTextError = {link='_virtual'},
+-    DiagnosticVirtualTextWarn  = {link='_virtual'},
+-    DiagnosticVirtualTextInfo  = {link='_virtual'},
+-    DiagnosticVirtualTextHint  = {link='_virtual'},
+-    DiagnosticVirtualTextOk    = {link='_virtual'},
+-
+--- DiagnosticVirtualLinesError Used for "Error" diagnostic virtual lines.
+--- DiagnosticVirtualLinesWarn  Used for "Warn" diagnostic virtual lines.
+--- DiagnosticVirtualLinesInfo  Used for "Info" diagnostic virtual lines.
+--- DiagnosticVirtualLinesHint  Used for "Hint" diagnostic virtual lines.
+--- DiagnosticVirtualLinesOk    Used for "Ok" diagnostic virtual lines.
+-    DiagnosticVirtualLinesError = {link='_normal'},
+-    DiagnosticVirtualLinesWarn  = {link='_normal'},
+-    DiagnosticVirtualLinesInfo  = {link='_normal'},
+-    DiagnosticVirtualLinesHint  = {link='_normal'},
+-    DiagnosticVirtualLinesOk    = {link='_normal'},
+-
+--- DiagnosticUnderlineError Used to underline "Error" diagnostics.
+--- DiagnosticUnderlineWarn  Used to underline "Warn" diagnostics.
+--- DiagnosticUnderlineInfo  Used to underline "Info" diagnostics.
+--- DiagnosticUnderlineHint  Used to underline "Hint" diagnostics.
+--- DiagnosticUnderlineOk    Used to underline "Ok" diagnostics.
+-    DiagnosticUnderlineError = {link='_normal'},
+-    DiagnosticUnderlineWarn  = {link='_normal'},
+-    DiagnosticUnderlineInfo  = {link='_normal'},
+-    DiagnosticUnderlineHint  = {link='_normal'},
+-    DiagnosticUnderlineOk    = {link='_normal'},
+-
+--- DiagnosticFloatingError Used to color "Error" diagnostic messages 
+---                         in diagnostics float. See 
+---                         |vim.diagnostic.open_float()|
+--- DiagnosticFloatingWarn  Used to color "Warn" diagnostic 
+---                         messages in diagnostics float.
+--- DiagnosticFloatingInfo  Used to color "Info" diagnostic messages 
+---                         in diagnostics float.
+--- DiagnosticFloatingHint  Used to color "Hint" diagnostic messages in 
+---                         diagnostics float.
+--- DiagnosticFloatingOk    Used to color "Ok" diagnostic messages 
+---                         in diagnostics float.
+-    DiagnosticFloatingError = {link='_normal'},
+-    DiagnosticFloatingWarn  = {link='_normal'},
+-    DiagnosticFloatingInfo  = {link='_normal'},
+-    DiagnosticFloatingHint  = {link='_normal'},
+-    DiagnosticFloatingOk    = {link='_normal'},
+-
+--- DiagnosticSignError Used for "Error" signs in sign column.
+--- DiagnosticSignWarn  Used for "Warn" signs in sign column.
+--- DiagnosticSignInfo  Used for "Info" signs in sign column.
+--- DiagnosticSignHint  Used for "Hint" signs in sign column.
+--- DiagnosticSignOk    Used for "Ok" signs in sign column.
+-    DiagnosticSignError = {link='_normal'},
+-    DiagnosticSignWarn  = {link='_normal'},
+-    DiagnosticSignInfo  = {link='_normal'},
+-    DiagnosticSignHint  = {link='_normal'},
+-    DiagnosticSignOk    = {link='_normal'},
+-
+--- DiagnosticDeprecated  Used for deprecated or obsolete code.
+--- DiagnosticUnnecessary Used for unnecessary or unused code.
+-    DiagnosticDeprecated  = {link='_normal'},
+-    DiagnosticUnnecessary = {link='_normal'},
+- }
+diff --git a/nvim/lua/color/links_lsp.lua b/nvim/lua/color/links_lsp.lua
+deleted file mode 100644
+index 9437f1b..0000000
+--- a/nvim/lua/color/links_lsp.lua
++++ /dev/null
+@@ -1,103 +0,0 @@
+--- lsp
+-
+-return {
+--- @lsp.type.namespace Identifiers that declare or reference a namespace, 
+---                     module, or package
+--- @lsp.type.number    Tokens that represent a number literal
+--- @lsp.type.operator  Tokens that represent an operator
+--- @lsp.type.type      Identifiers that declare or reference a type that is 
+---                     not covered above
+--- @lsp.type.struct    Identifiers that declare or reference a struct type
+--- @lsp.type.class     Identifiers that declare or reference a class type
+--- @lsp.type.property  Identifiers that declare or reference a member 
+---                     property, member field, or member variable
+-    ['@lsp.type.namespace'] = {link='_normal'},
+-    ['@lsp.type.number']    = {link='_normal'},
+-    ['@lsp.type.operator']  = {link='@lsp'},
+-    ['@lsp.type.type']      = {link='_normal'},
+-    ['@lsp.type.struct']    = {link='_struct'},
+-    ['@lsp.type.class']     = {link='_struct'},
+-    ['@lsp.type.property']  = {link='_property'},
+-
+--- @lsp.type.enum          Identifiers that declare or reference an 
+---                         enumeration type
+--- @lsp.type.enumMember    Identifiers that declare or reference an 
+---                         enumeration property, constant, or member
+--- @lsp.type.typeParameter Identifiers that declare or reference a type 
+---                         parameter
+-    ['@lsp.type.enum']          = {link='_enum'},
+-    ['@lsp.type.enumMember']    = {link='_enummember'},
+-    ['@lsp.type.typeParameter'] = {link='_typeparam'}, 
+-
+--- @lsp.type.function  Identifiers that declare a function
+--- @lsp.type.method    Identifiers that declare a member function or method
+--- @lsp.type.decorator Identifiers that declare or reference decorators 
+---                     and annotations
+--- @lsp.type.interface Identifiers that declare or reference an interface type
+-    ['@lsp.type.function']             = {link='_function'},
+-    ['@lsp.type.method']               = {link='_function'},
+-    ['@lsp.type.decorator']            = {link='_function'},
+-    ['@lsp.type.interface']            = {link='_interface'},
+-    ['@lsp.typemod.interface.library'] = {link='_interface'},
+-
+--- @lsp.type.parameter Identifiers that declare or reference a function or 
+---                     method parameters
+-    ['@lsp.type.parameter']              = {link='_funcparam'},
+-    ['@lsp.type.selfKeyword']            = {link='_funcparam'},
+-    ['@lsp.typemod.parameter.mutable']   = {link='_mut_funcparam'},
+-    ['@lsp.typemod.selfKeyword.mutable'] = {link='_mut_funcparam'},
+-    ['@lsp.type.parameter.cs']           = {link='_mut_funcparam'},
+-
+--- @lsp.type.variable Identifiers that declare or reference a local or 
+---                    global variable
+-    ['@lsp.type.variable']            = {link='_var'},
+-    ['@lsp.typemod.variable.mutable'] = {link='_mut_var'},
+-    ['@lsp.type.const']               = {link='_constant'},
+-    ['@lsp.type.variable.cs']         = {link='_mut_var'},
+-    ['@lsp.typemod.property.static']  = {link='_var'},
+-
+--- @lsp.type.keyword  Tokens that represent a language keyword
+--- @lsp.type.modifier Tokens that represent a modifier
+-    ['@lsp.type.keyword']         = {link='_keyword'},
+-    ['@lsp.type.selfTypeKeyword'] = {link='_keyword'},
+-    ['@lsp.type.builtinType']     = {link='_keyword'},
+-    ['@lsp.type.modifier']        = {link='_keyword'},
+-
+--- @lsp.type.macro Identifiers that declare a macro
+-    ['@lsp.type.macro'] = {link='_macro'},
+-
+--- @lsp.type.string Tokens that represent a string literal
+--- @lsp.type.regexp Tokens that represent a regular expression literal
+-    ['@lsp.type.string']          = {link='_string'},
+-    ['@lsp.type.escapeSequence']  = {link='_markup'},
+-    ['@lsp.type.regexp']          = {link='_markup'},
+-    ['@lsp.type.formatSpecifier'] = {link='_markup'},
+-
+--- @lsp.type.comment Tokens that represent a comment
+-    ['@lsp.type.comment'] = {link='_comment'},
+-
+--- @lsp.type.event Identifiers that declare an event property
+-    ['@lsp.type.event'] = {link='_event'},
+-
+--- @lsp.mod.async          Functions that are marked async
+--- @lsp.mod.readonly       Readonly variables and member fields (constants)
+--- @lsp.mod.abstract       Types and member functions that are abstract
+--- @lsp.mod.declaration    Declarations of symbols
+--- @lsp.mod.defaultLibrary Symbols that are part of the standard library
+--- @lsp.mod.definition     Definitions of symbols, for example, in header files
+--- @lsp.mod.deprecated     Symbols that should no longer be used
+--- @lsp.mod.documentation  Occurrences of symbols in documentation
+--- @lsp.mod.modification   Variable references where the variable is assigned to
+--- @lsp.mod.static         Class members (static members)
+-    ['@lsp.mod.async']          = {link='_function'},
+-    ['@lsp.mod.readonly']       = {link='@lsp'},
+-    ['@lsp.mod.constant']       = {link='@lsp'},
+-    ['@lsp.mod.abstract']       = {link='@lsp'},
+-    ['@lsp.mod.declaration']    = {link='@lsp'},
+-    ['@lsp.mod.defaultLibrary'] = {link='@lsp'},
+-    ['@lsp.mod.definition']     = {link='@lsp'},
+-    ['@lsp.mod.deprecated']     = {link='@lsp'},
+-    ['@lsp.mod.documentation']  = {link='@lsp'},
+-    ['@lsp.mod.modification']   = {link='@lsp'},
+-    ['@lsp.mod.static']         = {link='@lsp'},
+- }
+diff --git a/nvim/lua/color/links_ts.lua b/nvim/lua/color/links_ts.lua
+deleted file mode 100644
+index 667007c..0000000
+--- a/nvim/lua/color/links_ts.lua
++++ /dev/null
+@@ -1,214 +0,0 @@
+--- treesitter
+-
+-return {
+--- @variable                   various variable names
+--- @variable.builtin           built-in variable names (e.g. `this`, `self`)
+--- @variable.parameter         parameters of a function
+--- @variable.parameter.builtin special parameters (e.g. `_`, `it`)
+-    ['@variable']                   = {link='_var'},
+-    ['@variable.parameter']         = {link='@variable'}, 
+-    ['@variable.builtin']           = {link='_keyword'}, 
+-    ['@variable.parameter.builtin'] = {link='@builtin'}, 
+-
+--- @variable.member object and struct fields
+--- @operator        symbolic operators (e.g. `+`, `*`)
+--- @boolean         boolean literals
+--- @number          numeric literals
+--- @number.float    floating-point number literals
+-    ['@variable.member'] = {link='_normal'}, 
+-    ['@operator']        = {link='_normal'}, 
+-    ['@number']          = {link='_normal'}, 
+-    ['@number.float']    = {link='_normal'}, 
+-    ['@boolean']         = {link='_keyword'}, 
+-
+--- @constant         constant identifiers
+--- @constant.builtin built-in constant values
+--- @constant.macro   constants defined by the preprocessor
+-    ['@constant']         = {link='_constant'}, 
+-    ['@constant.builtin'] = {link='_keyword'}, 
+-    ['@constant.macro']   = {link='@constant'}, 
+-
+--- @module         modules or namespaces
+--- @module.builtin built-in modules or namespaces
+-    ['@module']         = {link='_normal'}, 
+-    ['@module.builtin'] = {link='_keyword'}, 
+-
+--- @string                string literals
+--- @string.documentation  string documenting code (e.g. Python docstrings)
+--- @string.regexp         regular expressions
+--- @string.escape         escape sequences
+--- @string.special        other special strings (e.g. dates)
+--- @string.special.symbol symbols or atoms
+--- @string.special.path   filenames
+--- @string.special.url    URIs (e.g. hyperlinks)
+--- @character             character literals
+--- @character.special     special characters (e.g. wildcards)
+-    ['@string']                = {link='_string'}, 
+-    ['@string.documentation']  = {link='@string'}, 
+-    ['@string.regexp']         = {link='_markup'}, 
+-    ['@string.escape']         = {link='_markup'}, 
+-    ['@string.special']        = {link='_markup'}, 
+-    ['@string.special.symbol'] = {link='@string.special'}, 
+-    ['@string.special.path']   = {link='@string.special'}, 
+-    ['@string.special.url']    = {link='@string.special'}, 
+-    ['@character']             = {link='_string'}, 
+-    ['@character.special']     = {link='_special'}, 
+-
+--- @type            type or class definitions and annotations
+--- @type.builtin    built-in types
+--- @type.definition identifiers in type definitions 
+---                  (e.g. `typedef <type> <identifier>` in C)
+-    ['@type']            = {link='_type'}, 
+-    ['@type.builtin']    = {link='_keyword'}, 
+-    ['@type.definition'] = {link='@type'}, 
+-
+--- @attribute         attribute annotations 
+---                    (e.g. Python decorators, Rust lifetimes)
+--- @attribute.builtin builtin annotations (e.g. `@property` in Python)
+-    ['@attribute']         = {link='_annotation'}, 
+-    ['@attribute.builtin'] = {link='@attribute'}, 
+-
+--- @property the key in key/value pairs
+-    ['@property'] = {link='_normal'}, 
+-
+--- @function             function definitions
+--- @function.builtin     built-in functions
+--- @function.call        function calls
+--- @function.method      method definitions
+--- @function.method.call method calls
+--- @function.macro       preprocessor macros
+--- @constructor          constructor calls and definitions
+-    ['@function']             = {link='_function'}, 
+-    ['@function.builtin']     = {link='@function'}, 
+-    ['@function.call']        = {link='@function'}, 
+-    ['@function.method']      = {link='@function'}, 
+-    ['@function.method.call'] = {link='@function.method'}, 
+-    ['@function.macro']       = {link='_macro'}, 
+-    ['@constructor']          = {link='_function'}, 
+-    ['@struct']               = {link='_struct'}, 
+-
+-    ['@enum']                 = {link='_enum'}, 
+-    ['@operator.try']         = {link='_enum'}, 
+-
+--- @keyword                     keywords not fitting into specific categories
+--- @keyword.coroutine           keywords related to coroutines 
+---                              (e.g. `go` in Go, `async/await` in Python)
+--- @keyword.function            keywords that define a function 
+---                              (e.g. `func` in Go, `def` in Python)
+--- @keyword.operator            operators that are English words 
+---                              (e.g. `and`, `or`)
+--- @keyword.import              keywords for including or exporting modules 
+---                              (e.g. `import`, `from` in Python)
+--- @keyword.type                keywords describing namespaces and 
+---                              composite types (e.g. `struct`, `enum`)
+--- @keyword.modifier            keywords modifying other constructs 
+---                              (e.g. `const`, `static`, `public`)
+--- @keyword.repeat              keywords related to loops (e.g. `for`, `while`)
+--- @keyword.return              keywords like `return` and `yield`
+--- @keyword.debug               keywords related to debugging
+--- @keyword.exception           keywords related to exceptions 
+---                              (e.g. `throw`, `catch`)
+--- @keyword.conditional         keywords related to conditionals 
+---                              (e.g. `if`, `else`)
+--- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
+--- @keyword.directive           various preprocessor directives and shebangs
+--- @keyword.directive.define    preprocessor definition directives
+-    ['@keyword']                     = {link='_keyword'}, 
+-    ['@keyword.coroutine']           = {link='@keyword'}, 
+-    ['@keyword.function']            = {link='@keyword'}, 
+-    ['@keyword.operator']            = {link='@keyword'}, 
+-    ['@keyword.import']              = {link='@keyword'}, 
+-    ['@keyword.type']                = {link='@keyword'}, 
+-    ['@keyword.modifier']            = {link='@keyword'}, 
+-    ['@keyword.repeat']              = {link='@keyword'}, 
+-    ['@keyword.return']              = {link='@keyword'}, 
+-    ['@keyword.debug']               = {link='@keyword'}, 
+-    ['@keyword.exception']           = {link='@keyword'}, 
+-    ['@keyword.conditional']         = {link='@keyword'}, 
+-    ['@keyword.conditional.ternary'] = {link='@keyword.conditional'}, 
+-    ['@keyword.directive']           = {link='@keyword'}, 
+-    ['@keyword.directive.define']    = {link='@keyword.directive'}, 
+-
+--- @punctuation.delimiter delimiters (e.g. `;`, `.`, `,`)
+--- @punctuation.bracket   brackets (e.g. `()`, `{}`, `[]`)
+--- @punctuation.special   special symbols (e.g. `{}` in string interpolation)
+-    ['@punctuation']         = {link='_normal'},
+-    ['@punctuation.bracket'] = {link='@punctiation'}, 
+-    ['@punctuation.special'] = {link='@punctiation'}, 
+-
+--- @comment               line and block comments
+--- @comment.documentation comments documenting code
+--- @comment.error         error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
+--- @comment.warning       warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
+--- @comment.todo          todo-type comments (e.g. `TODO`, `WIP`)
+--- @comment.note          note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
+-    ['@comment']               = {link='_comment'}, 
+-    ['@comment.documentation'] = {link='_doc_comment'}, 
+-    ['@comment.error']         = {link='_annotation'}, 
+-    ['@comment.warning']       = {link='_annotation'}, 
+-    ['@comment.todo']          = {link='_annotation'}, 
+-    ['@comment.note']          = {link='_annotation'}, 
+-
+--- @tag           XML-style tag names (e.g. in XML, HTML, etc.)
+--- @tag.builtin   builtin tag names (e.g. HTML5 tags)
+--- @tag.attribute XML-style tag attributes
+--- @tag.delimiter XML-style tag delimiters
+-    ['@tag']           = {link='_annotation'}, 
+-    ['@tag.builtin']   = {link='@tag'}, 
+-    ['@tag.attribute'] = {link='@tag'}, 
+-    ['@tag.delimeter'] = {link='@tag'}, 
+-
+--- @markup.strong         bold text
+--- @markup.italic         italic text
+--- @markup.strikethrough  struck-through text
+--- @markup.underline      underlined text (only for literal underline markup!)
+--- @markup.heading        headings, titles (including markers)
+--- @markup.heading.1      top-level heading
+--- @markup.heading.2      section heading
+--- @markup.heading.3      subsection heading
+--- @markup.heading.4      and so on
+--- @markup.heading.5      and so forth
+--- @markup.heading.6      six levels ought to be enough for anybody
+--- @markup.quote          block quotes
+--- @markup.math           math environments (e.g. `$ ... $` in LaTeX)
+--- @markup.link           text references, footnotes, citations, etc.
+--- @markup.link.label     link, reference descriptions
+--- @markup.link.url       URL-style links
+--- @markup.raw            literal or verbatim text (e.g. inline code)
+--- @markup.raw.block      literal or verbatim text as a stand-alone block
+--- @markup.list           list markers
+--- @markup.list.checked   checked todo-style list markers
+--- @markup.list.unchecked unchecked todo-style list markers
+-    ['@markup']                = {link='_markup'}, 
+-    ['@markup.strong']         = {link='@markup'}, 
+-    ['@markup.italic']         = {link='@markup'}, 
+-    ['@markup.strikethrough']  = {link='@markup'}, 
+-    ['@markup.underline']      = {link='@markup'}, 
+-    ['@markup.heading']        = {link='@markup'}, 
+-    ['@markup.heading1']       = {link='@markup.heading'}, 
+-    ['@markup.heading2']       = {link='@markup.heading'}, 
+-    ['@markup.heading3']       = {link='@markup.heading'}, 
+-    ['@markup.heading4']       = {link='@markup.heading'}, 
+-    ['@markup.heading5']       = {link='@markup.heading'}, 
+-    ['@markup.heading6']       = {link='@markup.heading'}, 
+-    ['@markup.quote']          = {link='@markup'}, 
+-    ['@markup.math']           = {link='@markup'}, 
+-    ['@markup.link']           = {link='@markup'}, 
+-    ['@markup.link.label']     = {link='@markup.link'}, 
+-    ['@markup.link.url']       = {link='@markup.link'}, 
+-    ['@markup.raw']            = {link='@markup'}, 
+-    ['@markup.raw.block']      = {link='@markup.raw'}, 
+-    ['@markup.list']           = {link='@markup'}, 
+-    ['@markup.list.checked']   = {link='@markup.list'}, 
+-    ['@markup.list.unchecked'] = {link='@markup.list.unchecked'}, 
+-
+--- @label `GOTO` and other labels (e.g. `label:` in C), including heredoc labels
+-    ['@label'] = {link='_annotation'}, 
+-
+--- @diff.plus  added text (for diff files)
+--- @diff.minus deleted text (for diff files)
+--- @diff.delta changed text (for diff files)
+-    ['@diff.plus']  = {link='_added'}, 
+-    ['@diff.minus'] = {link='_removed'}, 
+-    ['@diff.delta'] = {link='_changed'}, 
+- }
+diff --git a/nvim/lua/color/palette.lua b/nvim/lua/color/palette.lua
+deleted file mode 100644
+index 8227019..0000000
+--- a/nvim/lua/color/palette.lua
++++ /dev/null
+@@ -1,20 +0,0 @@
+--- base
+-
+-return {
+-	black       = { "#000000", "#000000", "#000000" },
+-	darkred     = { "#800000", "#800000", "#800000" },
+-	darkgreen   = { "#008000", "#008000", "#008000" },
+-	darkyellow  = { "#808000", "#808000", "#808000" }, 
+-	darkblue    = { "#000080", "#000080", "#000080" }, 
+-	darkmagenta = { "#800080", "#800080", "#800080" },
+-	darkcyan    = { "#008080", "#008080", "#008080" }, 
+-	grey        = { "#c0c0c0", "#c0c0c0", "#c0c0c0" },
+-	darkgrey    = { "#808080", "#808080", "#808080" },
+-	red         = { "#ff0000", "#ff0000", "#ff0000" },
+-	green       = { "#00ff00", "#00ff00", "#00ff00" },
+-	yellow      = { "#ffff00", "#ffff00", "#ffff00" },
+-	blue        = { "#0000ff", "#0000ff", "#0000ff" }, 
+-	magenta     = { "#ff00ff", "#ff00ff", "#ff00ff" },
+-	cyan        = { "#00ffff", "#00ffff", "#00ffff" },
+-	white       = { "#ffffff", "#ffffff", "#ffffff" },
+-}
+diff --git a/nvim/lua/color/scheme_lars.lua b/nvim/lua/color/scheme_lars.lua
+deleted file mode 100644
+index 8e527c0..0000000
+--- a/nvim/lua/color/scheme_lars.lua
++++ /dev/null
+@@ -1,93 +0,0 @@
+--- scheme lars
+-
+-return function(t, p) return {
+-    Normal = {
+-        ctermfg = t.green, 
+-        fg      = p.green[1], 
+-        ctermbg = t.black,
+-        bg      = p.black[1],
+-    }, _normal = {link="Normal"}, 
+-    _keyword = {
+-        ctermfg = t.cyan,
+-        fg      = p.cyan[1],
+-    }, 
+-    _preproc = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    },
+-    _annotation = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    }, 
+-    _string = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    }, 
+-    _comment = {
+-        ctermfg = t.darkgreen,
+-        fg      = p.darkgreen[1],
+-    }, 
+-    _enum = {
+-        ctermfg = t.red,
+-        fg      = p.red[1],
+-    },
+-    _function = {
+-        ctermfg = t.yellow,
+-        fg      = p.yellow[1],
+-    }, 
+-    _var = {
+-        ctermfg = t.magenta,
+-        fg      = p.magenta[1],
+-    }, 
+-    _linenumber = {
+-        ctermfg = t.darkgreen,
+-        fg      = p.darkgreen[1],
+-    }, 
+-    _cursorlinenumber = {
+-        ctermfg = t.yellow,
+-        fg      = p.yellow[1],
+-    }, 
+-    _visual     = {
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[1],
+-    },
+-    _search = {
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[1],
+-    },
+-    _matchparen = {
+-        ctermbg = t.darkyellow,
+-        bg      = p.darkyellow[1],
+-    }, 
+-    _folded = {
+-        ctermfg = t.darkcyan, 
+-        fg      = p.darkcyan[1], 
+-        ctermbg = t.black,
+-        bg      = p.black[1],
+-    }, 
+-    _cursor = {
+-        ctermfg = t.darkblue,
+-        fg      = p.darkblue[2], 
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[2],
+-    }, 
+-    _type             = {
+-        link = "_normal"
+-    },
+-    _struct             = {
+-        link = "_normal"
+-    },
+-    _property            = {
+-        link = "_normal"
+-    },
+-    _mut_var          = {link = "_var"}, 
+-    _funcparam        = {link = "_var"}, 
+-    _mut_funcparam    = {link = "_var"}, 
+-    _macro            = {link = "_keyword"}, 
+-    _doc_comment      = {link = "_comment"}, 
+-    _enummember       = {link = "_enum"},
+-    _typeparam        = {link = "_enum"},
+-    _interface        = {link = "_function"}, 
+-    _constant         = {link = "_var"}, 
+-    _markup           = {link = "_keyword"},
+-} end
+diff --git a/nvim/lua/color/scheme_rose.lua b/nvim/lua/color/scheme_rose.lua
+deleted file mode 100644
+index 4d69f9d..0000000
+--- a/nvim/lua/color/scheme_rose.lua
++++ /dev/null
+@@ -1,86 +0,0 @@
+--- scheme rose
+-
+-return function(t, p) return {
+-    Normal = {
+-        ctermfg = t.green, 
+-        fg      = p.green[1], 
+-        ctermbg = t.black,
+-        bg      = p.black[1],
+-    }, _normal = {link="Normal"}, 
+-    _keyword = {
+-        ctermfg = t.magenta,
+-        fg      = p.magenta[1],
+-    }, 
+-    _annotation = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    }, 
+-    _string = {
+-        ctermfg = t.magenta,
+-        fg      = p.magenta[1],
+-    }, 
+-    _comment = {
+-        ctermfg = t.grey,
+-        fg      = p.grey[1],
+-    }, 
+-    _linenumber = {
+-        ctermfg = t.darkgrey,
+-        fg      = p.darkgrey[1],
+-    }, 
+-    _visual     = {
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[1],
+-    },
+-    _search = {
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[1],
+-    },
+-    _matchparen = {
+-        ctermbg = t.darkyellow,
+-        bg      = p.darkyellow[1],
+-    }, 
+-    _folded = {
+-        ctermfg = t.darkcyan, 
+-        fg      = p.darkcyan[1], 
+-        ctermbg = t.black,
+-        bg      = p.black[1],
+-    }, 
+-    _cursor = {
+-        ctermfg = t.darkblue,
+-        fg      = p.darkblue[2], 
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[2],
+-    }, 
+-    _preproc          = {link = "_normal"},
+-    _cursorlinenumber = {link = "_normal"}, 
+-    _var              = {link = "_normal"}, 
+-    _type             = {
+-        ctermfg = t.red, 
+-        fg      = p.red[1], 
+-    },
+-    _struct             = {
+-        ctermfg = t.red, 
+-        fg      = p.red[1], 
+-    },
+-    _property            = {
+-        link = "_normal"
+-    },
+-    _enum             = {
+-        ctermfg = t.red, 
+-        fg      = p.red[1], 
+-    },
+-    _function         = {
+-        ctermfg = t.red, 
+-        fg      = p.red[1], 
+-    },
+-    _mut_var          = {link = "_var"}, 
+-    _funcparam        = {link = "_var"}, 
+-    _mut_funcparam    = {link = "_var"}, 
+-    _macro            = {link = "_function"}, 
+-    _doc_comment      = {link = "_comment"}, 
+-    _enummember       = {link = "_enum"},
+-    _typeparam        = {link = "_enum"},
+-    _interface        = {link = "_struct"}, 
+-    _constant         = {link = "_var"}, 
+-    _markup           = {link = "_string"},
+-} end
+diff --git a/nvim/lua/color/scheme_susan.lua b/nvim/lua/color/scheme_susan.lua
+deleted file mode 100644
+index acf18a3..0000000
+--- a/nvim/lua/color/scheme_susan.lua
++++ /dev/null
+@@ -1,93 +0,0 @@
+--- scheme susan
+-
+-return function(t, p) return {
+-    Normal = {
+-        ctermfg = t.white, 
+-        fg      = p.white[1], 
+-        ctermbg = t.black,
+-        bg      = p.black[1],
+-    }, _normal = {link="Normal"}, 
+-    _keyword = {
+-        ctermfg = t.darkgreen,
+-        fg      = p.darkgreen[1],
+-    }, 
+-    _preproc = {
+-        ctermfg = t.cyan,
+-        fg      = p.cyan[1],
+-    },
+-    _annotation = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    }, 
+-    _string = {
+-        ctermfg = t.cyan,
+-        fg      = p.cyan[1],
+-    }, 
+-    _comment = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    }, 
+-    _enum = {
+-        ctermfg = t.red,
+-        fg      = p.red[1],
+-    },
+-    _function = {
+-        ctermfg = t.green,
+-        fg      = p.green[1],
+-    }, 
+-    _var = {
+-        ctermfg = t.magenta,
+-        fg      = p.magenta[1],
+-    }, 
+-    _linenumber = {
+-        ctermfg = t.darkcyan,
+-        fg      = p.darkcyan[1],
+-    }, 
+-    _cursorlinenumber = {
+-        ctermfg = t.white,
+-        fg      = p.white[1],
+-    }, 
+-    _visual     = {
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[1],
+-    },
+-    _search = {
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[1],
+-    },
+-    _matchparen = {
+-        ctermbg = t.darkyellow,
+-        bg      = p.darkyellow[1],
+-    }, 
+-    _folded = {
+-        ctermfg = t.darkcyan, 
+-        fg      = p.darkcyan[1], 
+-        ctermbg = t.black,
+-        bg      = p.black[1],
+-    }, 
+-    _cursor = {
+-        ctermfg = t.darkblue,
+-        fg      = p.darkblue[2], 
+-        ctermbg = t.darkblue,
+-        bg      = p.darkblue[2],
+-    }, 
+-    _type             = {
+-        link = "_normal"
+-    },
+-    _struct             = {
+-        link = "_normal"
+-    },
+-    _property            = {
+-        link = "_normal"
+-    },
+-    _mut_var          = {link = "_var"}, 
+-    _funcparam        = {link = "_var"}, 
+-    _mut_funcparam    = {link = "_var"}, 
+-    _macro            = {link = "_keyword"}, 
+-    _doc_comment      = {link = "_comment"}, 
+-    _enummember       = {link = "_enum"},
+-    _typeparam        = {link = "_enum"},
+-    _interface        = {link = "_function"}, 
+-    _constant         = {link = "_var"}, 
+-    _markup           = {link = "_keyword"},
+-} end
+diff --git a/nvim/lua/color/term.lua b/nvim/lua/color/term.lua
+deleted file mode 100644
+index 2f509b5..0000000
+--- a/nvim/lua/color/term.lua
++++ /dev/null
+@@ -1,20 +0,0 @@
+--- term
+-
+-return {
+-	black       = 0, 
+-	darkred     = 1, 
+-	darkgreen   = 2, 
+-	darkyellow  = 3,  
+-	darkblue    = 4,  
+-	darkmagenta = 5, 
+-	darkcyan    = 6,  
+-	grey        = 7,
+-	darkgrey    = 8,
+-	red         = 9, 
+-	green       = 10,
+-	yellow      = 11,
+-	blue        = 12, 
+-	magenta     = 13,
+-	cyan        = 14,
+-	white       = 15,
+-}
+diff --git a/nvim/lua/color/util.lua b/nvim/lua/color/util.lua
+deleted file mode 100644
+index d29102a..0000000
+--- a/nvim/lua/color/util.lua
++++ /dev/null
+@@ -1,27 +0,0 @@
+-local M = {}
+-
+-M.apply = function(spec)
+-    vim.cmd("syntax reset")
+-    -- clear lsp highlights
+-    for _, group in ipairs(
+-        vim.fn.getcompletion("@lsp", "highlight")
+-    ) do
+-        vim.api.nvim_set_hl(0, group, {})
+-    end
+-    -- apply scheme
+-    for k, v in pairs(spec) do
+-        vim.api.nvim_set_hl(0, k, v)
+-    end
+-    -- apply links
+-    for k, v in pairs(require("color.links_groups")) do
+-        vim.api.nvim_set_hl(0, k, v)
+-    end
+-    for k, v in pairs(require("color.links_ts")) do
+-        vim.api.nvim_set_hl(0, k, v)
+-    end
+-    for k, v in pairs(require("color.links_lsp")) do
+-        vim.api.nvim_set_hl(0, k, v)
+-    end
+-end
+-
+-return M
+diff --git a/nvim/lua/colorscheme.lua b/nvim/lua/colorscheme.lua
+new file mode 100644
+index 0000000..3776c80
+--- /dev/null
++++ b/nvim/lua/colorscheme.lua
+@@ -0,0 +1,247 @@
++return function(p) 
++--  p.window    
++--  p.background
++--  p.linenumber
++--  p.comment   
++--
++--  p.text      
++--  p.variable      
++--  p.keyword   
++--  p.func      
++--  p.type      
++--  p.enum      
++--  p.struct      
++--  p.class      
++
++    -- clear highlights
++    vim.cmd("syntax clear")
++    vim.cmd("highlight clear")
++
++    local cap = 1
++    local gui = 3
++
++    local groups = {
++        Normal = {
++            ctermfg = p.text[cap], 
++            fg      = p.text[gui], 
++            ctermbg = p.background[cap],
++            bg      = p.background[gui],
++        },
++        NormalNC = {
++            ctermfg = p.text[cap], 
++            fg      = p.text[gui], 
++            ctermbg = p.window[cap],
++            bg      = p.window[gui],
++        },
++        Comment = {
++            ctermfg = p.comment[cap], 
++            fg      = p.comment[gui], 
++        }, 
++        LineNr = {
++            ctermfg = p.linenumber[cap], 
++            fg      = p.linenumber[gui], 
++        }, 
++        Visual = {
++            ctermbg = p.linenumber[cap], 
++            bg      = p.linenumber[gui], 
++        },
++        Search = {
++            ctermbg = p.linenumber[cap], 
++            bg      = p.linenumber[gui], 
++        },
++        String = {
++            ctermfg = p.string[cap], 
++            fg      = p.string[gui], 
++        },
++        Function = {
++            ctermfg = p.func[cap], 
++            fg      = p.func[gui], 
++        },
++        Variable = {
++            ctermfg = p.variable[cap], 
++            fg      = p.variable[gui], 
++        },
++        Struct = {
++            ctermfg = p.text[cap], 
++            fg      = p.text[gui], 
++        },
++        Class = {
++            ctermfg = p.text[cap], 
++            fg      = p.text[gui], 
++        },
++        Type = {
++            ctermfg = p.type[cap], 
++            fg      = p.type[gui], 
++        },
++        Enum = {
++            ctermfg = p.type[cap], 
++            fg      = p.type[gui], 
++        },
++        Delimiter    = {link='Normal'},
++        CurSearch    = {link='Search'}, 
++        IncSearch    = {link='Search'}, 
++        Substitute   = {link='Search'}, 
++        CursorLineNr = {link='Comment'}, 
++        MatchParen   = {link='Comment'}, 
++        Folded       = {link='NormalNC'}, 
++        Pmenu        = {link='NormalNC'}, 
++        NormalFloat  = {link='NormalNC'},
++        FloatBorder  = {link='Comment'}, 
++        FloatTitle   = {link='Comment'}, 
++        FloatFooter  = {link='Comment'}, 
++    }
++    local treesitter = {
++        ['@keyword'] = {
++            ctermfg = p.keyword[cap], 
++            fg      = p.keyword[gui], 
++        }, 
++        ['@type'] = {
++            ctermfg = p.type[cap], 
++            fg      = p.type[gui], 
++        }, 
++        ['@variable'] = {
++            ctermfg = p.variable[cap], 
++            fg      = p.variable[gui], 
++        },
++        ['@string']                      = {link='String'}, 
++        ['@variable']                    = {link='@variable'}, 
++        ['@variable.parameter']          = {link='@variable'}, 
++        ['@variable.member']             = {link='@variable'}, 
++        ['@operator']                    = {link='@variable'}, 
++        ['@number']                      = {link='@variable'}, 
++        ['@number.float']                = {link='@variable'}, 
++        ['@constant']                    = {link='@variable'}, 
++        ['@constant.builtin']            = {link='@keyword'}, 
++        ['@constant.macro']              = {link='@constant'}, 
++        ['@module']                      = {link='Normal'}, 
++        ['@module.builtin']              = {link='@keyword'}, 
++        ['@variable.builtin']            = {link='@keyword'}, 
++        ['@variable.parameter.builtin']  = {link='@keyword'}, 
++        ['@boolean']                     = {link='@keyword'}, 
++        ['@string.documentation']        = {link='@string'}, 
++        ['@string.regexp']               = {link='@string'}, 
++        ['@string.escape']               = {link='@string'}, 
++        ['@string.special']              = {link='@string'}, 
++        ['@string.special.symbol']       = {link='@string.special'}, 
++        ['@string.special.path']         = {link='@string.special'}, 
++        ['@string.special.url']          = {link='@string.special'}, 
++        ['@character']                   = {link='@string'}, 
++        ['@character.special']           = {link='@string'}, 
++        ['@attribute']                   = {link='Normal'}, 
++        ['@attribute.builtin']           = {link='@keyword'}, 
++        ['@property']                    = {link='Normal'}, 
++        ['@punctuation']                 = {link='Normal'}, 
++        ['@punctuation.special']         = {link='Normal'}, 
++        ['@punctuation.special.query']   = {link='Normal'}, 
++        ['@type.builtin']                = {link='@builtin'}, 
++        ['@type.definition']             = {link='@type'}, 
++        ['@struct']                      = {link='Struct'}, 
++        ['@class']                       = {link='Class'}, 
++        ['@enum']                        = {link='Enum'}, 
++        ['@function']                    = {link='Function'}, 
++        ['@function.builtin']            = {link='@function'}, 
++        ['@function.call']               = {link='@function'}, 
++        ['@function.method']             = {link='@function'}, 
++        ['@function.method.call']        = {link='@function.method'}, 
++        ['@function.macro']              = {link='@function'}, 
++        ['@constructor']                 = {link='@function'}, 
++        ['@operator.try']                = {link='@function'}, 
++        ['@keyword.coroutine']           = {link='@keyword'}, 
++        ['@keyword.function']            = {link='@keyword'}, 
++        ['@keyword.operator']            = {link='@keyword'}, 
++        ['@keyword.import']              = {link='@keyword'}, 
++        ['@keyword.type']                = {link='@keyword'}, 
++        ['@keyword.modifier']            = {link='@keyword'}, 
++        ['@keyword.repeat']              = {link='@keyword'}, 
++        ['@keyword.return']              = {link='@keyword'}, 
++        ['@keyword.debug']               = {link='@keyword'}, 
++        ['@keyword.exception']           = {link='@keyword'}, 
++        ['@keyword.conditional']         = {link='@keyword'}, 
++        ['@keyword.conditional.ternary'] = {link='@keyword.conditional'}, 
++        ['@keyword.directive']           = {link='@keyword'}, 
++        ['@keyword.directive.define']    = {link='@keyword.directive'}, 
++        ['@comment']                     = {link='Comment'}, 
++        ['@comment.documentation']       = {link='@comment'}, 
++        ['@comment.error']               = {link='@comment'}, 
++        ['@comment.warning']             = {link='@comment'}, 
++        ['@comment.todo']                = {link='@comment'}, 
++        ['@comment.note']                = {link='@comment'}, 
++    }
++    local lsp = {
++        ['@lsp.type.namespace']              = {link='Normal'},
++        ['@lsp.type.number']                 = {link='Normal'},
++        ['@lsp.type.operator']               = {link='@lsp'},
++        ['@lsp.type.type']                   = {link='Normal'},
++        ['@lsp.type.struct']                 = {link='Struct'},
++        ['@lsp.type.class']                  = {link='Struct'},
++        ['@lsp.type.property']               = {link='Normal'},
++        ['@lsp.type.enum']                   = {link='Enum'},
++        ['@lsp.type.enumMember']             = {link='Enum'},
++        ['@lsp.type.typeParameter']          = {link='Type'}, 
++        ['@lsp.type.function']               = {link='Function'},
++        ['@lsp.type.method']                 = {link='Function'},
++        ['@lsp.type.decorator']              = {link='Function'},
++        ['@lsp.type.interface']              = {link='Function'},
++        ['@lsp.typemod.interface.library']   = {link='Function'},
++        ['@lsp.type.parameter']              = {link='@lsp'},
++        ['@lsp.type.selfKeyword']            = {link='@lsp'},
++        ['@lsp.typemod.parameter.mutable']   = {link='@lsp'},
++        ['@lsp.typemod.selfKeyword.mutable'] = {link='@lsp'},
++        ['@lsp.type.parameter.cs']           = {link='@lsp'},
++        ['@lsp.type.variable']               = {link='Variable'},
++        ['@lsp.typemod.variable.mutable']    = {link='Variable'},
++        ['@lsp.type.const']                  = {link='Variable'},
++        ['@lsp.type.variable.cs']            = {link='Variable'},
++        ['@lsp.typemod.property.static']     = {link='Variable'},
++        ['@lsp.type.keyword']                = {link='Keyword'},
++        ['@lsp.type.selfTypeKeyword']        = {link='Keyword'},
++        ['@lsp.type.builtinType']            = {link='Keyword'},
++        ['@lsp.type.modifier']               = {link='Keyword'},
++        ['@lsp.type.macro']                  = {link='Keyword'},
++        ['@lsp.type.string']                 = {link='String'},
++        ['@lsp.type.escapeSequence']         = {link='String'},
++        ['@lsp.type.regexp']                 = {link='String'},
++        ['@lsp.type.formatSpecifier']        = {link='String'},
++        ['@lsp.type.comment']                = {link='Comment'},
++        ['@lsp.type.event']                  = {link='Type'},
++        ['@lsp.mod.async']                   = {link='String'},
++        ['@lsp.mod.readonly']                = {link='@lsp'},
++        ['@lsp.mod.constant']                = {link='@lsp'},
++        ['@lsp.mod.abstract']                = {link='@lsp'},
++        ['@lsp.mod.declaration']             = {link='@lsp'},
++        ['@lsp.mod.defaultLibrary']          = {link='@lsp'},
++        ['@lsp.mod.definition']              = {link='@lsp'},
++        ['@lsp.mod.deprecated']              = {link='@lsp'},
++        ['@lsp.mod.documentation']           = {link='@lsp'},
++        ['@lsp.mod.modification']            = {link='@lsp'},
++        ['@lsp.mod.static']                  = {link='@lsp'},
++    }
++
++    -- clear lsp highlights
++    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
++        vim.api.nvim_set_hl(0, group, {})
++    end
++    for k, _ in pairs(treesitter) do
++        vim.api.nvim_set_hl(0, k, {})
++    end
++
++    -- apply highlights
++    for k, v in pairs(groups) do
++        vim.api.nvim_set_hl(0, k, v)
++    end
++
++    -- apply treesitter highlights
++    if p.treesitter == true then
++--        vim.treesitter.start()
++        for k, v in pairs(treesitter) do
++            vim.api.nvim_set_hl(0, k, v)
++        end
++    end
++
++    -- apply lsp highlights
++    if p.lsp == true then
++        for k, v in pairs(lsp) do
++            vim.api.nvim_set_hl(0, k, v)
++        end
++    end
++end
+diff --git a/nvim/lua/lsp.lua b/nvim/lua/lsp.lua
+index 56ecf8b..c68457b 100644
+--- a/nvim/lua/lsp.lua
++++ b/nvim/lua/lsp.lua
+@@ -2,80 +2,102 @@
+ -- * executables for Language Servers must be on $PATH
+ -- * :lua =vim.lsp.get_clients()[1].server_capabilities
+ 
+-    vim.api.nvim_create_autocmd(
+-        {'BufEnter', 'BufWinEnter'}, 
+-        {
+-            pattern = {
+-                '*.c', '*.C', '*.h', '*.H', 
+-                '*.cpp', '*.CPP', '*.hpp', '*.HPP'
+-            },
+-            callback = function(args) 
+-                vim.lsp.start({
+-                        name = 'clang-lsp',
+-                        cmd = {'clangd'},
+-                        root_dir = vim.fs.root(
+-                            args.buf, 
+-                            {'.git'}
+-                        )
+-                    }
+-                )
+-            end
+-        }
+-    )
+-    vim.api.nvim_create_autocmd(
+-        'FileType', 
+-        {
+-            pattern  = 'rust',
+-            callback = function(args) 
+-                vim.lsp.start({
+-                        name = 'rust-lsp',
+-                        cmd = {'rust-analyzer'},
+-                        root_dir = vim.fs.root(
+-                            args.buf, 
+-                            {'Cargo.toml'}
+-                        )
+-                    }
+-                )
+-            end
+-        }
+-    )
+-    vim.api.nvim_create_autocmd(
+-        'FileType', 
+-        {
+-            pattern  = 'go',
+-            callback = function(args) 
+-                vim.lsp.start({
+-                        name = 'go-lsp',
+-                        cmd = {'gopls'},
+-                        root_dir = vim.fs.root(
+-                            args.buf, 
+-                            {'go.mod'}
+-                        )
+-                    }
+-                )
+-            end
+-        }
+-    )
+-    vim.api.nvim_create_autocmd(
+-        {'BufEnter', 'BufWinEnter'}, 
+-        {
+-            pattern  = '*.cs',
+-            callback = function(args) 
+-                vim.lsp.start({
+-                        name = 'csharp-lsp',
+-                        cmd = {'csharp-ls'},
+-                        root_dir = vim.fs.root(
+-                            args.buf, 
+-                            {'.git'}
+-                        )
+-                    }
+-                )
+-            end
+-        }
+-    )
+-vim.diagnostic.config({
++vim.api.nvim_create_autocmd(
++    {'BufEnter', 'BufWinEnter'}, 
++    {
++        pattern = {
++            '*.c', '*.C', '*.h', '*.H', 
++            '*.cpp', '*.CPP', '*.hpp', '*.HPP'
++        },
++        callback = function(args) 
++            vim.lsp.start({
++                    name = 'clang-lsp',
++                    cmd = {'clangd'},
++                    root_dir = vim.fs.root(
++                        args.buf, 
++                        {'.git'}
++                    )
++                }
++            )
++        end
++    }
++)
++vim.api.nvim_create_autocmd(
++    'FileType', 
++    {
++        pattern  = 'rust',
++        callback = function(args) 
++            vim.lsp.start({
++                    name = 'rust-lsp',
++                    cmd = {'rust-analyzer'},
++                    root_dir = vim.fs.root(
++                        args.buf, 
++                        {'Cargo.toml'}
++                    )
++                }
++            )
++        end
++    }
++)
++vim.api.nvim_create_autocmd(
++    'FileType', 
++    {
++        pattern  = 'go',
++        callback = function(args) 
++            vim.lsp.start({
++                    name = 'go-lsp',
++                    cmd = {'gopls'},
++                    root_dir = vim.fs.root(
++                        args.buf, 
++                        {'go.mod'}
++                    )
++                }
++            )
++        end
++    }
++)
++vim.api.nvim_create_autocmd(
++    {'BufEnter', 'BufWinEnter'}, 
++    {
++        pattern  = '*.cs',
++        callback = function(args) 
++            vim.lsp.start({
++                    name = 'csharp-lsp',
++                    cmd = {'csharp-ls'},
++                    root_dir = vim.fs.root(
++                        args.buf, 
++                        {'.git'}
++                    )
++                }
++            )
++        end
++    }
++)
++vim.diagnostic.config {
+     underline = true,
+ --    float = true,
+     virtual_text = true,
+     update_in_insert = false,
++}
++vim.lsp.config('*', {
++    root_markers = { '.git' },
++})
++vim.lsp.config('*', {
++    capabilities = {
++        textDocument = {
++            semanticTokens = {
++                multilineTokenSupport = true,
++            }
++        }
++    }
+ })
++vim.lsp.config.clangd = {
++    cmd = {
++        'clangd',
++        '--clang-tidy',
++        '--background-index',
++        '--offset-encoding=utf-8',
++    },
++    root_markers = { '.clangd', 'compile_commands.json' },
++    filetypes = { 'c', 'cpp' },
++}
+diff --git a/nvim/queries/rust/highlights.scm b/nvim/queries/rust/highlights.scm
+index e8840c0..23ad089 100644
+--- a/nvim/queries/rust/highlights.scm
++++ b/nvim/queries/rust/highlights.scm
+@@ -10,6 +10,9 @@
+ ((identifier) @constant
+  (#match? @constant "^[A-Z][A-Z_]+"))
+ 
++((use_list (identifier) @type)
++ (#match? @type "^[a-z][a-z_]+"))
++
+ ; uppercase names are types
+ (((identifier) @type)
+  (#match? @type "^[A-Z]+[a-z]+"))
+@@ -115,7 +118,6 @@
+ "yield" @keyword
+ (crate) @keyword
+ (mutable_specifier) @keyword
+-;(use_list (self) @keyword)
+ ;(scoped_use_list (self) @keyword)
+ ;(scoped_identifier (self) @keyword)
+ (super) @keyword
+diff --git a/nvim/queries/rust/tags.scm b/nvim/queries/rust/tags.scm
+index 943f46b..cf6ed84 100644
+--- a/nvim/queries/rust/tags.scm
++++ b/nvim/queries/rust/tags.scm
+@@ -1,13 +1,13 @@
+ ; ADT definitions
+ 
+-(struct_item
+-    name: (type_identifier) @name) @definition.class
++(struct_item 
++  name: (type_identifier) @name) @definition.class
+ 
+-(enum_item
+-    name: (type_identifier) @name) @definition.class
++(enum_item   
++  name: (type_identifier) @name) @definition.class
+ 
+-(union_item
+-    name: (type_identifier) @name) @definition.class
++(union_item  
++  name: (type_identifier) @name) @definition.class
+ 
+ ; type aliases
+ 
