@@ -29,3 +29,8 @@ require "colorscheme" {
 
     enum       = {7, 7, "#e878a0"}, -- red
 }
+require "nvim-treesitter.configs".setup {
+    highlight = {
+        enable = false,
+    }
+}
