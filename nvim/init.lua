@@ -14,6 +14,9 @@ vim.o.timeoutlen = 300
 -- Configure how new splits should be opened
 vim.o.splitright = true
 
+-- Configure how new splits should be opened
+vim.o.signcolumn = 'yes'
+
 vim.o.scrolloff = 10
 vim.o.undofile = false
 vim.o.wrap = true
@@ -28,8 +31,6 @@ vim.o.foldenable = false
 -- contains "number" or is "both", for the cursor line.
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
--- turn off highlighting matched parenthesis
---vim.cmd('let loaded_matchparen = 1')
 -- a reasonable default that was hard to find
 --vim.cmd('set foldlevelstart=99') 
 -- needed to paste text from clipboard
@@ -85,33 +86,6 @@ vim.keymap.set({"n"}, "<S-Left>", "<cmd>bp<CR>")  -- previous buffer
 vim.keymap.set({"n"}, "<S-Right>", "<cmd>bn<CR>") -- next buffer
 vim.keymap.set({"n"}, "<C-Down>", "<C-i>")        -- next jump
 vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
---  local lsp_attach = function(args)
---      local caps = {{
---              mode = {"n"}, cmd = "br", 
---              name = "textDocument/rename",
---              method = vim.lsp.buf.rename
---          }, {
---              mode = {"n"}, cmd = "bi", 
---              name = "textDocument/implementation",
---              method = vim.lsp.buf.implementation
---          }, {
---              mode = {"n"}, cmd = "bh", 
---              name = "textDocument/hover",
---              method = vim.lsp.buf.hover
---          }, {
---              mode = {"n"}, cmd = "bs", 
---              name = "textDocument/diagnostic",
---              method = vim.lsp.diagnostic.show
---          }
---      }
---  end
---  vim.api.nvim_create_autocmd(
---      'LspAttach', 
---     {
---          callback = lsp_attach
---     }
---  )
-
 
 -- TREESITTER ----------------------------------------------------
 
@@ -148,12 +122,8 @@ vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
 
 -- LSP ----------------------------------------------------------
 
--- * executables for Language Servers must be on $PATH
--- * :lua =vim.lsp.get_clients()[1].server_capabilities
-
     vim.api.nvim_create_autocmd(
-        {'BufEnter', 'BufWinEnter'}, 
-        {
+        {'BufEnter', 'BufWinEnter'}, {
             pattern = {
                 '*.c', '*.C', '*.h', '*.H', 
                 '*.cpp', '*.CPP', '*.hpp', '*.HPP'
@@ -172,8 +142,7 @@ vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
         }
     )
     vim.api.nvim_create_autocmd(
-        'FileType', 
-        {
+        'FileType', {
             pattern  = 'rust',
             callback = function(args) 
                 vim.lsp.start({
@@ -189,25 +158,7 @@ vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
         }
     )
     vim.api.nvim_create_autocmd(
-        'FileType', 
-        {
-            pattern  = 'go',
-            callback = function(args) 
-                vim.lsp.start({
-                        name = 'go-lsp',
-                        cmd = {'gopls'},
-                        root_dir = vim.fs.root(
-                            args.buf, 
-                            {'go.mod'}
-                        )
-                    }
-                )
-            end
-        }
-    )
-    vim.api.nvim_create_autocmd(
-        {'BufEnter', 'BufWinEnter'}, 
-        {
+        {'BufEnter', 'BufWinEnter'}, {
             pattern  = '*.cs',
             callback = function(args) 
                 vim.lsp.start({
@@ -224,21 +175,12 @@ vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
     )
     vim.diagnostic.config {
         underline = true,
-    --    float = true,
-        virtual_text = true,
+        float = true,
+    --    virtual_text = true,
         update_in_insert = false,
     }
     vim.lsp.config('*', {
         root_markers = { '.git' },
-    })
-    vim.lsp.config('*', {
-        capabilities = {
-            textDocument = {
-                semanticTokens = {
-                    multilineTokenSupport = true,
-                }
-            }
-        }
     })
     vim.lsp.config.clangd = {
         cmd = {
@@ -256,4 +198,3 @@ vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
 
 vim.cmd "colo rose"
 vim.cmd "com LspCap lua =vim.lsp.get_clients()[1].server_capabilities"
---vim.cmd("com InspectTree lua =vim.treesitter.inspect_tree()")

@@ -1,36 +1,28 @@
 -- lars
 
-require "colorscheme" {
-    lsp        = true,
-    treesitter = false,
+require "hl_lsp" {
+    window     = {4, 4, "#000000"}, -- black
+    background = {0, 0, "#06080a"}, -- grey
+    linenumber = {8, 8, "#1d2022"}, -- grey
+    comment    = {7, 7, "#506058"}, -- grey
 
-    window     = {1, 1, "#000000"}, -- black
-    background = {2, 2, "#06080a"}, -- grey
-    linenumber = {3, 3, "#1d2022"}, -- grey
-    comment    = {4, 4, "#506058"}, -- grey
+    macro      = {10, 10, "#88d860"}, -- green
+    added      = {10, 10, "#88d860"}, -- green
+    changed    = {10, 10, "#88d860"}, -- green
+    removed    = {10, 10, "#88d860"}, -- green
 
-    macro       = {5, 5, "#88d860"}, -- green
-    added       = {5, 5, "#88d860"}, -- green
-    changed     = {5, 5, "#88d860"}, -- green
-    removed     = {5, 5, "#88d860"}, -- green
+    text       = {10, 10, "#88d860"}, -- green
+    type       = {10, 10, "#88d860"}, -- green
+    struct     = {10, 10, "#88d860"}, -- green
+    class      = {10, 10, "#88d860"}, -- green
 
-    text       = {5, 5, "#88d860"}, -- green
-    type       = {7, 7, "#88d860"}, -- green
-    struct     = {7, 7, "#88d860"}, -- green
-    class      = {7, 7, "#88d860"}, -- green
+    keyword    = {2, 2, "#40c8b8"}, -- green
 
-    keyword    = {6, 6, "#40c8b8"}, -- green
+    str        = {12, 12, "#4090d8"}, -- blue
 
-    str        = {4, 4, "#4090d8"}, -- grey
+    identifier = {13, 13, "#c070d8"}, -- magenta
 
-    identifier = {6, 6, "#c070d8"}, -- magenta
+    func       = {11, 11, "#d8c850"}, -- yellow
 
-    func       = {5, 5, "#d8c850"}, -- yellow
-
-    enum       = {7, 7, "#d86060"}, -- red
-}
-require "nvim-treesitter.configs".setup {
-    highlight = {
-        enable = false,
-    }
+    enum       = {9, 9, "#d86060"}, -- red
 }

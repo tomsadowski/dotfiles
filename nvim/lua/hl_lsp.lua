@@ -1,3 +1,4 @@
+-- hl_lsp
 return function(p) 
 --  p.window    
 --  p.background
@@ -12,10 +13,6 @@ return function(p)
 --  p.enum      
 --  p.struct      
 --  p.class      
-
-    -- clear highlights
-    vim.cmd("syntax clear")
-    vim.cmd("highlight clear")
 
     local cap = 1
     local gui = 3
@@ -509,195 +506,6 @@ return function(p)
         DiagnosticDeprecated        = {link='Normal'},
         DiagnosticUnnecessary       = {link='Normal'},
     }
-    local treesitter = {
-        -- @variable                   various variable names
-        -- @variable.builtin           built-in variable names (e.g. `this`, `self`)
-        -- @variable.parameter         parameters of a function
-        -- @variable.parameter.builtin special parameters (e.g. `_`, `it`)
-        -- @variable.member object and struct fields
-        -- @operator        symbolic operators (e.g. `+`, `*`)
-        -- @boolean         boolean literals
-        -- @number          numeric literals
-        -- @number.float    floating-point number literals
-        -- @constant         constant identifiers
-        -- @constant.builtin built-in constant values
-        -- @constant.macro   constants defined by the preprocessor
-        -- @module         modules or namespaces
-        -- @module.builtin built-in modules or namespaces
-        -- @string                string literals
-        -- @string.documentation  string documenting code (e.g. Python docstrings)
-        -- @string.regexp         regular expressions
-        -- @string.escape         escape sequences
-        -- @string.special        other special strings (e.g. dates)
-        -- @string.special.symbol symbols or atoms
-        -- @string.special.path   filenames
-        -- @string.special.url    URIs (e.g. hyperlinks)
-        -- @character             character literals
-        -- @character.special     special characters (e.g. wildcards)
-        -- @type            type or class definitions and annotations
-        -- @type.builtin    built-in types
-        -- @type.definition identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
-        -- @attribute         attribute annotations (e.g. Python decorators, Rust lifetimes)
-        -- @attribute.builtin builtin annotations (e.g. `@property` in Python)
-        -- @property the key in key/value pairs
-        -- @function             function definitions
-        -- @function.builtin     built-in functions
-        -- @function.call        function calls
-        -- @function.method      method definitions
-        -- @function.method.call method calls
-        -- @function.macro       preprocessor macros
-        -- @constructor          constructor calls and definitions
-        -- @keyword                     keywords not fitting into specific categories
-        -- @keyword.coroutine           keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
-        -- @keyword.function            keywords that define a function (e.g. `func` in Go, `def` in Python)
-        -- @keyword.operator            operators that are English words (e.g. `and`, `or`)
-        -- @keyword.import              keywords for including or exporting modules (e.g. `import`, `from` in Python)
-        -- @keyword.type                keywords describing namespaces and composite types (e.g. `struct`, `enum`)
-        -- @keyword.modifier            keywords modifying other constructs (e.g. `const`, `static`, `public`)
-        -- @keyword.repeat              keywords related to loops (e.g. `for`, `while`)
-        -- @keyword.return              keywords like `return` and `yield`
-        -- @keyword.debug               keywords related to debugging
-        -- @keyword.exception           keywords related to exceptions (e.g. `throw`, `catch`)
-        -- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
-        -- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
-        -- @keyword.directive           various preprocessor directives and shebangs
-        -- @keyword.directive.define    preprocessor definition directives
-        -- @punctuation.delimiter delimiters (e.g. `;`, `.`, `,`)
-        -- @punctuation.bracket   brackets (e.g. `()`, `{}`, `[]`)
-        -- @punctuation.special   special symbols (e.g. `{}` in string interpolation)
-        -- @comment               line and block comments
-        -- @comment.documentation comments documenting code
-        -- @comment.error         error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
-        -- @comment.warning       warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
-        -- @comment.todo          todo-type comments (e.g. `TODO`, `WIP`)
-        -- @comment.note          note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
-        -- @tag           XML-style tag names (e.g. in XML, HTML, etc.)
-        -- @tag.builtin   builtin tag names (e.g. HTML5 tags)
-        -- @tag.attribute XML-style tag attributes
-        -- @tag.delimiter XML-style tag delimiters
-        -- @markup.strong         bold text
-        -- @markup.italic         italic text
-        -- @markup.strikethrough  struck-through text
-        -- @markup.underline      underlined text (only for literal underline markup!)
-        -- @markup.heading        headings, titles (including markers)
-        -- @markup.heading.1      top-level heading
-        -- @markup.heading.2      section heading
-        -- @markup.heading.3      subsection heading
-        -- @markup.heading.4      and so on
-        -- @markup.heading.5      and so forth
-        -- @markup.heading.6      six levels ought to be enough for anybody
-        -- @markup.quote          block quotes
-        -- @markup.math           math environments (e.g. `$ ... $` in LaTeX)
-        -- @markup.link           text references, footnotes, citations, etc.
-        -- @markup.link.label     link, reference descriptions
-        -- @markup.link.url       URL-style links
-        -- @markup.raw            literal or verbatim text (e.g. inline code)
-        -- @markup.raw.block      literal or verbatim text as a stand-alone block
-        -- @markup.list           list markers
-        -- @markup.list.checked   checked todo-style list markers
-        -- @markup.list.unchecked unchecked todo-style list markers
-        -- @label `GOTO` and other labels (e.g. `label:` in C), including heredoc labels
-        -- @diff.plus  added text (for diff files)
-        -- @diff.minus deleted text (for diff files)
-        -- @diff.delta changed text (for diff files)
-        ['@variable']                    = {link='Identifier'}, 
-        ['@variable.parameter']          = {link='@variable'}, 
-        ['@variable.builtin']            = {link='Keyword'}, 
-        ['@variable.parameter.builtin']  = {link='Keyword'}, 
-        ['@variable.member']             = {link='@variable'}, 
-        ['@operator']                    = {link='@variable'}, 
-        ['@boolean']                     = {link='Keyword'}, 
-        ['@number']                      = {link='@variable'}, 
-        ['@number.float']                = {link='@variable'}, 
-        ['@constant']                    = {link='@variable'}, 
-        ['@constant.builtin']            = {link='@keyword'}, 
-        ['@constant.macro']              = {link='@constant'}, 
-        ['@module']                      = {link='Normal'}, 
-        ['@module.builtin']              = {link='@keyword'}, 
-        ['@string']                      = {link='String'}, 
-        ['@string.documentation']        = {link='@string'}, 
-        ['@string.regexp']               = {link='@string'}, 
-        ['@string.escape']               = {link='@string'}, 
-        ['@string.special']              = {link='@string'}, 
-        ['@string.special.symbol']       = {link='@string.special'}, 
-        ['@string.special.path']         = {link='@string.special'}, 
-        ['@string.special.url']          = {link='@string.special'}, 
-        ['@character']                   = {link='@string'}, 
-        ['@character.special']           = {link='@string'}, 
-        ['@type']                        = {link='Type'},
-        ['@type.builtin']                = {link='Keyword'}, 
-        ['@type.definition']             = {link='@type'}, 
-        ['@attribute']                   = {link='Normal'}, 
-        ['@attribute.builtin']           = {link='@keyword'}, 
-        ['@property']                    = {link='Normal'}, 
-        ['@function']                    = {link='Function'}, 
-        ['@function.builtin']            = {link='@function'}, 
-        ['@function.call']               = {link='@function'}, 
-        ['@function.method']             = {link='@function'}, 
-        ['@function.method.call']        = {link='@function.method'}, 
-        ['@function.macro']              = {link='@function'}, 
-        ['@constructor']                 = {link='@function'}, 
-        ['@struct']                      = {link='Structure'}, 
-        ['@enum']                        = {link='Enum'}, 
-        ['@operator.try']                = {link='@function'}, 
-        ['@keyword']                     = {link='Keyword'}, 
-        ['@keyword.coroutine']           = {link='@keyword'}, 
-        ['@keyword.function']            = {link='@keyword'}, 
-        ['@keyword.operator']            = {link='@keyword'}, 
-        ['@keyword.import']              = {link='@keyword'}, 
-        ['@keyword.type']                = {link='@keyword'}, 
-        ['@keyword.modifier']            = {link='@keyword'}, 
-        ['@keyword.repeat']              = {link='@keyword'}, 
-        ['@keyword.return']              = {link='@keyword'}, 
-        ['@keyword.debug']               = {link='@keyword'}, 
-        ['@keyword.exception']           = {link='@keyword'}, 
-        ['@keyword.conditional']         = {link='@keyword'}, 
-        ['@keyword.conditional.ternary'] = {link='@keyword.conditional'}, 
-        ['@keyword.directive']           = {link='@keyword'}, 
-        ['@keyword.directive.define']    = {link='@keyword.directive'}, 
-        ['@punctuation']                 = {link='Normal'}, 
-        ['@punctuation.delimiter']       = {link='Normal'}, 
-        ['@punctuation.bracket']         = {link='Normal'}, 
-        ['@punctuation.special']         = {link='Normal'}, 
-        ['@punctuation.special.query']   = {link='Normal'}, 
-        ['@class']                       = {link='Class'}, 
-        ['@comment']                     = {link='Comment'}, 
-        ['@comment.documentation']       = {link='@comment'}, 
-        ['@comment.error']               = {link='@comment'}, 
-        ['@comment.warning']             = {link='@comment'}, 
-        ['@comment.todo']                = {link='@comment'}, 
-        ['@comment.note']                = {link='@comment'}, 
-        ['@tag']                         = {link='@type'}, 
-        ['@tag.builtin']                 = {link='@type'}, 
-        ['@tag.attribute']               = {link='@type'}, 
-        ['@tag.delimeter']               = {link='@type'}, 
-        ['@markup']                      = {link='Normal'}, 
-        ['@markup.strong']               = {link='@markup'}, 
-        ['@markup.italic']               = {link='@markup'}, 
-        ['@markup.strikethrough']        = {link='@markup'}, 
-        ['@markup.underline']            = {link='@markup'}, 
-        ['@markup.heading']              = {link='@markup'}, 
-        ['@markup.heading1']             = {link='@markup.heading'}, 
-        ['@markup.heading2']             = {link='@markup.heading'}, 
-        ['@markup.heading3']             = {link='@markup.heading'}, 
-        ['@markup.heading4']             = {link='@markup.heading'}, 
-        ['@markup.heading5']             = {link='@markup.heading'}, 
-        ['@markup.heading6']             = {link='@markup.heading'}, 
-        ['@markup.quote']                = {link='@markup'}, 
-        ['@markup.math']                 = {link='@markup'}, 
-        ['@markup.link']                 = {link='@markup'}, 
-        ['@markup.link.label']           = {link='@markup.link'}, 
-        ['@markup.link.url']             = {link='@markup.link'}, 
-        ['@markup.raw']                  = {link='@markup'}, 
-        ['@markup.raw.block']            = {link='@markup.raw'}, 
-        ['@markup.list']                 = {link='@markup'}, 
-        ['@markup.list.checked']         = {link='@markup.list'}, 
-        ['@markup.list.unchecked']       = {link='@markup.list.unchecked'}, 
-        ['@label']                       = {link='Keyword'}, 
-        ['@diff.plus']                   = {link='Normal'}, 
-        ['@diff.minus']                  = {link='Normal'}, 
-        ['@diff.delta']                  = {link='Normal'}, 
-    }
     local lsp = {
         -- @lsp.type.namespace Identifiers that declare or reference a namespace, module, or package
         -- @lsp.type.number    Tokens that represent a number literal
@@ -783,9 +591,8 @@ return function(p)
     }
 
     -- clear highlights
-    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-        vim.api.nvim_set_hl(0, group, {})
-    end
+    vim.cmd("syntax clear")
+    vim.cmd("highlight clear")
 
     -- apply highlights
     for k, v in pairs(core_groups) do
@@ -803,8 +610,17 @@ return function(p)
     for k, v in pairs(diagnostic_groups) do
         vim.api.nvim_set_hl(0, k, v)
     end
-    for k, v in pairs(treesitter) do
-        vim.api.nvim_set_hl(0, k, v)
+
+    -- treesitter business
+    require "nvim-treesitter.configs".setup {
+        highlight = {
+            enable = false,
+        }
+    }
+    
+    -- lsp business
+    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+        vim.api.nvim_set_hl(0, group, {})
     end
     for k, v in pairs(lsp) do
         vim.api.nvim_set_hl(0, k, v)
