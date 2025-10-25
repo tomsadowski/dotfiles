@@ -196,5 +196,5 @@ vim.keymap.set({"n"}, "<C-Up>", "<C-o>")          -- previous jump
 
 -- COMMANDS ---------------------------------------------------
 
-vim.cmd "colo rose"
+vim.cmd "colo yellow"
 vim.cmd "com LspCap lua =vim.lsp.get_clients()[1].server_capabilities"
