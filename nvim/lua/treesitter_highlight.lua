@@ -32,16 +32,16 @@ return function(p)
             bg      = p.background[gui],
         },
         NormalNC = {
-            ctermbg = p.window[cap],
-            bg      = p.window[gui],
+            ctermbg = p.background[cap],
+            bg      = p.background[gui],
         },
         SignColumn   = {
             ctermbg = p.window[cap], 
             bg = p.window[gui]
         }, 
         Search = {
-            ctermbg = p.linenumber[cap], 
-            bg      = p.linenumber[gui], 
+            ctermbg = p.window[cap], 
+            bg      = p.window[gui], 
         },
         LineNr = {
             ctermfg = p.linenumber[cap], 
@@ -101,10 +101,14 @@ return function(p)
         WarningMsg   = {
             ctermfg = p.warn[cap], 
             fg      = p.warn[gui],
+            ctermbg = p.warnbg[cap], 
+            bg      = p.warnbg[gui],
         }, 
         ErrorMsg      = {
             ctermfg = p.error[cap], 
             fg = p.error[gui],
+            ctermbg = p.errorbg[cap], 
+            bg = p.errorbg[gui],
         }, 
         NonText       = {link='Normal'}, 
         Whitespace    = {link='Normal'}, 
@@ -115,8 +119,8 @@ return function(p)
             bg      = p.window[gui],
         }, 
         NormalFloat   = {
-            ctermbg = p.window[cap], 
-            bg = p.window[gui],
+            ctermbg = p.background[cap], 
+            bg      = p.background[gui],
         },
         FloatBorder   = {
             ctermfg = p.curlinenum[cap], 
@@ -153,8 +157,10 @@ return function(p)
         TabLineFill = {link='Normal'}, 
         TabLineSel  = {link='Normal'},
         Visual = {
-            ctermbg = p.window[cap], 
-            bg      = p.window[gui], 
+            ctermfg = p.visual[cap], 
+            fg      = p.visual[gui], 
+            ctermbg = p.visualbg[cap], 
+            bg      = p.visualbg[gui], 
         },
         VisualNOS      = {link='Visual'}, 
         Directory      = {link='NONE'}, 
