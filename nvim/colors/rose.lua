@@ -1,8 +1,8 @@
 -- rose
 
 require "treesitter_highlight" {
-    window     = {4, 4, "#000200"}, -- black
-    background = {0, 0, "#111311"}, -- grey
+    window     = {4, 4, "#000000"}, -- black
+    background = {0, 0, "#111111"}, -- grey
 
     macro      = {10, 10, "#89f098"}, -- green
     added      = {10, 10, "#89f098"}, -- green

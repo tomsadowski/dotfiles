@@ -19,17 +19,25 @@
 
 (field_identifier) @property
 
-; Function calls
-
+; enum
+((call_expression
+  function: (identifier) @type
+ (#match? @type "^[A-Z]+[a-z]+")))
 (call_expression
-  function: (identifier) @function)
+  function: (scoped_identifier
+    "::"
+    name: (identifier) @type
+     (#match? @type "^[A-Z]+[a-z]+")))
+
+; Function calls
 (call_expression
   function: (field_expression
     field: (field_identifier) @function.method))
 (call_expression
   function: (scoped_identifier
     "::"
-    name: (identifier) @function))
+    name: (identifier) @function
+     (#match? @function "^[a-z]+")))
 
 (generic_function
   function: (identifier) @function)
