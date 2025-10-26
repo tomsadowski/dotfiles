@@ -1,5 +1,8 @@
 # neovim config
 
+### bone
+![bone](docs/bone.png)  
+
 ### rose
 ![rose](docs/rose.png)  
 
