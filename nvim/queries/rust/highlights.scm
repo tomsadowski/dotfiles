@@ -19,6 +19,10 @@
 
 (field_identifier) @property
 
+((call_expression
+  function: (identifier) @function
+ (#match? @function "^[a-z]+")))
+
 ; enum
 ((call_expression
   function: (identifier) @type

@@ -194,5 +194,5 @@ vim.lsp.config.clangd = {
 
 -- COMMANDS ---------------------------------------------------
 
-vim.cmd "colo bone"
+vim.cmd "colo rose"
 vim.cmd "com LspCap lua =vim.lsp.get_clients()[1].server_capabilities"
