@@ -32,7 +32,8 @@ zstyle ':vcs_info:git:*' formats ' (%b)'
 
 setopt PROMPT_SUBST
 
-PROMPT='%F{#747680}%n@%m%f %F{#747680}%~%f%F{#747680}${vcs_info_msg_0_}%f %F{#747680}%#%f '
+#PROMPT='%F{#747680}%n@%m%f %F{#747680}%~%f%F{#747680}${vcs_info_msg_0_}%f %F{#747680}%#%f '
+PROMPT='%F{#707890}%n@%m %~${vcs_info_msg_0_} %#%f '
 
 source ~/.config/dotfiles/env.sh
 source ~/.config/dotfiles/alias.sh
